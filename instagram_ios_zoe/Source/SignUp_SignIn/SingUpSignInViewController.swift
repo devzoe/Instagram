@@ -20,10 +20,14 @@ class SingUpSignInViewController: UIViewController {
     }
     
     @IBAction func signUpButtonClicked(_ sender: UIButton) {
-        
+        let signUpViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "SignUpNavigationController")
+        signUpViewController.modalPresentationStyle = .fullScreen
+        self.present(signUpViewController, animated: true, completion: nil)
     }
     @IBAction func signInButtonClicked(_ sender: UIButton) {
-        
+        let signInViewController = UIStoryboard(name: "SignInStoryboard", bundle: nil).instantiateViewController(identifier: "SignInViewController")
+        signInViewController.modalPresentationStyle = .fullScreen
+        self.present(signInViewController, animated: true, completion: nil)
     }
     
 

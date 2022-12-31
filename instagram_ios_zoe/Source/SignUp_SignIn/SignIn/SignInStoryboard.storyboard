@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="Y6W-OH-hqX" customClass="SignInViewController" customModule="instagram_ios_zoe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,6 +53,9 @@
                                 <state key="normal" title="로그인">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="h4K-Hd-ogU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="또는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzn-B2-7jl">
                                 <rect key="frame" x="196.5" y="539" width="21" height="14.5"/>
@@ -126,6 +129,11 @@
                             <constraint firstItem="d7R-FV-f2j" firstAttribute="top" secondItem="cSk-xh-FGx" secondAttribute="bottom" constant="10" id="uAd-3N-0ee"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="idTextField" destination="xtr-SO-gcx" id="Dr7-MR-Rab"/>
+                        <outlet property="loginButton" destination="tec-5C-oe2" id="68z-sm-NB9"/>
+                        <outlet property="passwordTextField" destination="rPc-HI-xCl" id="nVZ-1x-Tj9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
