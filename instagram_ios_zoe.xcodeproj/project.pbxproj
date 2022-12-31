@@ -34,6 +34,7 @@
 		2FBE45D42960DA3C00051BB5 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45D32960DA3C00051BB5 /* UIViewController.swift */; };
 		2FBE45D82960E12900051BB5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE45D72960E12900051BB5 /* MainStoryboard.storyboard */; };
 		2FBE45DA2960E54A00051BB5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45D92960E54A00051BB5 /* SignUpViewController.swift */; };
+		2FBE45DC2960F11100051BB5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45DB2960F11100051BB5 /* BaseViewController.swift */; };
 		949B388F491D6AE3D54C81B1 /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */; };
 		C296CADFC5AF771CA70DF1A8 /* Pods_instagram_ios_zoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		2FBE45D32960DA3C00051BB5 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		2FBE45D72960E12900051BB5 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		2FBE45D92960E54A00051BB5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		2FBE45DB2960F11100051BB5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634E153C4F73C1194F9601D1 /* Pods-instagram_ios_zoeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoeTests.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoeTests/Pods-instagram_ios_zoeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		2FBE45A629600D7A00051BB5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				2FBE45DB2960F11100051BB5 /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBE45DC2960F11100051BB5 /* BaseViewController.swift in Sources */,
 				2FBE45BD2960BDA400051BB5 /* UIBezierPath.swift in Sources */,
 				2FBE45D12960D11C00051BB5 /* UITextField.swift in Sources */,
 				2FBE4575295FE69500051BB5 /* ViewController.swift in Sources */,
