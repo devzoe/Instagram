@@ -16,6 +16,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uz0-lc-INm">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="wfb-Go-fMD"/>
@@ -48,7 +49,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eCo-hP-2Xy">
-                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="dej-VU-qya"/>
+                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="442-GY-CsN"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

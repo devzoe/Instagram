@@ -15,7 +15,11 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.black
         ]
+        self.navigationItem.backBarButtonItem?.tintColor = .black
+        self.navigationController?.navigationBar.tintColor = .black
+
     }
+    
     
 
 

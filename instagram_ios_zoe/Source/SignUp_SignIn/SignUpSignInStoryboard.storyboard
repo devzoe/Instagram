@@ -63,6 +63,7 @@
                             <constraint firstItem="CED-nH-BDL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xIC-fF-Miv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="IQz-YW-aTa"/>
                     <connections>
                         <outlet property="signInButton" destination="x7T-FB-AQk" id="EbG-IX-Lvy"/>
                         <outlet property="signUpButton" destination="RNc-mJ-Cve" id="LUf-fR-F2O"/>
