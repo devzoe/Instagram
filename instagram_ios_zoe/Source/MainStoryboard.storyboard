@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i9s-q3-kub">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JD5-Tu-7Ns">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" id="i9s-q3-kub" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xob-lu-C38">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="oOI-z0-0aT" kind="relationship" relationship="viewControllers" id="fhz-Bl-W86"/>
+                        <segue destination="tIw-re-uXv" kind="relationship" relationship="viewControllers" id="Lfq-jD-MCF"/>
+                        <segue destination="5pn-dS-Vip" kind="relationship" relationship="viewControllers" id="tk0-P1-AM1"/>
+                        <segue destination="lBd-Tk-tSQ" kind="relationship" relationship="viewControllers" id="R5E-Ce-z8a"/>
+                        <segue destination="mgb-7u-pFx" kind="relationship" relationship="viewControllers" id="QpL-Qc-spq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U8b-Dz-oT5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-993" y="-245"/>
+        </scene>
+        <!--HomeNavigationController-->
+        <scene sceneID="8eg-vx-VIt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeStoryboard" referencedIdentifier="HomeNavigationController" id="oOI-z0-0aT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="c7y-Ad-l5t"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kU-28-WOu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="-514"/>
+        </scene>
+        <!--SearchNavigationController-->
+        <scene sceneID="zHY-YJ-C0c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SearchStoryboard" referencedIdentifier="SearchNavigationController" id="tIw-re-uXv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="oGZ-5t-jk1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vG1-3T-2SS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="-387"/>
+        </scene>
+        <!--ReelsNavigationController-->
+        <scene sceneID="mPh-Cs-ddj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ReelsStoryboard" referencedIdentifier="ReelsNavigationController" id="5pn-dS-Vip" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="play.rectangle" catalog="system" id="gho-aA-7op"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E29-As-1bD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="-260"/>
+        </scene>
+        <!--ShopNavigationController-->
+        <scene sceneID="BwF-Qh-Ydg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ShopStoryboard" referencedIdentifier="ShopNavigationController" id="lBd-Tk-tSQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="bag" catalog="system" id="z7K-GR-aVQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="abJ-7b-fw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="-123"/>
+        </scene>
+        <!--ProfileNavigationController-->
+        <scene sceneID="StN-dA-Rex">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileStoryboard" referencedIdentifier="ProfileNavigationController" id="mgb-7u-pFx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="B8i-qR-CdW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Af-iP-gdd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="1"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bag" catalog="system" width="128" height="128"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="play.rectangle" catalog="system" width="128" height="93"/>
+    </resources>
+</document>
