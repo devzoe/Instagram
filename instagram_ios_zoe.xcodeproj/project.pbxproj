@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1301DE2CDF3A2D88FF2A2DFB /* Pods_instagram_ios_zoeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C22EBD738C32BC53AE1821 /* Pods_instagram_ios_zoeTests.framework */; };
 		2FBE4571295FE69500051BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4570295FE69500051BB5 /* AppDelegate.swift */; };
 		2FBE4573295FE69500051BB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4572295FE69500051BB5 /* SceneDelegate.swift */; };
 		2FBE4575295FE69500051BB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4574295FE69500051BB5 /* ViewController.swift */; };
-		2FBE4578295FE69500051BB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE4576295FE69500051BB5 /* Main.storyboard */; };
+		2FBE4578295FE69500051BB5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE4576295FE69500051BB5 /* MainStoryboard.storyboard */; };
 		2FBE457B295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4579295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld */; };
 		2FBE457D295FE69700051BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE457C295FE69700051BB5 /* Assets.xcassets */; };
 		2FBE4580295FE69700051BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE457E295FE69700051BB5 /* LaunchScreen.storyboard */; };
 		2FBE458B295FE69700051BB5 /* instagram_ios_zoeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE458A295FE69700051BB5 /* instagram_ios_zoeTests.swift */; };
 		2FBE4595295FE69700051BB5 /* instagram_ios_zoeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4594295FE69700051BB5 /* instagram_ios_zoeUITests.swift */; };
 		2FBE4597295FE69700051BB5 /* instagram_ios_zoeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4596295FE69700051BB5 /* instagram_ios_zoeUITestsLaunchTests.swift */; };
+		2FBE45AD29600E4900051BB5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45AC29600E4900051BB5 /* Constant.swift */; };
+		949B388F491D6AE3D54C81B1 /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */; };
+		C296CADFC5AF771CA70DF1A8 /* Pods_instagram_ios_zoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1934C94B60BF3D333C40B533 /* Pods-instagram_ios_zoeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoeTests.debug.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoeTests/Pods-instagram_ios_zoeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		256C470BFA0EE9CB91B8312F /* Pods-instagram_ios_zoe-instagram_ios_zoeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoe-instagram_ios_zoeUITests.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoe-instagram_ios_zoeUITests/Pods-instagram_ios_zoe-instagram_ios_zoeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FBE456D295FE69500051BB5 /* instagram_ios_zoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram_ios_zoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FBE4570295FE69500051BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FBE4572295FE69500051BB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2FBE4574295FE69500051BB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2FBE4577295FE69500051BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2FBE4577295FE69500051BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		2FBE457A295FE69500051BB5 /* instagram_ios_zoe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = instagram_ios_zoe.xcdatamodel; sourceTree = "<group>"; };
 		2FBE457C295FE69700051BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FBE457F295FE69700051BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +57,14 @@
 		2FBE4590295FE69700051BB5 /* instagram_ios_zoeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instagram_ios_zoeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FBE4594295FE69700051BB5 /* instagram_ios_zoeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagram_ios_zoeUITests.swift; sourceTree = "<group>"; };
 		2FBE4596295FE69700051BB5 /* instagram_ios_zoeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagram_ios_zoeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2FBE45AC29600E4900051BB5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		634E153C4F73C1194F9601D1 /* Pods-instagram_ios_zoeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoeTests.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoeTests/Pods-instagram_ios_zoeTests.release.xcconfig"; sourceTree = "<group>"; };
+		750E078944444AB1D6EA11A6 /* Pods-instagram_ios_zoe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoe.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoe/Pods-instagram_ios_zoe.release.xcconfig"; sourceTree = "<group>"; };
+		D2C22EBD738C32BC53AE1821 /* Pods_instagram_ios_zoeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D499DA41EFF5F85DC3EE5BB3 /* Pods-instagram_ios_zoe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoe.debug.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoe/Pods-instagram_ios_zoe.debug.xcconfig"; sourceTree = "<group>"; };
+		F14B8BF49E97B458AFB792D6 /* Pods-instagram_ios_zoe-instagram_ios_zoeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoe-instagram_ios_zoeUITests.debug.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoe-instagram_ios_zoeUITests/Pods-instagram_ios_zoe-instagram_ios_zoeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C296CADFC5AF771CA70DF1A8 /* Pods_instagram_ios_zoe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1301DE2CDF3A2D88FF2A2DFB /* Pods_instagram_ios_zoeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				949B388F491D6AE3D54C81B1 /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +102,8 @@
 				2FBE4589295FE69700051BB5 /* instagram_ios_zoeTests */,
 				2FBE4593295FE69700051BB5 /* instagram_ios_zoeUITests */,
 				2FBE456E295FE69500051BB5 /* Products */,
+				BC44B8AFC7FDC88D93BB384B /* Pods */,
+				DAB26D47747C48CB4E5C16CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +120,12 @@
 		2FBE456F295FE69500051BB5 /* instagram_ios_zoe */ = {
 			isa = PBXGroup;
 			children = (
+				2FBE45A329600D6300051BB5 /* Configuration */,
+				2FBE45A729600D9400051BB5 /* Util */,
+				2FBE45A829600DA100051BB5 /* Source */,
 				2FBE4570295FE69500051BB5 /* AppDelegate.swift */,
 				2FBE4572295FE69500051BB5 /* SceneDelegate.swift */,
 				2FBE4574295FE69500051BB5 /* ViewController.swift */,
-				2FBE4576295FE69500051BB5 /* Main.storyboard */,
 				2FBE457C295FE69700051BB5 /* Assets.xcassets */,
 				2FBE457E295FE69700051BB5 /* LaunchScreen.storyboard */,
 				2FBE4581295FE69700051BB5 /* Info.plist */,
@@ -130,6 +151,100 @@
 			path = instagram_ios_zoeUITests;
 			sourceTree = "<group>";
 		};
+		2FBE45A329600D6300051BB5 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE45AC29600E4900051BB5 /* Constant.swift */,
+				2FBE45A429600D6B00051BB5 /* Secret */,
+				2FBE45A529600D7400051BB5 /* Font */,
+				2FBE45A629600D7A00051BB5 /* Base */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		2FBE45A429600D6B00051BB5 /* Secret */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Secret;
+			sourceTree = "<group>";
+		};
+		2FBE45A529600D7400051BB5 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		2FBE45A629600D7A00051BB5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2FBE45A729600D9400051BB5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE45A929600DB600051BB5 /* Extension */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		2FBE45A829600DA100051BB5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE4576295FE69500051BB5 /* MainStoryboard.storyboard */,
+				2FBE45AB29600DDA00051BB5 /* Splash */,
+				2FBE45AA29600DC900051BB5 /* Main */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		2FBE45A929600DB600051BB5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2FBE45AA29600DC900051BB5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2FBE45AB29600DDA00051BB5 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		BC44B8AFC7FDC88D93BB384B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D499DA41EFF5F85DC3EE5BB3 /* Pods-instagram_ios_zoe.debug.xcconfig */,
+				750E078944444AB1D6EA11A6 /* Pods-instagram_ios_zoe.release.xcconfig */,
+				F14B8BF49E97B458AFB792D6 /* Pods-instagram_ios_zoe-instagram_ios_zoeUITests.debug.xcconfig */,
+				256C470BFA0EE9CB91B8312F /* Pods-instagram_ios_zoe-instagram_ios_zoeUITests.release.xcconfig */,
+				1934C94B60BF3D333C40B533 /* Pods-instagram_ios_zoeTests.debug.xcconfig */,
+				634E153C4F73C1194F9601D1 /* Pods-instagram_ios_zoeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DAB26D47747C48CB4E5C16CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */,
+				45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */,
+				D2C22EBD738C32BC53AE1821 /* Pods_instagram_ios_zoeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FBE459A295FE69700051BB5 /* Build configuration list for PBXNativeTarget "instagram_ios_zoe" */;
 			buildPhases = (
+				4C823F5C30FAA1725B2D28A3 /* [CP] Check Pods Manifest.lock */,
 				2FBE4569295FE69500051BB5 /* Sources */,
 				2FBE456A295FE69500051BB5 /* Frameworks */,
 				2FBE456B295FE69500051BB5 /* Resources */,
+				FF9C4DA12B5315DF410FDB11 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +271,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FBE459D295FE69700051BB5 /* Build configuration list for PBXNativeTarget "instagram_ios_zoeTests" */;
 			buildPhases = (
+				CFFFBE3B1CF01393E184D07F /* [CP] Check Pods Manifest.lock */,
 				2FBE4582295FE69700051BB5 /* Sources */,
 				2FBE4583295FE69700051BB5 /* Frameworks */,
 				2FBE4584295FE69700051BB5 /* Resources */,
@@ -172,9 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FBE45A0295FE69700051BB5 /* Build configuration list for PBXNativeTarget "instagram_ios_zoeUITests" */;
 			buildPhases = (
+				E941C17DDB46BAEAFE032748 /* [CP] Check Pods Manifest.lock */,
 				2FBE458C295FE69700051BB5 /* Sources */,
 				2FBE458D295FE69700051BB5 /* Frameworks */,
 				2FBE458E295FE69700051BB5 /* Resources */,
+				DC1565317DF6FC44AA224BF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,7 +356,7 @@
 			files = (
 				2FBE4580295FE69700051BB5 /* LaunchScreen.storyboard in Resources */,
 				2FBE457D295FE69700051BB5 /* Assets.xcassets in Resources */,
-				2FBE4578295FE69500051BB5 /* Main.storyboard in Resources */,
+				2FBE4578295FE69500051BB5 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +376,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C823F5C30FAA1725B2D28A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instagram_ios_zoe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFFFBE3B1CF01393E184D07F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instagram_ios_zoeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC1565317DF6FC44AA224BF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-instagram_ios_zoe-instagram_ios_zoeUITests/Pods-instagram_ios_zoe-instagram_ios_zoeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-instagram_ios_zoe-instagram_ios_zoeUITests/Pods-instagram_ios_zoe-instagram_ios_zoeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-instagram_ios_zoe-instagram_ios_zoeUITests/Pods-instagram_ios_zoe-instagram_ios_zoeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E941C17DDB46BAEAFE032748 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instagram_ios_zoe-instagram_ios_zoeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF9C4DA12B5315DF410FDB11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-instagram_ios_zoe/Pods-instagram_ios_zoe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-instagram_ios_zoe/Pods-instagram_ios_zoe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-instagram_ios_zoe/Pods-instagram_ios_zoe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2FBE4569295FE69500051BB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -263,6 +486,7 @@
 			files = (
 				2FBE4575295FE69500051BB5 /* ViewController.swift in Sources */,
 				2FBE4571295FE69500051BB5 /* AppDelegate.swift in Sources */,
+				2FBE45AD29600E4900051BB5 /* Constant.swift in Sources */,
 				2FBE4573295FE69500051BB5 /* SceneDelegate.swift in Sources */,
 				2FBE457B295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld in Sources */,
 			);
@@ -301,12 +525,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2FBE4576295FE69500051BB5 /* Main.storyboard */ = {
+		2FBE4576295FE69500051BB5 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2FBE4577295FE69500051BB5 /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		2FBE457E295FE69700051BB5 /* LaunchScreen.storyboard */ = {
@@ -371,7 +595,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -426,7 +650,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,6 +662,7 @@
 		};
 		2FBE459B295FE69700051BB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D499DA41EFF5F85DC3EE5BB3 /* Pods-instagram_ios_zoe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,6 +676,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,6 +692,7 @@
 		};
 		2FBE459C295FE69700051BB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 750E078944444AB1D6EA11A6 /* Pods-instagram_ios_zoe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -479,6 +706,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,6 +722,7 @@
 		};
 		2FBE459E295FE69700051BB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1934C94B60BF3D333C40B533 /* Pods-instagram_ios_zoeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,7 +730,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "KyoungminNam.instagram-ios-zoeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,6 +743,7 @@
 		};
 		2FBE459F295FE69700051BB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 634E153C4F73C1194F9601D1 /* Pods-instagram_ios_zoeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -521,7 +751,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "KyoungminNam.instagram-ios-zoeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -534,6 +764,7 @@
 		};
 		2FBE45A1295FE69700051BB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F14B8BF49E97B458AFB792D6 /* Pods-instagram_ios_zoe-instagram_ios_zoeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +783,7 @@
 		};
 		2FBE45A2295FE69700051BB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 256C470BFA0EE9CB91B8312F /* Pods-instagram_ios_zoe-instagram_ios_zoeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,42 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - Alamofire (5.6.4)
+  - Kingfisher (7.4.1)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 4.0)
+  - Alamofire (~> 5.6.1)
+  - Kingfisher (~> 7.0)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - Alamofire
+    - Kingfisher
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 8c10c9956af1c292e50bc24edef327c449d6a0f0
+
+COCOAPODS: 1.11.3

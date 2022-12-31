@@ -5,4 +5,8 @@
 //  Created by 남경민 on 2022/12/31.
 //
 
-import Foundation
+import Alamofire
+
+struct Constant {
+    
+}
