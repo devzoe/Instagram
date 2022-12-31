@@ -10,7 +10,7 @@ target 'instagram_ios_zoe' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Alamofire', '~> 5.6.1'
   pod 'Kingfisher', '~> 7.0'
-
+  pod 'Tabman', '~> 2.12'
   target 'instagram_ios_zoeTests' do
     inherit! :search_paths
     # Pods for testing

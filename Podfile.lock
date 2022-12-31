@@ -16,27 +16,35 @@ PODS:
     - AFNetworking/NSURLSession
   - Alamofire (5.6.4)
   - Kingfisher (7.4.1)
+  - Pageboy (3.7.0)
   - SwiftyJSON (4.3.0)
+  - Tabman (2.13.0):
+    - Pageboy (~> 3.7.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 4.0)
   - Alamofire (~> 5.6.1)
   - Kingfisher (~> 7.0)
   - SwiftyJSON (~> 4.0)
+  - Tabman (~> 2.12)
 
 SPEC REPOS:
   trunk:
     - AFNetworking
     - Alamofire
     - Kingfisher
+    - Pageboy
     - SwiftyJSON
+    - Tabman
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
+  Pageboy: fe646118f7168960058bea7a96038386aa7c0da8
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  Tabman: 66ea44c44488327ec20f3c8dc5554a5d22f5908c
 
-PODFILE CHECKSUM: 8c10c9956af1c292e50bc24edef327c449d6a0f0
+PODFILE CHECKSUM: 4a120e068fe6359abdbc0de8b3b3524f42372558
 
 COCOAPODS: 1.11.3
