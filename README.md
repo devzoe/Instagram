@@ -1,1 +1,1 @@
-# first commit Readme
+# 개발일지
