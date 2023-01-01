@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCollectionViewCell" id="gTV-IL-0wX" customClass="StoryCollectionViewCell" customModule="instagram_ios_zoe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="274" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="274" height="220"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z14-1h-y0M">
+                        <rect key="frame" x="60" y="0.0" width="154" height="154"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="z14-1h-y0M" secondAttribute="height" id="bt2-J7-ICS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTR-Ez-rHU">
+                        <rect key="frame" x="121.5" y="159" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="FTR-Ez-rHU" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="815-1a-fuY"/>
+                <constraint firstItem="FTR-Ez-rHU" firstAttribute="top" secondItem="z14-1h-y0M" secondAttribute="bottom" constant="5" id="Iu6-YK-XEt"/>
+                <constraint firstItem="z14-1h-y0M" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kWW-1h-zUR"/>
+                <constraint firstItem="z14-1h-y0M" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.7" id="lEw-hM-Fhy"/>
+                <constraint firstItem="z14-1h-y0M" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="tEv-LK-oR9"/>
+            </constraints>
+            <size key="customSize" width="274" height="220"/>
+            <connections>
+                <outlet property="idLabel" destination="FTR-Ez-rHU" id="x1H-QA-C76"/>
+                <outlet property="storyProfileImage" destination="z14-1h-y0M" id="KqE-MZ-HCG"/>
+            </connections>
+            <point key="canvasLocation" x="294.20289855072468" y="162.72321428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>
