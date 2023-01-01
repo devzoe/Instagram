@@ -26,4 +26,10 @@ class SignInViewController: BaseViewController {
         self.changeRootViewController(mainTabBarController)
     }
     
+    @IBAction func signUpButtonTouchUpInside(_ sender: UIButton) {
+        let signUpViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "SignUpNavigationController")
+        signUpViewController.modalPresentationStyle = .fullScreen
+        self.present(signUpViewController, animated: true, completion: nil)
+        
+    }
 }

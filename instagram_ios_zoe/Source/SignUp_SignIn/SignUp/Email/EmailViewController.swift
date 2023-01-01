@@ -9,9 +9,10 @@ import UIKit
 
 class EmailViewController: UIViewController {
 
+    @IBOutlet weak var emailNextButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.emailNextButton.setCornerRadius(10)
         // Do any additional setup after loading the view.
     }
     

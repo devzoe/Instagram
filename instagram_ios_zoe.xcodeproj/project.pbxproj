@@ -43,6 +43,8 @@
 		2FBE45F32961E2BC00051BB5 /* ServiceAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45F22961E2BC00051BB5 /* ServiceAgreementViewController.swift */; };
 		2FBE45F52961E2CC00051BB5 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45F42961E2CC00051BB5 /* NicknameViewController.swift */; };
 		2FBE45F82961E48300051BB5 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45F72961E48300051BB5 /* BirthdayViewController.swift */; };
+		2FBE45FB2961EFD100051BB5 /* AuthCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45FA2961EFD100051BB5 /* AuthCodeViewController.swift */; };
+		2FBE45FE2961F06600051BB5 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45FD2961F06600051BB5 /* FinalViewController.swift */; };
 		949B388F491D6AE3D54C81B1 /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */; };
 		C296CADFC5AF771CA70DF1A8 /* Pods_instagram_ios_zoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */; };
 /* End PBXBuildFile section */
@@ -106,6 +108,8 @@
 		2FBE45F22961E2BC00051BB5 /* ServiceAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAgreementViewController.swift; sourceTree = "<group>"; };
 		2FBE45F42961E2CC00051BB5 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		2FBE45F72961E48300051BB5 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
+		2FBE45FA2961EFD100051BB5 /* AuthCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeViewController.swift; sourceTree = "<group>"; };
+		2FBE45FD2961F06600051BB5 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634E153C4F73C1194F9601D1 /* Pods-instagram_ios_zoeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoeTests.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoeTests/Pods-instagram_ios_zoeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -299,12 +303,14 @@
 				2FBE45D92960E54A00051BB5 /* SignUpViewController.swift */,
 				2FBE45DD29619EAC00051BB5 /* TabViewController.swift */,
 				2FBE45E32961E1E600051BB5 /* Phone */,
+				2FBE45F92961EF6C00051BB5 /* AuthCode */,
 				2FBE45E42961E1EE00051BB5 /* Email */,
 				2FBE45E52961E1FE00051BB5 /* Name */,
 				2FBE45E62961E20700051BB5 /* Password */,
 				2FBE45F62961E46800051BB5 /* Birthday */,
 				2FBE45E72961E20F00051BB5 /* ServiceAgreement */,
 				2FBE45E82961E23100051BB5 /* Nickname */,
+				2FBE45FC2961F05100051BB5 /* Final */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -412,6 +418,22 @@
 				2FBE45F72961E48300051BB5 /* BirthdayViewController.swift */,
 			);
 			path = Birthday;
+			sourceTree = "<group>";
+		};
+		2FBE45F92961EF6C00051BB5 /* AuthCode */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE45FA2961EFD100051BB5 /* AuthCodeViewController.swift */,
+			);
+			path = AuthCode;
+			sourceTree = "<group>";
+		};
+		2FBE45FC2961F05100051BB5 /* Final */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE45FD2961F06600051BB5 /* FinalViewController.swift */,
+			);
+			path = Final;
 			sourceTree = "<group>";
 		};
 		BC44B8AFC7FDC88D93BB384B /* Pods */ = {
@@ -691,6 +713,7 @@
 				2FBE45D42960DA3C00051BB5 /* UIViewController.swift in Sources */,
 				2FBE45DE29619EAC00051BB5 /* TabViewController.swift in Sources */,
 				2FBE45EB2961E28B00051BB5 /* PhoneViewController.swift in Sources */,
+				2FBE45FB2961EFD100051BB5 /* AuthCodeViewController.swift in Sources */,
 				2FBE4571295FE69500051BB5 /* AppDelegate.swift in Sources */,
 				2FBE45EF2961E2A200051BB5 /* NameViewController.swift in Sources */,
 				2FBE45F32961E2BC00051BB5 /* ServiceAgreementViewController.swift in Sources */,
@@ -698,6 +721,7 @@
 				2FBE45DA2960E54A00051BB5 /* SignUpViewController.swift in Sources */,
 				2FBE4573295FE69500051BB5 /* SceneDelegate.swift in Sources */,
 				2FBE45ED2961E29600051BB5 /* EmailViewController.swift in Sources */,
+				2FBE45FE2961F06600051BB5 /* FinalViewController.swift in Sources */,
 				2FBE45CF2960CFE100051BB5 /* SignInViewController.swift in Sources */,
 				2FBE457B295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld in Sources */,
 				2FBE45F52961E2CC00051BB5 /* NicknameViewController.swift in Sources */,

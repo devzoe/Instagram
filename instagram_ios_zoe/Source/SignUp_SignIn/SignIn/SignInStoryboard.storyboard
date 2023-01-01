@@ -98,6 +98,9 @@
                                         <state key="normal" title="가입하기">
                                             <color key="titleColor" red="0.14946120979999999" green="0.55989861490000004" blue="0.96474975350000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signUpButtonTouchUpInside:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="o8R-73-1mw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

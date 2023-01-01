@@ -9,22 +9,18 @@ import UIKit
 
 class PhoneViewController: UIViewController {
     
-    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var phoneNextButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.phoneNextButton.setCornerRadius(10)
+       
     }
+    
     @IBAction func phoneNextButtonTouchUpInside(_ sender: UIButton) {
         let codeViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "CodeViewController")
         
         self.navigationController?.pushViewController(codeViewController, animated: true)
         
-    }
-    @IBAction func codeNumberNextButtonTouchUpInside(_ sender: UIButton) {
-        let nameViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "NameViewController")
-        
-        self.navigationController?.pushViewController(nameViewController, animated: true)
-    }
-    
+    }    
 }

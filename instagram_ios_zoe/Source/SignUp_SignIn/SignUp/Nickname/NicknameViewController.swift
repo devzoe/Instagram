@@ -9,11 +9,12 @@ import UIKit
 
 class NicknameViewController: UIViewController {
 
-    @IBOutlet weak var nicknameLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.nextButton.setCornerRadius(10)
+        
     }
     
     @IBAction func nextButtonTouchUpInside(_ sender: UIButton) {
@@ -21,10 +22,6 @@ class NicknameViewController: UIViewController {
         
         self.navigationController?.pushViewController(finalViewController, animated: true)
     }
-    
-    @IBAction func signUpButtonTouchUpInside(_ sender: UIButton) {
-        let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
-        self.changeRootViewController(mainTabBarController)
-    }
+
     
 }

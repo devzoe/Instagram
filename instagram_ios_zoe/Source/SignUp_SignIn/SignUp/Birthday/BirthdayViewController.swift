@@ -9,9 +9,10 @@ import UIKit
 
 class BirthdayViewController: UIViewController {
 
+    @IBOutlet weak var nextButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.nextButton.setCornerRadius(10)
         // Do any additional setup after loading the view.
     }
     
