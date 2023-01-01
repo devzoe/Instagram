@@ -9,17 +9,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="HomeViewController" customModule="instagram_ios_zoe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MoZ-xZ-Ub0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="89.5"/>
+                                <connections>
+                                    <segue destination="nK7-JH-jiR" kind="embed" id="2fM-Ca-y0B"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MoZ-xZ-Ub0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="OKN-Hd-DfM"/>
+                            <constraint firstItem="MoZ-xZ-Ub0" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.1" id="Tqo-Yu-CHS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MoZ-xZ-Ub0" secondAttribute="trailing" id="Ydw-WC-f1h"/>
+                            <constraint firstItem="MoZ-xZ-Ub0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="bwQ-qg-jIU"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FeJ-fD-jkj"/>
+                    <navigationItem key="navigationItem" id="FeJ-fD-jkj">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Instagram" id="TG4-QF-LHj"/>
+                        <rightBarButtonItems>
+                            <barButtonItem image="paperplane" catalog="system" id="05V-QA-HkI"/>
+                            <barButtonItem image="heart" catalog="system" id="Cin-Fz-zsg"/>
+                            <barButtonItem title="Item" image="plus.square" catalog="system" id="Qr4-qn-fWN"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,9 +65,26 @@
             </objects>
             <point key="canvasLocation" x="-416" y="104"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="SGe-jk-HJz">
+            <objects>
+                <viewController id="nK7-JH-jiR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="04K-G2-tVk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFD-0D-sTe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="-110"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="paperplane" catalog="system" width="128" height="118"/>
+        <image name="plus.square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
