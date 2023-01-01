@@ -21,7 +21,7 @@ class SignInViewController: BaseViewController {
         self.passwordTextField.setPlaceHolder("비밀번호", .darkGray)
     }
     
-    @IBAction func loginButtonClicked(_ sender: UIButton) {
+    @IBAction func loginButtonTouchUpInside(_ sender: UIButton) {
         let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
         self.changeRootViewController(mainTabBarController)
     }
