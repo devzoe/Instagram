@@ -8,7 +8,7 @@
 import UIKit
 
 class FinalViewController: BaseViewController {
-    @IBOutlet weak var nicknameLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var signUpButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()

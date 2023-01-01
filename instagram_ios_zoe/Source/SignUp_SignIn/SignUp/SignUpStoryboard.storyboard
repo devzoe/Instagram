@@ -583,10 +583,10 @@
             </objects>
             <point key="canvasLocation" x="4628.985507246377" y="-266.51785714285711"/>
         </scene>
-        <!--Nickname View Controller-->
+        <!--Id View Controller-->
         <scene sceneID="cC9-Pg-ikG">
             <objects>
-                <viewController storyboardIdentifier="NicknameViewController" id="xD2-oT-Ct3" customClass="NicknameViewController" customModule="instagram_ios_zoe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IdViewController" id="xD2-oT-Ct3" customClass="IdViewController" customModule="instagram_ios_zoe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gY9-AQ-J9n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -719,7 +719,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nicknameLabel" destination="w34-6M-ZUQ" id="7s3-Ff-nYZ"/>
+                        <outlet property="idLabel" destination="w34-6M-ZUQ" id="WmX-N2-U0Q"/>
                         <outlet property="signUpButton" destination="oKj-4j-39k" id="nLn-hI-bkr"/>
                     </connections>
                 </viewController>

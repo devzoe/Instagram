@@ -18,7 +18,7 @@ class ServiceAgreementViewController: BaseViewController {
   
 
     @IBAction func nextButtonTouchUpInside(_ sender: UIButton) {
-        let nicknameViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "NicknameViewController")
+        let nicknameViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "IdViewController")
         
         self.navigationController?.pushViewController(nicknameViewController, animated: true)
     }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NicknameViewController: BaseViewController {
+class IdViewController: BaseViewController {
 
     @IBOutlet weak var nextButton: UIButton!
 
