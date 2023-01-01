@@ -18,8 +18,11 @@ class StoryCollectionViewCell: UICollectionViewCell {
     }
 
     public func get(data: Story) {
-        storyProfileImage.layer.cornerRadius = storyProfileImage.frame.width / 2
-        storyProfileImage.clipsToBounds = true
+        DispatchQueue.main.async {
+            self.storyProfileImage.layer.cornerRadius = self.storyProfileImage.frame.width / 2
+            self.storyProfileImage.clipsToBounds = true
+        }
+        
         
         storyProfileImage.image = UIImage(named: data.profileImageName)
         idLabel.text = data.id

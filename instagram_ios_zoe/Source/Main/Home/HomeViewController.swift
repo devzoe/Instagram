@@ -8,10 +8,10 @@
 import UIKit
 
 class HomeViewController: BaseViewController {
-
+    @IBOutlet weak var instagramButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        instagramButton.setTitleTextAttributes([NSAttributedString.Key.font : UIFont.billabong(size: 35)], for: .normal)
     }
 }

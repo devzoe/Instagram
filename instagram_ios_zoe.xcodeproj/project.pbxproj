@@ -57,6 +57,14 @@
 		2FBE461829622A5100051BB5 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE461629622A5100051BB5 /* FeedTableViewCell.xib */; };
 		2FBE461B29622FF600051BB5 /* FeedResonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE461A29622FF600051BB5 /* FeedResonse.swift */; };
 		2FBE461D2962302900051BB5 /* FeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE461C2962302900051BB5 /* FeedDataManager.swift */; };
+		2FBE46202962376100051BB5 /* SignInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE461F2962376100051BB5 /* SignInDataManager.swift */; };
+		2FBE4622296237AC00051BB5 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4621296237AC00051BB5 /* SignInRequest.swift */; };
+		2FBE4624296237C200051BB5 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4623296237C200051BB5 /* SignInResponse.swift */; };
+		2FBE4626296239A000051BB5 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4625296239A000051BB5 /* IndicatorView.swift */; };
+		2FBE462829623ABD00051BB5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE462729623ABD00051BB5 /* String.swift */; };
+		2FBE462A29623BC100051BB5 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE462929623BC100051BB5 /* UIColor.swift */; };
+		2FBE462E296243CC00051BB5 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE462D296243CC00051BB5 /* UIFont.swift */; };
+		2FBE46302962473E00051BB5 /* billabong.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE462F2962473E00051BB5 /* billabong.otf */; };
 		949B388F491D6AE3D54C81B1 /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */; };
 		C296CADFC5AF771CA70DF1A8 /* Pods_instagram_ios_zoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */; };
 /* End PBXBuildFile section */
@@ -134,6 +142,14 @@
 		2FBE461629622A5100051BB5 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		2FBE461A29622FF600051BB5 /* FeedResonse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResonse.swift; sourceTree = "<group>"; };
 		2FBE461C2962302900051BB5 /* FeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataManager.swift; sourceTree = "<group>"; };
+		2FBE461F2962376100051BB5 /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; };
+		2FBE4621296237AC00051BB5 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
+		2FBE4623296237C200051BB5 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
+		2FBE4625296239A000051BB5 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		2FBE462729623ABD00051BB5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		2FBE462929623BC100051BB5 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		2FBE462D296243CC00051BB5 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		2FBE462F2962473E00051BB5 /* billabong.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = billabong.otf; path = ../../../../../../Downloads/billabong.otf; sourceTree = "<group>"; };
 		45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634E153C4F73C1194F9601D1 /* Pods-instagram_ios_zoeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoeTests.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoeTests/Pods-instagram_ios_zoeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +263,7 @@
 		2FBE45A529600D7400051BB5 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				2FBE462F2962473E00051BB5 /* billabong.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -262,6 +279,7 @@
 		2FBE45A729600D9400051BB5 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2FBE4625296239A000051BB5 /* IndicatorView.swift */,
 				2FBE46102962150000051BB5 /* Device.swift */,
 				2FBE45A929600DB600051BB5 /* Extension */,
 			);
@@ -282,8 +300,11 @@
 		2FBE45A929600DB600051BB5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				2FBE45B42960B3AF00051BB5 /* UIButton.swift */,
+				2FBE462729623ABD00051BB5 /* String.swift */,
+				2FBE462929623BC100051BB5 /* UIColor.swift */,
+				2FBE462D296243CC00051BB5 /* UIFont.swift */,
 				2FBE45BC2960BDA400051BB5 /* UIBezierPath.swift */,
+				2FBE45B42960B3AF00051BB5 /* UIButton.swift */,
 				2FBE45D02960D11C00051BB5 /* UITextField.swift */,
 				2FBE45D32960DA3C00051BB5 /* UIViewController.swift */,
 				2FBE45E12961A58100051BB5 /* TabmanViewController.swift */,
@@ -345,6 +366,8 @@
 			children = (
 				2FBE45BA2960BBA900051BB5 /* SignInStoryboard.storyboard */,
 				2FBE45CE2960CFE100051BB5 /* SignInViewController.swift */,
+				2FBE461F2962376100051BB5 /* SignInDataManager.swift */,
+				2FBE461E2962374900051BB5 /* Entity */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -504,6 +527,15 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		2FBE461E2962374900051BB5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE4621296237AC00051BB5 /* SignInRequest.swift */,
+				2FBE4623296237C200051BB5 /* SignInResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		BC44B8AFC7FDC88D93BB384B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +672,7 @@
 				2FBE45D82960E12900051BB5 /* MainStoryboard.storyboard in Resources */,
 				2FBE45C62960C9E600051BB5 /* SearchStoryboard.storyboard in Resources */,
 				2FBE45CD2960CA1400051BB5 /* ProfileStoryboard.storyboard in Resources */,
+				2FBE46302962473E00051BB5 /* billabong.otf in Resources */,
 				2FBE46062962032300051BB5 /* StoryCollectionViewCell.xib in Resources */,
 				2FBE4580295FE69700051BB5 /* LaunchScreen.storyboard in Resources */,
 				2FBE45B32960A7AB00051BB5 /* SignUpSignInStoryboard.storyboard in Resources */,
@@ -776,15 +809,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBE462829623ABD00051BB5 /* String.swift in Sources */,
 				2FBE45DC2960F11100051BB5 /* BaseViewController.swift in Sources */,
 				2FBE45E22961A58100051BB5 /* TabmanViewController.swift in Sources */,
 				2FBE45BD2960BDA400051BB5 /* UIBezierPath.swift in Sources */,
 				2FBE45D12960D11C00051BB5 /* UITextField.swift in Sources */,
 				2FBE45D42960DA3C00051BB5 /* UIViewController.swift in Sources */,
 				2FBE45DE29619EAC00051BB5 /* TabViewController.swift in Sources */,
+				2FBE4624296237C200051BB5 /* SignInResponse.swift in Sources */,
+				2FBE4622296237AC00051BB5 /* SignInRequest.swift in Sources */,
 				2FBE45EB2961E28B00051BB5 /* PhoneViewController.swift in Sources */,
 				2FBE45FB2961EFD100051BB5 /* AuthCodeViewController.swift in Sources */,
 				2FBE4571295FE69500051BB5 /* AppDelegate.swift in Sources */,
+				2FBE4626296239A000051BB5 /* IndicatorView.swift in Sources */,
 				2FBE461D2962302900051BB5 /* FeedDataManager.swift in Sources */,
 				2FBE45EF2961E2A200051BB5 /* NameViewController.swift in Sources */,
 				2FBE46112962150000051BB5 /* Device.swift in Sources */,
@@ -794,11 +831,13 @@
 				2FBE45AD29600E4900051BB5 /* Constant.swift in Sources */,
 				2FBE45DA2960E54A00051BB5 /* SignUpViewController.swift in Sources */,
 				2FBE4573295FE69500051BB5 /* SceneDelegate.swift in Sources */,
+				2FBE462A29623BC100051BB5 /* UIColor.swift in Sources */,
 				2FBE45ED2961E29600051BB5 /* EmailViewController.swift in Sources */,
 				2FBE45FE2961F06600051BB5 /* FinalViewController.swift in Sources */,
 				2FBE45CF2960CFE100051BB5 /* SignInViewController.swift in Sources */,
 				2FBE457B295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld in Sources */,
 				2FBE46082962058000051BB5 /* StoryViewController.swift in Sources */,
+				2FBE462E296243CC00051BB5 /* UIFont.swift in Sources */,
 				2FBE46142962299600051BB5 /* FeedViewController.swift in Sources */,
 				2FBE45F52961E2CC00051BB5 /* IdViewController.swift in Sources */,
 				2FBE460D29620B5400051BB5 /* StoryResponse.swift in Sources */,
@@ -809,6 +848,7 @@
 				2FBE45F12961E2AD00051BB5 /* PasswordViewController.swift in Sources */,
 				2FBE45F82961E48300051BB5 /* BirthdayViewController.swift in Sources */,
 				2FBE461B29622FF600051BB5 /* FeedResonse.swift in Sources */,
+				2FBE46202962376100051BB5 /* SignInDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

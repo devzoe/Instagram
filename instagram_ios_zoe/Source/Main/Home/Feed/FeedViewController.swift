@@ -39,7 +39,7 @@ extension FeedViewController {
     }
     
     func failedToRequest(message: String) {
-        //self.presentAlert(title: message)
+        self.presentAlert(title: message)
     }
 }
 

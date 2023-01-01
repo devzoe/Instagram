@@ -8,6 +8,7 @@
 import UIKit
 
 class SignInViewController: BaseViewController {
+    lazy var dataManager: SignInDataManager = SignInDataManager()
 
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -22,14 +23,47 @@ class SignInViewController: BaseViewController {
     }
     
     @IBAction func loginButtonTouchUpInside(_ sender: UIButton) {
-        let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
-        self.changeRootViewController(mainTabBarController)
+        // ID validation
+        guard let id = idTextField.text?.trim, id.isExists else {
+            self.presentAlert(title: "아이디를 입력해주세요")
+            return
+        }
+        
+        // Password validation
+        guard let password = passwordTextField.text, password.isExists else {
+            self.presentAlert(title: "비밀번호를 입력해주세요")
+            return
+        }
+        
+        // Requst Sign In
+        self.dismissKeyboard()
+        self.showIndicator()
+        let input = SignInRequest(id: id, password: password)
+        dataManager.postSignIn(input, delegate: self)
     }
+        
+    
     
     @IBAction func signUpButtonTouchUpInside(_ sender: UIButton) {
         let signUpViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "SignUpNavigationController")
         signUpViewController.modalPresentationStyle = .fullScreen
         self.present(signUpViewController, animated: true, completion: nil)
         
+    }
+}
+
+extension SignInViewController {
+    func didSuccessSignIn(_ result: SignInResult) {
+        self.presentAlert(title: "로그인에 성공하였습니다", message: result.token)
+        
+        // 자동로그인을 위해 토큰 저장
+        //UserDefaults.standard.set(result.token, forKey: "LoginUserIdentifier")
+        
+        let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
+        self.changeRootViewController(mainTabBarController)
+    }
+    
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
     }
 }

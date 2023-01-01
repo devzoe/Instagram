@@ -24,8 +24,10 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     public func get(data: Feed) {
-        profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
-        profileImageView.clipsToBounds = true
+        DispatchQueue.main.async {
+            self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
+            self.profileImageView.clipsToBounds = true
+        }
         
         profileImageView.image = UIImage(named: data.profileImageName)
         idLabel.text = data.id
