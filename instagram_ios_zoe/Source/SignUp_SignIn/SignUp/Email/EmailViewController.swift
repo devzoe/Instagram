@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EmailViewController: UIViewController {
+class EmailViewController: BaseViewController {
 
     @IBOutlet weak var emailNextButton: UIButton!
     override func viewDidLoad() {

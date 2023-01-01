@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BirthdayViewController: UIViewController {
+class BirthdayViewController: BaseViewController {
 
     @IBOutlet weak var nextButton: UIButton!
     override func viewDidLoad() {

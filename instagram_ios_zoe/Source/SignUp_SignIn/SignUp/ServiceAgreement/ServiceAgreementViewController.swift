@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ServiceAgreementViewController: UIViewController {
+class ServiceAgreementViewController: BaseViewController {
 
     @IBOutlet weak var nextButton: UIButton!
     override func viewDidLoad() {

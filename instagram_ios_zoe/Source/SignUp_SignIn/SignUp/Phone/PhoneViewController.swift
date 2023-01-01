@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PhoneViewController: UIViewController {
+class PhoneViewController: BaseViewController {
     
     @IBOutlet weak var phoneNextButton: UIButton!
 

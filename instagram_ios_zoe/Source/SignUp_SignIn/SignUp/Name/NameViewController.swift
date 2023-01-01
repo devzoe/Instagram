@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NameViewController: UIViewController {
+class NameViewController: BaseViewController {
 
     @IBOutlet weak var nextButton: UIButton!
     override func viewDidLoad() {

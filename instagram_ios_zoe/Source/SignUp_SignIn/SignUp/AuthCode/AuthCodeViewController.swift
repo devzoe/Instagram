@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthCodeViewController: UIViewController {
+class AuthCodeViewController: BaseViewController {
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var codeNumberNextButton: UIButton!
     override func viewDidLoad() {
