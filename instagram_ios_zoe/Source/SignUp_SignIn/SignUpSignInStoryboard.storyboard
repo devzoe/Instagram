@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sing Up Sign In View Controller-->
+        <!--Sign Up Sign In View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SingUpSignInViewController" id="Y6W-OH-hqX" customClass="SingUpSignInViewController" customModule="instagram_ios_zoe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpSignInViewController" id="Y6W-OH-hqX" customClass="SignUpSignInViewController" customModule="instagram_ios_zoe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="signUpButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hcN-5g-vxd"/>
+                                            <action selector="signUpButtonTouchUpInside:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="clN-gY-dVJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7T-FB-AQk">
@@ -44,7 +44,7 @@
                                             <color key="titleColor" red="0.26042997839999998" green="0.5844240785" blue="0.96866983179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
-                                            <action selector="signInButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gkU-tN-j3N"/>
+                                            <action selector="signInButtonTouchUpInside:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kZa-Lf-KZO"/>
                                         </connections>
                                     </button>
                                 </subviews>

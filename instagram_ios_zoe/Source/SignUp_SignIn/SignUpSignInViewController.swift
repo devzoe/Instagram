@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SingUpSignInViewController: BaseViewController {
+class SignUpSignInViewController: BaseViewController {
 
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
@@ -19,12 +19,12 @@ class SingUpSignInViewController: BaseViewController {
         self.signUpButton.setCornerRadius(10)
     }
     
-    @IBAction func signUpButtonClicked(_ sender: UIButton) {
+    @IBAction func signUpButtonTouchUpInside(_ sender: UIButton) {
         let signUpViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "SignUpNavigationController")
         signUpViewController.modalPresentationStyle = .fullScreen
         self.present(signUpViewController, animated: true, completion: nil)
     }
-    @IBAction func signInButtonClicked(_ sender: UIButton) {
+    @IBAction func signInButtonTouchUpInside(_ sender: UIButton) {
         let signInViewController = UIStoryboard(name: "SignInStoryboard", bundle: nil).instantiateViewController(identifier: "SignInViewController")
         signInViewController.modalPresentationStyle = .fullScreen
         self.present(signInViewController, animated: true, completion: nil)

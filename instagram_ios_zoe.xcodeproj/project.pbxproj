@@ -10,7 +10,6 @@
 		1301DE2CDF3A2D88FF2A2DFB /* Pods_instagram_ios_zoeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C22EBD738C32BC53AE1821 /* Pods_instagram_ios_zoeTests.framework */; };
 		2FBE4571295FE69500051BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4570295FE69500051BB5 /* AppDelegate.swift */; };
 		2FBE4573295FE69500051BB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4572295FE69500051BB5 /* SceneDelegate.swift */; };
-		2FBE4575295FE69500051BB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4574295FE69500051BB5 /* ViewController.swift */; };
 		2FBE457B295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4579295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld */; };
 		2FBE457D295FE69700051BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE457C295FE69700051BB5 /* Assets.xcassets */; };
 		2FBE4580295FE69700051BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE457E295FE69700051BB5 /* LaunchScreen.storyboard */; };
@@ -20,7 +19,7 @@
 		2FBE45AD29600E4900051BB5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45AC29600E4900051BB5 /* Constant.swift */; };
 		2FBE45B32960A7AB00051BB5 /* SignUpSignInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE45B22960A7AB00051BB5 /* SignUpSignInStoryboard.storyboard */; };
 		2FBE45B52960B3AF00051BB5 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45B42960B3AF00051BB5 /* UIButton.swift */; };
-		2FBE45B72960B47700051BB5 /* SingUpSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45B62960B47700051BB5 /* SingUpSignInViewController.swift */; };
+		2FBE45B72960B47700051BB5 /* SignUpSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45B62960B47700051BB5 /* SignUpSignInViewController.swift */; };
 		2FBE45B92960BB9A00051BB5 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE45B82960BB9A00051BB5 /* SignUpStoryboard.storyboard */; };
 		2FBE45BB2960BBA900051BB5 /* SignInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE45BA2960BBA900051BB5 /* SignInStoryboard.storyboard */; };
 		2FBE45BD2960BDA400051BB5 /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45BC2960BDA400051BB5 /* UIBezierPath.swift */; };
@@ -35,6 +34,15 @@
 		2FBE45D82960E12900051BB5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE45D72960E12900051BB5 /* MainStoryboard.storyboard */; };
 		2FBE45DA2960E54A00051BB5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45D92960E54A00051BB5 /* SignUpViewController.swift */; };
 		2FBE45DC2960F11100051BB5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45DB2960F11100051BB5 /* BaseViewController.swift */; };
+		2FBE45DE29619EAC00051BB5 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45DD29619EAC00051BB5 /* TabViewController.swift */; };
+		2FBE45E22961A58100051BB5 /* TabmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45E12961A58100051BB5 /* TabmanViewController.swift */; };
+		2FBE45EB2961E28B00051BB5 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45EA2961E28B00051BB5 /* PhoneViewController.swift */; };
+		2FBE45ED2961E29600051BB5 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45EC2961E29600051BB5 /* EmailViewController.swift */; };
+		2FBE45EF2961E2A200051BB5 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45EE2961E2A200051BB5 /* NameViewController.swift */; };
+		2FBE45F12961E2AD00051BB5 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45F02961E2AD00051BB5 /* PasswordViewController.swift */; };
+		2FBE45F32961E2BC00051BB5 /* ServiceAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45F22961E2BC00051BB5 /* ServiceAgreementViewController.swift */; };
+		2FBE45F52961E2CC00051BB5 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45F42961E2CC00051BB5 /* NicknameViewController.swift */; };
+		2FBE45F82961E48300051BB5 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45F72961E48300051BB5 /* BirthdayViewController.swift */; };
 		949B388F491D6AE3D54C81B1 /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */; };
 		C296CADFC5AF771CA70DF1A8 /* Pods_instagram_ios_zoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */; };
 /* End PBXBuildFile section */
@@ -62,7 +70,6 @@
 		2FBE456D295FE69500051BB5 /* instagram_ios_zoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram_ios_zoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FBE4570295FE69500051BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FBE4572295FE69500051BB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2FBE4574295FE69500051BB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2FBE457A295FE69500051BB5 /* instagram_ios_zoe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = instagram_ios_zoe.xcdatamodel; sourceTree = "<group>"; };
 		2FBE457C295FE69700051BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FBE457F295FE69700051BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,7 +82,7 @@
 		2FBE45AC29600E4900051BB5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2FBE45B22960A7AB00051BB5 /* SignUpSignInStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpSignInStoryboard.storyboard; sourceTree = "<group>"; };
 		2FBE45B42960B3AF00051BB5 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		2FBE45B62960B47700051BB5 /* SingUpSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpSignInViewController.swift; sourceTree = "<group>"; };
+		2FBE45B62960B47700051BB5 /* SignUpSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSignInViewController.swift; sourceTree = "<group>"; };
 		2FBE45B82960BB9A00051BB5 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		2FBE45BA2960BBA900051BB5 /* SignInStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInStoryboard.storyboard; sourceTree = "<group>"; };
 		2FBE45BC2960BDA400051BB5 /* UIBezierPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
@@ -90,6 +97,15 @@
 		2FBE45D72960E12900051BB5 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		2FBE45D92960E54A00051BB5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2FBE45DB2960F11100051BB5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2FBE45DD29619EAC00051BB5 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		2FBE45E12961A58100051BB5 /* TabmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabmanViewController.swift; sourceTree = "<group>"; };
+		2FBE45EA2961E28B00051BB5 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		2FBE45EC2961E29600051BB5 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		2FBE45EE2961E2A200051BB5 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		2FBE45F02961E2AD00051BB5 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		2FBE45F22961E2BC00051BB5 /* ServiceAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAgreementViewController.swift; sourceTree = "<group>"; };
+		2FBE45F42961E2CC00051BB5 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
+		2FBE45F72961E48300051BB5 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 		45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634E153C4F73C1194F9601D1 /* Pods-instagram_ios_zoeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoeTests.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoeTests/Pods-instagram_ios_zoeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,7 +173,6 @@
 				2FBE45A829600DA100051BB5 /* Source */,
 				2FBE4570295FE69500051BB5 /* AppDelegate.swift */,
 				2FBE4572295FE69500051BB5 /* SceneDelegate.swift */,
-				2FBE4574295FE69500051BB5 /* ViewController.swift */,
 				2FBE457C295FE69700051BB5 /* Assets.xcassets */,
 				2FBE457E295FE69700051BB5 /* LaunchScreen.storyboard */,
 				2FBE4581295FE69700051BB5 /* Info.plist */,
@@ -242,6 +257,7 @@
 				2FBE45BC2960BDA400051BB5 /* UIBezierPath.swift */,
 				2FBE45D02960D11C00051BB5 /* UITextField.swift */,
 				2FBE45D32960DA3C00051BB5 /* UIViewController.swift */,
+				2FBE45E12961A58100051BB5 /* TabmanViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -269,7 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				2FBE45B22960A7AB00051BB5 /* SignUpSignInStoryboard.storyboard */,
-				2FBE45B62960B47700051BB5 /* SingUpSignInViewController.swift */,
+				2FBE45B62960B47700051BB5 /* SignUpSignInViewController.swift */,
 				2FBE45AF2960A63700051BB5 /* SignUp */,
 				2FBE45B12960A66B00051BB5 /* SignIn */,
 			);
@@ -281,6 +297,14 @@
 			children = (
 				2FBE45B82960BB9A00051BB5 /* SignUpStoryboard.storyboard */,
 				2FBE45D92960E54A00051BB5 /* SignUpViewController.swift */,
+				2FBE45DD29619EAC00051BB5 /* TabViewController.swift */,
+				2FBE45E32961E1E600051BB5 /* Phone */,
+				2FBE45E42961E1EE00051BB5 /* Email */,
+				2FBE45E52961E1FE00051BB5 /* Name */,
+				2FBE45E62961E20700051BB5 /* Password */,
+				2FBE45F62961E46800051BB5 /* Birthday */,
+				2FBE45E72961E20F00051BB5 /* ServiceAgreement */,
+				2FBE45E82961E23100051BB5 /* Nickname */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -332,6 +356,62 @@
 				2FBE45C52960C9E600051BB5 /* SearchStoryboard.storyboard */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		2FBE45E32961E1E600051BB5 /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE45EA2961E28B00051BB5 /* PhoneViewController.swift */,
+			);
+			path = Phone;
+			sourceTree = "<group>";
+		};
+		2FBE45E42961E1EE00051BB5 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE45EC2961E29600051BB5 /* EmailViewController.swift */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		2FBE45E52961E1FE00051BB5 /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE45EE2961E2A200051BB5 /* NameViewController.swift */,
+			);
+			path = Name;
+			sourceTree = "<group>";
+		};
+		2FBE45E62961E20700051BB5 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE45F02961E2AD00051BB5 /* PasswordViewController.swift */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		2FBE45E72961E20F00051BB5 /* ServiceAgreement */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE45F22961E2BC00051BB5 /* ServiceAgreementViewController.swift */,
+			);
+			path = ServiceAgreement;
+			sourceTree = "<group>";
+		};
+		2FBE45E82961E23100051BB5 /* Nickname */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE45F42961E2CC00051BB5 /* NicknameViewController.swift */,
+			);
+			path = Nickname;
+			sourceTree = "<group>";
+		};
+		2FBE45F62961E46800051BB5 /* Birthday */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE45F72961E48300051BB5 /* BirthdayViewController.swift */,
+			);
+			path = Birthday;
 			sourceTree = "<group>";
 		};
 		BC44B8AFC7FDC88D93BB384B /* Pods */ = {
@@ -605,18 +685,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FBE45DC2960F11100051BB5 /* BaseViewController.swift in Sources */,
+				2FBE45E22961A58100051BB5 /* TabmanViewController.swift in Sources */,
 				2FBE45BD2960BDA400051BB5 /* UIBezierPath.swift in Sources */,
 				2FBE45D12960D11C00051BB5 /* UITextField.swift in Sources */,
-				2FBE4575295FE69500051BB5 /* ViewController.swift in Sources */,
 				2FBE45D42960DA3C00051BB5 /* UIViewController.swift in Sources */,
+				2FBE45DE29619EAC00051BB5 /* TabViewController.swift in Sources */,
+				2FBE45EB2961E28B00051BB5 /* PhoneViewController.swift in Sources */,
 				2FBE4571295FE69500051BB5 /* AppDelegate.swift in Sources */,
+				2FBE45EF2961E2A200051BB5 /* NameViewController.swift in Sources */,
+				2FBE45F32961E2BC00051BB5 /* ServiceAgreementViewController.swift in Sources */,
 				2FBE45AD29600E4900051BB5 /* Constant.swift in Sources */,
 				2FBE45DA2960E54A00051BB5 /* SignUpViewController.swift in Sources */,
 				2FBE4573295FE69500051BB5 /* SceneDelegate.swift in Sources */,
+				2FBE45ED2961E29600051BB5 /* EmailViewController.swift in Sources */,
 				2FBE45CF2960CFE100051BB5 /* SignInViewController.swift in Sources */,
 				2FBE457B295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld in Sources */,
-				2FBE45B72960B47700051BB5 /* SingUpSignInViewController.swift in Sources */,
+				2FBE45F52961E2CC00051BB5 /* NicknameViewController.swift in Sources */,
+				2FBE45B72960B47700051BB5 /* SignUpSignInViewController.swift in Sources */,
 				2FBE45B52960B3AF00051BB5 /* UIButton.swift in Sources */,
+				2FBE45F12961E2AD00051BB5 /* PasswordViewController.swift in Sources */,
+				2FBE45F82961E48300051BB5 /* BirthdayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
