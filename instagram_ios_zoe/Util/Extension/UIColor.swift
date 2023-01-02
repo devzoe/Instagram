@@ -22,4 +22,7 @@ extension UIColor {
     // MARK: 메인 테마 색 또는 자주 쓰는 색을 정의
     // ex. label.textColor = .mainOrange
     class var mainOrange: UIColor { UIColor(hex: 0xF5663F) }
+    
+    class var buttonIsEnableFalse: UIColor { UIColor(hex: 0xB6D7F4) }
+    class var buttonIsEnableTrue: UIColor { UIColor(hex: 0x4295F7)}
 }
