@@ -43,7 +43,7 @@
 		2FBE45F32961E2BC00051BB5 /* ServiceAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45F22961E2BC00051BB5 /* ServiceAgreementViewController.swift */; };
 		2FBE45F52961E2CC00051BB5 /* IdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45F42961E2CC00051BB5 /* IdViewController.swift */; };
 		2FBE45F82961E48300051BB5 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45F72961E48300051BB5 /* BirthdayViewController.swift */; };
-		2FBE45FB2961EFD100051BB5 /* AuthCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45FA2961EFD100051BB5 /* AuthCodeViewController.swift */; };
+		2FBE45FB2961EFD100051BB5 /* PhoneAuthCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45FA2961EFD100051BB5 /* PhoneAuthCodeViewController.swift */; };
 		2FBE45FE2961F06600051BB5 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45FD2961F06600051BB5 /* FinalViewController.swift */; };
 		2FBE46002961F95100051BB5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE45FF2961F95100051BB5 /* HomeViewController.swift */; };
 		2FBE46052962032300051BB5 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE46032962032300051BB5 /* StoryCollectionViewCell.swift */; };
@@ -65,6 +65,8 @@
 		2FBE462A29623BC100051BB5 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE462929623BC100051BB5 /* UIColor.swift */; };
 		2FBE462E296243CC00051BB5 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE462D296243CC00051BB5 /* UIFont.swift */; };
 		2FBE46302962473E00051BB5 /* billabong.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE462F2962473E00051BB5 /* billabong.otf */; };
+		2FBE46322962508E00051BB5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE46312962508E00051BB5 /* Date.swift */; };
+		2FBE46352962622300051BB5 /* EmailAuthCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE46342962622300051BB5 /* EmailAuthCodeViewController.swift */; };
 		949B388F491D6AE3D54C81B1 /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */; };
 		C296CADFC5AF771CA70DF1A8 /* Pods_instagram_ios_zoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */; };
 /* End PBXBuildFile section */
@@ -128,7 +130,7 @@
 		2FBE45F22961E2BC00051BB5 /* ServiceAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAgreementViewController.swift; sourceTree = "<group>"; };
 		2FBE45F42961E2CC00051BB5 /* IdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdViewController.swift; sourceTree = "<group>"; };
 		2FBE45F72961E48300051BB5 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
-		2FBE45FA2961EFD100051BB5 /* AuthCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeViewController.swift; sourceTree = "<group>"; };
+		2FBE45FA2961EFD100051BB5 /* PhoneAuthCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthCodeViewController.swift; sourceTree = "<group>"; };
 		2FBE45FD2961F06600051BB5 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		2FBE45FF2961F95100051BB5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FBE46032962032300051BB5 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -150,6 +152,8 @@
 		2FBE462929623BC100051BB5 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		2FBE462D296243CC00051BB5 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		2FBE462F2962473E00051BB5 /* billabong.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = billabong.otf; path = ../../../../../../Downloads/billabong.otf; sourceTree = "<group>"; };
+		2FBE46312962508E00051BB5 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		2FBE46342962622300051BB5 /* EmailAuthCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthCodeViewController.swift; sourceTree = "<group>"; };
 		45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634E153C4F73C1194F9601D1 /* Pods-instagram_ios_zoeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoeTests.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoeTests/Pods-instagram_ios_zoeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -300,6 +304,7 @@
 		2FBE45A929600DB600051BB5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2FBE46312962508E00051BB5 /* Date.swift */,
 				2FBE462729623ABD00051BB5 /* String.swift */,
 				2FBE462929623BC100051BB5 /* UIColor.swift */,
 				2FBE462D296243CC00051BB5 /* UIFont.swift */,
@@ -349,7 +354,6 @@
 				2FBE45D92960E54A00051BB5 /* SignUpViewController.swift */,
 				2FBE45DD29619EAC00051BB5 /* TabViewController.swift */,
 				2FBE45E32961E1E600051BB5 /* Phone */,
-				2FBE45F92961EF6C00051BB5 /* AuthCode */,
 				2FBE45E42961E1EE00051BB5 /* Email */,
 				2FBE45E52961E1FE00051BB5 /* Name */,
 				2FBE45E62961E20700051BB5 /* Password */,
@@ -419,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				2FBE45EA2961E28B00051BB5 /* PhoneViewController.swift */,
+				2FBE45F92961EF6C00051BB5 /* PhoneAuthCode */,
 			);
 			path = Phone;
 			sourceTree = "<group>";
@@ -427,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				2FBE45EC2961E29600051BB5 /* EmailViewController.swift */,
+				2FBE46332962620300051BB5 /* EmailAuthCode */,
 			);
 			path = Email;
 			sourceTree = "<group>";
@@ -471,12 +477,12 @@
 			path = Birthday;
 			sourceTree = "<group>";
 		};
-		2FBE45F92961EF6C00051BB5 /* AuthCode */ = {
+		2FBE45F92961EF6C00051BB5 /* PhoneAuthCode */ = {
 			isa = PBXGroup;
 			children = (
-				2FBE45FA2961EFD100051BB5 /* AuthCodeViewController.swift */,
+				2FBE45FA2961EFD100051BB5 /* PhoneAuthCodeViewController.swift */,
 			);
-			path = AuthCode;
+			path = PhoneAuthCode;
 			sourceTree = "<group>";
 		};
 		2FBE45FC2961F05100051BB5 /* Final */ = {
@@ -534,6 +540,14 @@
 				2FBE4623296237C200051BB5 /* SignInResponse.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		2FBE46332962620300051BB5 /* EmailAuthCode */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE46342962622300051BB5 /* EmailAuthCodeViewController.swift */,
+			);
+			path = EmailAuthCode;
 			sourceTree = "<group>";
 		};
 		BC44B8AFC7FDC88D93BB384B /* Pods */ = {
@@ -819,10 +833,11 @@
 				2FBE4624296237C200051BB5 /* SignInResponse.swift in Sources */,
 				2FBE4622296237AC00051BB5 /* SignInRequest.swift in Sources */,
 				2FBE45EB2961E28B00051BB5 /* PhoneViewController.swift in Sources */,
-				2FBE45FB2961EFD100051BB5 /* AuthCodeViewController.swift in Sources */,
+				2FBE45FB2961EFD100051BB5 /* PhoneAuthCodeViewController.swift in Sources */,
 				2FBE4571295FE69500051BB5 /* AppDelegate.swift in Sources */,
 				2FBE4626296239A000051BB5 /* IndicatorView.swift in Sources */,
 				2FBE461D2962302900051BB5 /* FeedDataManager.swift in Sources */,
+				2FBE46322962508E00051BB5 /* Date.swift in Sources */,
 				2FBE45EF2961E2A200051BB5 /* NameViewController.swift in Sources */,
 				2FBE46112962150000051BB5 /* Device.swift in Sources */,
 				2FBE46052962032300051BB5 /* StoryCollectionViewCell.swift in Sources */,
@@ -848,6 +863,7 @@
 				2FBE45F12961E2AD00051BB5 /* PasswordViewController.swift in Sources */,
 				2FBE45F82961E48300051BB5 /* BirthdayViewController.swift in Sources */,
 				2FBE461B29622FF600051BB5 /* FeedResonse.swift in Sources */,
+				2FBE46352962622300051BB5 /* EmailAuthCodeViewController.swift in Sources */,
 				2FBE46202962376100051BB5 /* SignInDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

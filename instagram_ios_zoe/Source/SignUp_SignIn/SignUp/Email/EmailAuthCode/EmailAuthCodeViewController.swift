@@ -1,5 +1,5 @@
 //
-//  PasswordViewController.swift
+//  EmailAuthCodeViewController.swift
 //  instagram_ios_zoe
 //
 //  Created by 남경민 on 2023/01/02.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class PasswordViewController: BaseViewController {
-
-    @IBOutlet weak var passwordTextField: UITextField!
+class EmailAuthCodeViewController: BaseViewController {
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var codeNumberTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton! {
         didSet {
             nextButton.isEnabled = false
@@ -20,17 +20,18 @@ class PasswordViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        passwordTextField.delegate = self
+        codeNumberTextField.delegate = self
         self.nextButton.setCornerRadius(10)
+        self.codeNumberTextField.keyboardType = .phonePad
     }
     
     @IBAction func nextButtonTouchUpInside(_ sender: UIButton) {
-        let bdayViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "BirthdayViewController")
-        self.navigationController?.pushViewController(bdayViewController, animated: true)
+        let nameViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "NameViewController")
+        self.navigationController?.pushViewController(nameViewController, animated: true)
     }
 }
 
-extension PasswordViewController : UITextFieldDelegate {
+extension EmailAuthCodeViewController : UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
             replacementString string: String) -> Bool {
         if (range.location == 0 && range.length != 0) {
@@ -43,4 +44,3 @@ extension PasswordViewController : UITextFieldDelegate {
         return true
     }
 }
-

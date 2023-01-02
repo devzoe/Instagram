@@ -9,22 +9,35 @@ import UIKit
 
 class EmailViewController: BaseViewController {
 
-    @IBOutlet weak var emailNextButton: UIButton!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailNextButton: UIButton! {
+        didSet {
+            emailNextButton.isEnabled = false
+            emailNextButton.backgroundColor = .buttonIsEnableFalse
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
         self.emailNextButton.setCornerRadius(10)
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func emailNextButtonTouchUpInside(_ sender: UIButton) {
+        let codeViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "EmailAuthCodeViewController")
+        self.navigationController?.pushViewController(codeViewController, animated: true)
     }
-    */
+}
 
+extension EmailViewController: UITextFieldDelegate {
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+            replacementString string: String) -> Bool {
+        if (range.location == 0 && range.length != 0) {
+            self.emailNextButton.isEnabled = false
+            self.emailNextButton.backgroundColor = .buttonIsEnableFalse
+        } else {
+            self.emailNextButton.isEnabled = true
+            self.emailNextButton.backgroundColor = .buttonIsEnableTrue
+        }
+        return true
+    }
 }

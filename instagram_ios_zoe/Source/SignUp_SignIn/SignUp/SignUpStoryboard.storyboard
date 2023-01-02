@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVK-Qr-Cmo">
-                                <rect key="frame" x="56" y="158" width="302.5" height="299"/>
+                                <rect key="frame" x="56" y="158" width="303" height="299"/>
                                 <connections>
                                     <segue destination="3Rl-tL-kPX" kind="embed" id="3zt-p4-xj3"/>
                                 </connections>
@@ -102,7 +102,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRx-fv-F80">
                                 <rect key="frame" x="0.0" y="114" width="414" height="50"/>
-                                <color key="backgroundColor" red="0.71221631770000005" green="0.84443622829999998" blue="0.95687919860000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.71372549019607845" green="0.84313725490196079" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="다음"/>
@@ -136,16 +136,17 @@
                     </view>
                     <connections>
                         <outlet property="phoneNextButton" destination="FRx-fv-F80" id="Whh-tr-JlG"/>
+                        <outlet property="phoneTextField" destination="6pc-u5-zhf" id="B6G-2J-f0i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niH-es-hsL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1365" y="-266"/>
         </scene>
-        <!--Auth Code View Controller-->
+        <!--Phone Auth Code View Controller-->
         <scene sceneID="QBh-kM-8VI">
             <objects>
-                <viewController storyboardIdentifier="CodeViewController" id="mcg-ZS-v5e" customClass="AuthCodeViewController" customModule="instagram_ios_zoe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhoneAuthCodeViewController" id="mcg-ZS-v5e" customClass="PhoneAuthCodeViewController" customModule="instagram_ios_zoe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q46-rp-N8w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,6 +229,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="codeNumTextField" destination="CEb-s9-GD8" id="ZFv-iT-Kvh"/>
                         <outlet property="codeNumberNextButton" destination="Nrf-HY-xOl" id="B2Q-jZ-Fhs"/>
                         <outlet property="phoneNumberLabel" destination="Ug7-TU-XaK" id="mvN-aF-BNV"/>
                     </connections>
@@ -290,6 +292,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nameTextField" destination="wSH-SQ-SB5" id="qYn-36-uab"/>
                         <outlet property="nextButton" destination="xK2-em-Yqm" id="eqS-nD-6fd"/>
                     </connections>
                 </viewController>
@@ -373,6 +376,7 @@
                     </view>
                     <connections>
                         <outlet property="nextButton" destination="HZ6-r2-zXn" id="Lqs-k3-MX7"/>
+                        <outlet property="passwordTextField" destination="8eu-4m-D00" id="vwJ-V5-vqK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5I-O4-bcs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -441,6 +445,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthdayTextField" destination="1cq-Rm-5u6" id="Gig-by-kRY"/>
                         <outlet property="nextButton" destination="JZF-1C-dHz" id="qbL-WO-PHj"/>
                     </connections>
                 </viewController>
@@ -509,23 +514,43 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADQ-oJ-SsY">
                                 <rect key="frame" x="374" y="185.5" width="20" height="22"/>
+                                <color key="tintColor" systemColor="systemGray4Color"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="checkmark.circle" catalog="system"/>
+                                <state key="selected" image="checkmark.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="allCheckBoxTouchUpInside:" destination="TVH-NB-Deg" eventType="touchUpInside" id="FP0-dq-nTS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lk-qd-jPc">
                                 <rect key="frame" x="374" y="237" width="20" height="22"/>
+                                <color key="tintColor" systemColor="systemGray4Color"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="checkmark.circle" catalog="system"/>
+                                <state key="selected" image="checkmark.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="termsOfServiceCheckBoxTouchUpInside:" destination="TVH-NB-Deg" eventType="touchUpInside" id="TJW-NM-gWM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWc-gg-GUU">
                                 <rect key="frame" x="374" y="308" width="20" height="22"/>
+                                <color key="tintColor" systemColor="systemGray4Color"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="checkmark.circle" catalog="system"/>
+                                <state key="selected" image="checkmark.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="dataPolicyCheckBoxTouchUpInside:" destination="TVH-NB-Deg" eventType="touchUpInside" id="5TM-zw-joV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyN-9c-JS0">
                                 <rect key="frame" x="374" y="379" width="20" height="22"/>
+                                <color key="tintColor" systemColor="systemGray4Color"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="checkmark.circle" catalog="system"/>
+                                <state key="selected" image="checkmark.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="locationCheckBoxTouchUpInside:" destination="TVH-NB-Deg" eventType="touchUpInside" id="B6y-zL-iMx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkf-5R-6bv">
                                 <rect key="frame" x="20" y="817" width="374" height="45"/>
@@ -576,7 +601,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="allCheckBox" destination="ADQ-oJ-SsY" id="UX3-kt-t1m"/>
+                        <outlet property="dataPolicyCheckBox" destination="aWc-gg-GUU" id="iLt-Ju-d0d"/>
+                        <outlet property="locationCheckBox" destination="ZyN-9c-JS0" id="Rkj-jt-Saf"/>
                         <outlet property="nextButton" destination="Fkf-5R-6bv" id="6Mq-id-IiB"/>
+                        <outlet property="termsOfServiceCheckBox" destination="6lk-qd-jPc" id="HoT-a6-b04"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LI6-5o-OjX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -657,6 +686,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="idTextField" destination="i8q-bf-ETa" id="19l-12-aC9"/>
                         <outlet property="nextButton" destination="lmP-Nl-E1t" id="kNB-gO-W0r"/>
                     </connections>
                 </viewController>
@@ -749,6 +779,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="emailNextButtonTouchUpInside:" destination="wIt-4H-6cI" eventType="touchUpInside" id="iRb-9Y-rUr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ReF-gE-ujV"/>
@@ -765,11 +798,85 @@
                     </view>
                     <connections>
                         <outlet property="emailNextButton" destination="KMh-ga-J2w" id="Ten-S0-da5"/>
+                        <outlet property="emailTextField" destination="awh-BI-s27" id="GqP-hP-g0y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kJ-OW-Fwk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1364" y="394"/>
+        </scene>
+        <!--Email Auth Code View Controller-->
+        <scene sceneID="5K2-Pc-Ccg">
+            <objects>
+                <viewController storyboardIdentifier="EmailAuthCodeViewController" id="SDD-nQ-Syd" customClass="EmailAuthCodeViewController" customModule="instagram_ios_zoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="llZ-az-hk5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인증 코드 입력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3I-Q1-Fgy">
+                                <rect key="frame" x="158.5" y="54" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 주소로 전송된 인증 코드를 입력하세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpp-Pk-vYr">
+                                <rect key="frame" x="30" y="95" width="354" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZF9-bP-VAE">
+                                <rect key="frame" x="157.5" y="145.5" width="99" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="인증 코드 재전송"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vEB-ER-C8h">
+                                <rect key="frame" x="40" y="195.5" width="334" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0N-rC-pBx">
+                                <rect key="frame" x="40" y="250.5" width="334" height="44.5"/>
+                                <color key="backgroundColor" red="0.71372549019607845" green="0.84313725490196079" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="nextButtonTouchUpInside:" destination="SDD-nQ-Syd" eventType="touchUpInside" id="R9l-Jm-suB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BmK-Ph-rPo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vEB-ER-C8h" firstAttribute="centerX" secondItem="llZ-az-hk5" secondAttribute="centerX" id="4Z4-Xk-bfp"/>
+                            <constraint firstItem="vEB-ER-C8h" firstAttribute="height" secondItem="llZ-az-hk5" secondAttribute="height" multiplier="0.05" id="8oy-Rc-lDF"/>
+                            <constraint firstItem="BmK-Ph-rPo" firstAttribute="trailing" secondItem="lpp-Pk-vYr" secondAttribute="trailing" constant="30" id="AhQ-pk-uj9"/>
+                            <constraint firstItem="lpp-Pk-vYr" firstAttribute="top" secondItem="N3I-Q1-Fgy" secondAttribute="bottom" constant="20" id="B7f-uD-dHG"/>
+                            <constraint firstItem="lpp-Pk-vYr" firstAttribute="centerX" secondItem="llZ-az-hk5" secondAttribute="centerX" id="PFa-C7-knT"/>
+                            <constraint firstItem="vEB-ER-C8h" firstAttribute="top" secondItem="ZF9-bP-VAE" secondAttribute="bottom" constant="20" id="UwC-n5-yoh"/>
+                            <constraint firstItem="BmK-Ph-rPo" firstAttribute="trailing" secondItem="vEB-ER-C8h" secondAttribute="trailing" constant="40" id="aCz-E5-3Hc"/>
+                            <constraint firstItem="q0N-rC-pBx" firstAttribute="top" secondItem="vEB-ER-C8h" secondAttribute="bottom" constant="10" id="fQX-jF-38J"/>
+                            <constraint firstItem="N3I-Q1-Fgy" firstAttribute="top" secondItem="BmK-Ph-rPo" secondAttribute="top" constant="10" id="gDd-AB-XZs"/>
+                            <constraint firstItem="ZF9-bP-VAE" firstAttribute="top" secondItem="lpp-Pk-vYr" secondAttribute="bottom" constant="30" id="iam-Q3-5fm"/>
+                            <constraint firstItem="N3I-Q1-Fgy" firstAttribute="centerX" secondItem="llZ-az-hk5" secondAttribute="centerX" id="j3s-j0-VHh"/>
+                            <constraint firstItem="q0N-rC-pBx" firstAttribute="trailing" secondItem="vEB-ER-C8h" secondAttribute="trailing" id="ka1-hp-fv9"/>
+                            <constraint firstItem="q0N-rC-pBx" firstAttribute="leading" secondItem="vEB-ER-C8h" secondAttribute="leading" id="lUH-dP-6NQ"/>
+                            <constraint firstItem="ZF9-bP-VAE" firstAttribute="centerX" secondItem="llZ-az-hk5" secondAttribute="centerX" id="oeC-Wj-ubZ"/>
+                            <constraint firstItem="lpp-Pk-vYr" firstAttribute="leading" secondItem="BmK-Ph-rPo" secondAttribute="leading" constant="30" id="rTw-fX-xPS"/>
+                            <constraint firstItem="q0N-rC-pBx" firstAttribute="height" secondItem="vEB-ER-C8h" secondAttribute="height" id="vu2-Pf-XZ8"/>
+                            <constraint firstItem="vEB-ER-C8h" firstAttribute="leading" secondItem="BmK-Ph-rPo" secondAttribute="leading" constant="40" id="zaW-Fm-wN4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codeNumberTextField" destination="vEB-ER-C8h" id="X3Z-fy-kCF"/>
+                        <outlet property="emailLabel" destination="lpp-Pk-vYr" id="gsl-Mf-QBK"/>
+                        <outlet property="nextButton" destination="q0N-rC-pBx" id="XFa-gJ-49w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdx-1Z-2jM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2040.5797101449277" y="393.75"/>
         </scene>
     </scenes>
     <resources>
