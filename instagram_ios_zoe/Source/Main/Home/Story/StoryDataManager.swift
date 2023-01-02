@@ -13,7 +13,7 @@ class StoryDataManager {
     func getStoryList(delegate: StoryViewController) {
         [
             Story(profileImageName: "고양이1", id: "cat1"),
-            Story(profileImageName: "고양이2", id: "cat2"),
+            Story(profileImageName: "고양이8", id: "cat2"),
             Story(profileImageName: "고양이3", id: "cat3"),
             Story(profileImageName: "고양이4", id: "cat4"),
             Story(profileImageName: "고양이5", id: "cat5"),

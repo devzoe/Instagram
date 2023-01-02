@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z14-1h-y0M">
-                        <rect key="frame" x="60" y="0.0" width="154" height="154"/>
+                        <rect key="frame" x="60" y="10" width="154" height="154"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="z14-1h-y0M" secondAttribute="height" id="bt2-J7-ICS"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTR-Ez-rHU">
-                        <rect key="frame" x="121.5" y="159" width="31" height="14.5"/>
+                        <rect key="frame" x="121.5" y="169" width="31" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
             <constraints>
                 <constraint firstItem="FTR-Ez-rHU" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="815-1a-fuY"/>
                 <constraint firstItem="FTR-Ez-rHU" firstAttribute="top" secondItem="z14-1h-y0M" secondAttribute="bottom" constant="5" id="Iu6-YK-XEt"/>
-                <constraint firstItem="z14-1h-y0M" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kWW-1h-zUR"/>
+                <constraint firstItem="z14-1h-y0M" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="kWW-1h-zUR"/>
                 <constraint firstItem="z14-1h-y0M" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.7" id="lEw-hM-Fhy"/>
                 <constraint firstItem="z14-1h-y0M" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="tEv-LK-oR9"/>
             </constraints>
