@@ -36,7 +36,7 @@ extension FinalViewController {
         self.presentAlert(title: "회원가입에 성공하였습니다", message: result.jwt)
         
         //자동로그인을 위해 토큰 저장
-        //UserDefaults.standard.set(result.token, forKey: "LoginUserIdentifier")
+        UserDefaults.standard.set(result.jwt, forKey: "LoginUserIdentifier")
         
         let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
         self.changeRootViewController(mainTabBarController)

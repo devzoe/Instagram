@@ -55,7 +55,7 @@
 		2FBE46142962299600051BB5 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE46132962299600051BB5 /* FeedViewController.swift */; };
 		2FBE461729622A5100051BB5 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE461529622A5100051BB5 /* FeedTableViewCell.swift */; };
 		2FBE461829622A5100051BB5 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE461629622A5100051BB5 /* FeedTableViewCell.xib */; };
-		2FBE461B29622FF600051BB5 /* FeedResonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE461A29622FF600051BB5 /* FeedResonse.swift */; };
+		2FBE461B29622FF600051BB5 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE461A29622FF600051BB5 /* FeedResponse.swift */; };
 		2FBE461D2962302900051BB5 /* FeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE461C2962302900051BB5 /* FeedDataManager.swift */; };
 		2FBE46202962376100051BB5 /* SignInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE461F2962376100051BB5 /* SignInDataManager.swift */; };
 		2FBE4622296237AC00051BB5 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4621296237AC00051BB5 /* SignInRequest.swift */; };
@@ -149,7 +149,7 @@
 		2FBE46132962299600051BB5 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		2FBE461529622A5100051BB5 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		2FBE461629622A5100051BB5 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
-		2FBE461A29622FF600051BB5 /* FeedResonse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResonse.swift; sourceTree = "<group>"; };
+		2FBE461A29622FF600051BB5 /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
 		2FBE461C2962302900051BB5 /* FeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataManager.swift; sourceTree = "<group>"; };
 		2FBE461F2962376100051BB5 /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; };
 		2FBE4621296237AC00051BB5 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
@@ -548,7 +548,7 @@
 		2FBE461929622FE200051BB5 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				2FBE461A29622FF600051BB5 /* FeedResonse.swift */,
+				2FBE461A29622FF600051BB5 /* FeedResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -898,7 +898,7 @@
 				2FBE45B52960B3AF00051BB5 /* UIButton.swift in Sources */,
 				2FBE45F12961E2AD00051BB5 /* PasswordViewController.swift in Sources */,
 				2FBE45F82961E48300051BB5 /* BirthdayViewController.swift in Sources */,
-				2FBE461B29622FF600051BB5 /* FeedResonse.swift in Sources */,
+				2FBE461B29622FF600051BB5 /* FeedResponse.swift in Sources */,
 				2FBE46352962622300051BB5 /* EmailAuthCodeViewController.swift in Sources */,
 				2FBE46202962376100051BB5 /* SignInDataManager.swift in Sources */,
 			);
