@@ -8,5 +8,5 @@
 import Alamofire
 
 struct Constant {
-    
+    static let BASE_URL = "https://prod.chaengni.shop"
 }

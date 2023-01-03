@@ -38,7 +38,7 @@ class SignInViewController: BaseViewController {
         // Requst Sign In
         self.dismissKeyboard()
         self.showIndicator()
-        let input = SignInRequest(id: id, password: password)
+        let input = SignInRequest(email: id, phone: id, password: password)
         dataManager.postSignIn(input, delegate: self)
     }
         
@@ -54,7 +54,7 @@ class SignInViewController: BaseViewController {
 
 extension SignInViewController {
     func didSuccessSignIn(_ result: SignInResult) {
-        self.presentAlert(title: "로그인에 성공하였습니다", message: result.token)
+        self.presentAlert(title: "로그인에 성공하였습니다", message: result.jwt)
         
         // 자동로그인을 위해 토큰 저장
         //UserDefaults.standard.set(result.token, forKey: "LoginUserIdentifier")

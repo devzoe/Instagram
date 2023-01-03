@@ -8,14 +8,9 @@
 import Alamofire
 
 class SignInDataManager {
-    func postSignIn(_ parameters: SignInRequest, delegate: SignInViewController){
-        
-        let result = SignInResult(token: "MyToken", userInfoIdx: 0)
-        delegate.didSuccessSignIn(result)
-    }
-    /*
+    
     func postSignIn(_ parameters: SignInRequest, delegate: SignInViewController) {
-        AF.request("\(Constant.BASE_URL)/signin", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+        AF.request("\(Constant.BASE_URL)/users/logIn", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
             .responseDecodable(of: SignInResponse.self) { response in
                 switch response.result {
@@ -27,10 +22,12 @@ class SignInDataManager {
                     // 실패했을 때
                     else {
                         switch response.code {
-                        case 2000: delegate.failedToRequest(message: "상황에 맞는")
-                        case 3000: delegate.failedToRequest(message: "에러 메시지로")
-                        case 4000: delegate.failedToRequest(message: "사용자에게 적절한")
-                        default: delegate.failedToRequest(message: "피드백을 주세요")
+                        case 2022: delegate.failedToRequest(message: "이메일 혹은 휴대폰 번호를 입력해주세요.")
+                        case 2012: delegate.failedToRequest(message: "비밀번호 값을 입력해주세요.")
+                        case 3014: delegate.failedToRequest(message: "없는 아이디거나 비밀번호가 틀렸습니다.")
+                        case 3015: delegate.failedToRequest(message: "탈퇴 회원입니다.")
+                        case 4012: delegate.failedToRequest(message: "비밀번호 복호화에 실패하였습니다.")
+                        default: delegate.failedToRequest(message: "다시 입력해주세요.")
                         }
                     }
                 case .failure(let error):
@@ -39,5 +36,5 @@ class SignInDataManager {
                 }
             }
     }
-     */
+     
 }
