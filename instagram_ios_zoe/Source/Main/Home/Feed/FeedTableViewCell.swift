@@ -16,13 +16,16 @@ protocol PageControlDelegate {
 class FeedTableViewCell: UITableViewCell {
     var delegate: PageControlDelegate?
     var postImgRes: [PostImages] = []
+    var cellHeight: CGFloat = 0
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var feedImageView: UIImageView!
+    
     @IBOutlet weak var idLabel2: UILabel!
     @IBOutlet weak var feedTextLabel: UILabel!
     
+    @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var feedImagePageControl: UIPageControl!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,7 +44,7 @@ class FeedTableViewCell: UITableViewCell {
         feedImagePageControl.numberOfPages = data.postImgRes.count
         feedImagePageControl.currentPage = 0
         feedImagePageControl.pageIndicatorTintColor = .lightGray
-        feedImagePageControl.currentPageIndicatorTintColor = .blue
+        feedImagePageControl.currentPageIndicatorTintColor = .buttonIsEnableTrue
         
         // 프로필 이미지
         if let url = data.profileImgUrl {
@@ -54,9 +57,11 @@ class FeedTableViewCell: UITableViewCell {
         // user id
         idLabel.text = data.userId
         
-        //피트 이미지
+        //피드 이미지
         let feedImgUrl = URL(string: data.postImgRes[0].postImgUrl)
         feedImageView.kf.setImage(with: feedImgUrl)
+        
+        
         idLabel2.text = data.userId
         feedTextLabel.text = data.content
         
@@ -66,6 +71,5 @@ class FeedTableViewCell: UITableViewCell {
         print("pageChanged")
         self.delegate?.imagePageChanged(pageControl: sender, postImgRes: postImgRes, imageView: feedImageView)
     }
-    
-    
 }
+

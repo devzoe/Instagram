@@ -53,6 +53,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         let cellData = feeds[indexPath.row]
         cell.get(data: cellData)
         cell.postImgRes = cellData.postImgRes
+        
         cell.delegate = self
         return cell
     }
