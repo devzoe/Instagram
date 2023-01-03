@@ -7,39 +7,35 @@
 
 import Alamofire
 
-
 class FeedDataManager {
-    var feedList : [Feed] = []
-    func getFeedList(delegate: FeedViewController) {
-        [
-            Feed(profileImageName: "고양이1", id: "cat1", feedImageName: "고양이1", feedText: "날씨가 너무 좋다"),
-            Feed(profileImageName: "고양이2", id: "cat2", feedImageName: "고양이2", feedText: "날씨가 너무 좋다"),
-            Feed(profileImageName: "고양이3", id: "cat1", feedImageName: "고양이3", feedText: "날씨가 너무 좋다"),
-            Feed(profileImageName: "고양이4", id: "cat1", feedImageName: "고양이4", feedText: "날씨가 너무 좋다"),
-            Feed(profileImageName: "고양이5", id: "cat1", feedImageName: "고양이5", feedText: "날씨가 너무 좋다"),
-            Feed(profileImageName: "고양이7", id: "cat1", feedImageName: "고양이6", feedText: "날씨가 너무 좋다"),
-            Feed(profileImageName: "고양이8", id: "cat1", feedImageName: "고양이7", feedText: "날씨가 너무 좋다"),
-            Feed(profileImageName: "고양이9", id: "cat1", feedImageName: "고양이8", feedText: "날씨가 너무 좋다"),
-            Feed(profileImageName: "고양이10", id: "cat1", feedImageName: "고양이10", feedText: "날씨가 너무 좋다"),
-        ].forEach { feed in
-            self.feedList.append(feed)
-        }
-        var response : FeedResponse = FeedResponse(feedList: [])
-        response.feedList = feedList
-        delegate.didSetFeed(result: response)
-        //let url =
-        /*
-        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+    func getFeedData(delegate: FeedViewController) {
+        let url = "\(Constant.BASE_URL)/posts/feeds"
+        let token = UserDefaults.standard.string(forKey: "LoginUserIdentifier") ?? "none"
+        print("My Token : ", token)
+        
+        AF.request(url, method: .get, parameters: nil, encoding:JSONEncoding.default, headers: ["X-ACCESS-TOKEN":token])
             .validate()
-            .responseDecodable(of: StoryResponse.self) { response in
+            .responseDecodable(of: FeedResponse.self) { response in
                 switch response.result {
                 case .success(let response):
-                    delegate.didSetStory(result: response)
+                    // 성공했을 때
+                    if response.isSuccess, let result = response.result {
+                        delegate.didSetFeed(result: response)
+                    }
+                    // 실패했을 때
+                    else {
+                        switch response.code {
+                        case 2003: delegate.failedToRequest(message: "권한 없는 유저의 접근입니다.")
+                        case 4000: delegate.failedToRequest(message: "DB 오류")
+                        default: delegate.failedToRequest(message: "다시 입력해주세요.")
+                        }
+                    }
                 case .failure(let error):
                     print(error.localizedDescription)
                     delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
                 }
             }
-         */
+        
     }
 }
+

@@ -12,14 +12,14 @@ class FeedViewController: BaseViewController {
     
     let feedCell = "FeedTableViewCell"
     
-    var feeds : [Feed] = []
+    var feeds : [FeedResult] = []
     
     @IBOutlet weak var feedTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupFeedTableView()
         
-        dataManager.getFeedList(delegate: self)
+        dataManager.getFeedData(delegate: self)
     }
     
     private func setupFeedTableView() {
@@ -34,7 +34,7 @@ class FeedViewController: BaseViewController {
 }
 extension FeedViewController {
     func didSetFeed(result: FeedResponse) {
-        feeds = result.feedList
+        feeds = result.result!
         feedTableView.reloadData()
     }
     
@@ -52,12 +52,19 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = feedTableView.dequeueReusableCell(withIdentifier: feedCell, for: indexPath) as! FeedTableViewCell
         let cellData = feeds[indexPath.row]
         cell.get(data: cellData)
-        
+        cell.postImgRes = cellData.postImgRes
+        cell.delegate = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return  (feedTableView.bounds.height) * 1
     }
+}
 
+extension FeedViewController: PageControlDelegate {
+    func imagePageChanged(pageControl: UIPageControl, postImgRes: [PostImages], imageView: UIImageView) {
+        let feedImgUrl = URL(string: postImgRes[pageControl.currentPage].postImgUrl)
+        imageView.kf.setImage(with: feedImgUrl)
+    }
 }
