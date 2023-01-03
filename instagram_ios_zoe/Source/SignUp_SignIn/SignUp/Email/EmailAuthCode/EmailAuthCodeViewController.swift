@@ -8,6 +8,7 @@
 import UIKit
 
 class EmailAuthCodeViewController: BaseViewController {
+    var userInfo : SignUpRequest = SignUpRequest(userId: "", password: "", name: "", phone: "", email: "", birth: "", contract1: "", contract2: "", contract3: "")
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var codeNumberTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton! {
@@ -26,7 +27,8 @@ class EmailAuthCodeViewController: BaseViewController {
     }
     
     @IBAction func nextButtonTouchUpInside(_ sender: UIButton) {
-        let nameViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "NameViewController")
+        let nameViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "NameViewController") as! NameViewController
+        nameViewController.userInfo = userInfo
         self.navigationController?.pushViewController(nameViewController, animated: true)
     }
 }

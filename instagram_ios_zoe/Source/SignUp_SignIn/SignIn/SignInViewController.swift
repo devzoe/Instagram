@@ -35,14 +35,18 @@ class SignInViewController: BaseViewController {
             return
         }
         
-        // Requst Sign In
+        // Request Sign In
         self.dismissKeyboard()
         self.showIndicator()
-        let input = SignInRequest(email: id, phone: id, password: password)
-        dataManager.postSignIn(input, delegate: self)
-    }
         
-    
+        if (isValidEmail(testStr: id)) {
+            let input = SignInRequest(email: id, phone: "", password: password)
+            dataManager.postSignIn(input, delegate: self)
+        } else {
+            let input = SignInRequest(email: "", phone: id, password: password)
+            dataManager.postSignIn(input, delegate: self)
+        }
+    }
     
     @IBAction func signUpButtonTouchUpInside(_ sender: UIButton) {
         let signUpViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "SignUpNavigationController")
@@ -56,7 +60,7 @@ extension SignInViewController {
     func didSuccessSignIn(_ result: SignInResult) {
         self.presentAlert(title: "로그인에 성공하였습니다", message: result.jwt)
         
-        // 자동로그인을 위해 토큰 저장
+        //자동로그인을 위해 토큰 저장
         //UserDefaults.standard.set(result.token, forKey: "LoginUserIdentifier")
         
         let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")

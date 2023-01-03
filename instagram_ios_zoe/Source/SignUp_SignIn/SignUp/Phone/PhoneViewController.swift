@@ -8,6 +8,7 @@
 import UIKit
 
 class PhoneViewController: BaseViewController {
+    var userInfo : SignUpRequest = SignUpRequest(userId: "", password: "", name: "", phone: "", email: "", birth: "", contract1: "", contract2: "", contract3: "")
     
     @IBOutlet weak var phoneNextButton: UIButton! {
         didSet {
@@ -22,12 +23,16 @@ class PhoneViewController: BaseViewController {
         super.viewDidLoad()
         self.phoneTextField.delegate = self
         self.phoneNextButton.setCornerRadius(10)
-        self.phoneTextField.keyboardType = .phonePad
+        self.phoneTextField.keyboardType = .numberPad
        
     }
     
     @IBAction func phoneNextButtonTouchUpInside(_ sender: UIButton) {
-        let codeViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "PhoneAuthCodeViewController")
+        
+        userInfo.phone = phoneTextField.text!
+        print(userInfo)
+        let codeViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "PhoneAuthCodeViewController") as! PhoneAuthCodeViewController
+        codeViewController.userInfo = userInfo
         self.navigationController?.pushViewController(codeViewController, animated: true)
     }    
 }

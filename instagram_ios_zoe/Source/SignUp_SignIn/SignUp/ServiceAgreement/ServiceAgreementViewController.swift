@@ -8,6 +8,7 @@
 import UIKit
 
 class ServiceAgreementViewController: BaseViewController {
+    var userInfo : SignUpRequest = SignUpRequest(userId: "", password: "", name: "", phone: "", email: "", birth: "", contract1: "", contract2: "", contract3: "")
 
     @IBOutlet weak var allCheckBox: UIButton!
     @IBOutlet weak var termsOfServiceCheckBox: UIButton!
@@ -88,8 +89,15 @@ class ServiceAgreementViewController: BaseViewController {
         checkIsSelected()
     }
     @IBAction func nextButtonTouchUpInside(_ sender: UIButton) {
-        let nicknameViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "IdViewController")
-        self.navigationController?.pushViewController(nicknameViewController, animated: true)
+        userInfo.contract1 = "Y"
+        userInfo.contract2 = "Y"
+        userInfo.contract3 = "Y"
+        print(userInfo)
+        print(userInfo)
+        print(userInfo)
+        let idViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "IdViewController") as! IdViewController
+        idViewController.userInfo = userInfo
+        self.navigationController?.pushViewController(idViewController, animated: true)
     }
     
     

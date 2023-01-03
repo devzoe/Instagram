@@ -8,6 +8,7 @@
 import UIKit
 
 class EmailViewController: BaseViewController {
+    var userInfo : SignUpRequest = SignUpRequest(userId: "", password: "", name: "", phone: "", email: "", birth: "", contract1: "", contract2: "", contract3: "")
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var emailNextButton: UIButton! {
@@ -22,9 +23,18 @@ class EmailViewController: BaseViewController {
         self.emailNextButton.setCornerRadius(10)
     }
     @IBAction func emailNextButtonTouchUpInside(_ sender: UIButton) {
-        let codeViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "EmailAuthCodeViewController")
-        self.navigationController?.pushViewController(codeViewController, animated: true)
+        
+        if (isValidEmail(testStr: emailTextField.text!)){
+            userInfo.email = emailTextField.text!
+            print(userInfo)
+            let codeViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "EmailAuthCodeViewController") as! EmailAuthCodeViewController
+            //codeViewController.userInfo = userInfo
+            self.navigationController?.pushViewController(codeViewController, animated: true)
+        } else {
+            print("올바른 이메일 주소를 입력하세요.")
+        }
     }
+    
 }
 
 extension EmailViewController: UITextFieldDelegate {

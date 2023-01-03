@@ -8,9 +8,11 @@
 import UIKit
 
 class BirthdayViewController: BaseViewController {
-    
+    var userInfo : SignUpRequest = SignUpRequest(userId: "", password: "", name: "", phone: "", email: "", birth: "", contract1: "", contract2: "", contract3: "")
+ 
     private let datePicker = UIDatePicker()
-    private var birthday : Date?
+    private var birthday : Date = Date()
+    private var signupBirth: String = ""
 
     @IBOutlet weak var birthdayTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton! {
@@ -42,12 +44,16 @@ class BirthdayViewController: BaseViewController {
     
     @objc private func datePickerValueDidChange(_ datePicker: UIDatePicker){
         self.birthday = datePicker.date
-        self.birthdayTextField.text = birthday?.koreanText
+        self.birthdayTextField.text = birthday.koreanText
+        self.signupBirth = birthday.signUpRequestText
     }
     
    
     @IBAction func nextButtonTouchUpInside(_ sender: UIButton) {
-        let agreementViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "AgreementViewController")
+        userInfo.birth = signupBirth
+        print(userInfo)
+        let agreementViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "AgreementViewController") as! ServiceAgreementViewController
+        agreementViewController.userInfo = userInfo
         self.navigationController?.pushViewController(agreementViewController, animated: true)
     }
 }

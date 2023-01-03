@@ -8,6 +8,8 @@
 import UIKit
 
 class IdViewController: BaseViewController {
+    var userInfo : SignUpRequest = SignUpRequest(userId: "", password: "", name: "", phone: "", email: "", birth: "", contract1: "", contract2: "", contract3: "")
+  
     
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton! {
@@ -25,7 +27,10 @@ class IdViewController: BaseViewController {
     }
     
     @IBAction func nextButtonTouchUpInside(_ sender: UIButton) {
-        let finalViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "FinalViewController")
+        userInfo.userId = idTextField.text!
+        print(userInfo)
+        let finalViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "FinalViewController") as! FinalViewController
+        finalViewController.userInfo = userInfo
         self.navigationController?.pushViewController(finalViewController, animated: true)
     }
 }

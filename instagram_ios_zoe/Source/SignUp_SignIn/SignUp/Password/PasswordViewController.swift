@@ -8,6 +8,7 @@
 import UIKit
 
 class PasswordViewController: BaseViewController {
+    var userInfo : SignUpRequest = SignUpRequest(userId: "", password: "", name: "", phone: "", email: "", birth: "", contract1: "", contract2: "", contract3: "")
 
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton! {
@@ -25,7 +26,10 @@ class PasswordViewController: BaseViewController {
     }
     
     @IBAction func nextButtonTouchUpInside(_ sender: UIButton) {
-        let bdayViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "BirthdayViewController")
+        userInfo.password = passwordTextField.text!
+        print(userInfo)
+        let bdayViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "BirthdayViewController") as! BirthdayViewController
+        bdayViewController.userInfo = userInfo
         self.navigationController?.pushViewController(bdayViewController, animated: true)
     }
 }
