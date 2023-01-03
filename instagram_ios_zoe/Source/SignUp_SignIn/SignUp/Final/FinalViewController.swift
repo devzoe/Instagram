@@ -37,6 +37,7 @@ extension FinalViewController {
         
         //자동로그인을 위해 토큰 저장
         UserDefaults.standard.set(result.jwt, forKey: "LoginUserIdentifier")
+        UserDefaults.standard.set(result.userIdx, forKey: "UserIdx")
         
         let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
         self.changeRootViewController(mainTabBarController)

@@ -74,6 +74,9 @@
 		2FBE464029646A5E00051BB5 /* MyPostTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE463F29646A5E00051BB5 /* MyPostTabViewController.swift */; };
 		2FBE464229646B7200051BB5 /* MyPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464129646B7200051BB5 /* MyPostViewController.swift */; };
 		2FBE464429646B8900051BB5 /* TagPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464329646B8900051BB5 /* TagPostViewController.swift */; };
+		2FBE46492964B16800051BB5 /* ProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE46482964B16800051BB5 /* ProfileDataManager.swift */; };
+		2FBE464C2964B2FB00051BB5 /* MyPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464B2964B2FB00051BB5 /* MyPostResponse.swift */; };
+		2FBE46502964B53100051BB5 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464F2964B53100051BB5 /* ProfileResponse.swift */; };
 		949B388F491D6AE3D54C81B1 /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */; };
 		C296CADFC5AF771CA70DF1A8 /* Pods_instagram_ios_zoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */; };
 /* End PBXBuildFile section */
@@ -168,6 +171,9 @@
 		2FBE463F29646A5E00051BB5 /* MyPostTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostTabViewController.swift; sourceTree = "<group>"; };
 		2FBE464129646B7200051BB5 /* MyPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostViewController.swift; sourceTree = "<group>"; };
 		2FBE464329646B8900051BB5 /* TagPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPostViewController.swift; sourceTree = "<group>"; };
+		2FBE46482964B16800051BB5 /* ProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataManager.swift; sourceTree = "<group>"; };
+		2FBE464B2964B2FB00051BB5 /* MyPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostResponse.swift; sourceTree = "<group>"; };
+		2FBE464F2964B53100051BB5 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634E153C4F73C1194F9601D1 /* Pods-instagram_ios_zoeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoeTests.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoeTests/Pods-instagram_ios_zoeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -408,9 +414,9 @@
 			children = (
 				2FBE45CC2960CA1400051BB5 /* ProfileStoryboard.storyboard */,
 				2FBE463D2964694900051BB5 /* ProfileViewController.swift */,
-				2FBE463F29646A5E00051BB5 /* MyPostTabViewController.swift */,
-				2FBE464129646B7200051BB5 /* MyPostViewController.swift */,
-				2FBE464329646B8900051BB5 /* TagPostViewController.swift */,
+				2FBE46482964B16800051BB5 /* ProfileDataManager.swift */,
+				2FBE464A2964B2E700051BB5 /* Entity */,
+				2FBE464D2964B47F00051BB5 /* Post */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -575,6 +581,33 @@
 			children = (
 				2FBE46372964375100051BB5 /* SignUpRequest.swift */,
 				2FBE46392964376200051BB5 /* SignUpResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2FBE464A2964B2E700051BB5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE464F2964B53100051BB5 /* ProfileResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2FBE464D2964B47F00051BB5 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE463F29646A5E00051BB5 /* MyPostTabViewController.swift */,
+				2FBE464129646B7200051BB5 /* MyPostViewController.swift */,
+				2FBE464329646B8900051BB5 /* TagPostViewController.swift */,
+				2FBE464E2964B48600051BB5 /* Entity */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		2FBE464E2964B48600051BB5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE464B2964B2FB00051BB5 /* MyPostResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -866,8 +899,10 @@
 				2FBE45EB2961E28B00051BB5 /* PhoneViewController.swift in Sources */,
 				2FBE45FB2961EFD100051BB5 /* PhoneAuthCodeViewController.swift in Sources */,
 				2FBE4571295FE69500051BB5 /* AppDelegate.swift in Sources */,
+				2FBE46492964B16800051BB5 /* ProfileDataManager.swift in Sources */,
 				2FBE4626296239A000051BB5 /* IndicatorView.swift in Sources */,
 				2FBE461D2962302900051BB5 /* FeedDataManager.swift in Sources */,
+				2FBE464C2964B2FB00051BB5 /* MyPostResponse.swift in Sources */,
 				2FBE46322962508E00051BB5 /* Date.swift in Sources */,
 				2FBE464229646B7200051BB5 /* MyPostViewController.swift in Sources */,
 				2FBE45EF2961E2A200051BB5 /* NameViewController.swift in Sources */,
@@ -890,6 +925,7 @@
 				2FBE46142962299600051BB5 /* FeedViewController.swift in Sources */,
 				2FBE45F52961E2CC00051BB5 /* IdViewController.swift in Sources */,
 				2FBE460D29620B5400051BB5 /* StoryResponse.swift in Sources */,
+				2FBE46502964B53100051BB5 /* ProfileResponse.swift in Sources */,
 				2FBE461729622A5100051BB5 /* FeedTableViewCell.swift in Sources */,
 				2FBE45B72960B47700051BB5 /* SignUpSignInViewController.swift in Sources */,
 				2FBE463A2964376200051BB5 /* SignUpResponse.swift in Sources */,
