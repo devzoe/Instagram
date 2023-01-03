@@ -190,7 +190,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="findPeopleButton" destination="uUy-Vp-ELR" id="JNt-Qg-Mix"/>
+                        <outlet property="followerCountLabel" destination="Zg6-Ve-SHn" id="ASf-3b-qfC"/>
+                        <outlet property="followingCountLabel" destination="HNY-LN-5F2" id="FJ3-Vp-RXE"/>
+                        <outlet property="postCountLabel" destination="XJd-Mr-T13" id="xkt-F6-wsr"/>
                         <outlet property="profileEditButton" destination="JoP-e3-yhh" id="v21-d6-JMu"/>
+                        <outlet property="profileImageView" destination="8Ig-1g-Ch5" id="IYe-UM-pdD"/>
+                        <outlet property="userIdBarButton" destination="kai-cU-E1z" id="0pq-Uf-lwL"/>
+                        <outlet property="userNameLabel" destination="FmW-yh-4pb" id="SXX-Ht-3zN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
