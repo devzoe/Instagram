@@ -38,4 +38,10 @@ extension Date {
         dateFormatter.dateFormat = "yyyy년 MM월 dd일"
         return dateFormatter.string(from: self)
     }
+    
+    var signUpRequestText: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        return dateFormatter.string(from: self)
+    }
 }
