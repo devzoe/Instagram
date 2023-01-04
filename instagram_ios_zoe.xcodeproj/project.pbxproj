@@ -77,6 +77,7 @@
 		2FBE46492964B16800051BB5 /* ProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE46482964B16800051BB5 /* ProfileDataManager.swift */; };
 		2FBE464C2964B2FB00051BB5 /* MyPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464B2964B2FB00051BB5 /* MyPostResponse.swift */; };
 		2FBE46502964B53100051BB5 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464F2964B53100051BB5 /* ProfileResponse.swift */; };
+		2FBE46532965A50400051BB5 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE46522965A50300051BB5 /* CreatePostViewController.swift */; };
 		949B388F491D6AE3D54C81B1 /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */; };
 		C296CADFC5AF771CA70DF1A8 /* Pods_instagram_ios_zoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */; };
 /* End PBXBuildFile section */
@@ -174,6 +175,7 @@
 		2FBE46482964B16800051BB5 /* ProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataManager.swift; sourceTree = "<group>"; };
 		2FBE464B2964B2FB00051BB5 /* MyPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostResponse.swift; sourceTree = "<group>"; };
 		2FBE464F2964B53100051BB5 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
+		2FBE46522965A50300051BB5 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634E153C4F73C1194F9601D1 /* Pods-instagram_ios_zoeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoeTests.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoeTests/Pods-instagram_ios_zoeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 				2FBE46482964B16800051BB5 /* ProfileDataManager.swift */,
 				2FBE464A2964B2E700051BB5 /* Entity */,
 				2FBE464D2964B47F00051BB5 /* Post */,
+				2FBE46512965A4E100051BB5 /* CreatePost */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -610,6 +613,14 @@
 				2FBE464B2964B2FB00051BB5 /* MyPostResponse.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		2FBE46512965A4E100051BB5 /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+				2FBE46522965A50300051BB5 /* CreatePostViewController.swift */,
+			);
+			path = CreatePost;
 			sourceTree = "<group>";
 		};
 		BC44B8AFC7FDC88D93BB384B /* Pods */ = {
@@ -917,6 +928,7 @@
 				2FBE45ED2961E29600051BB5 /* EmailViewController.swift in Sources */,
 				2FBE45FE2961F06600051BB5 /* FinalViewController.swift in Sources */,
 				2FBE45CF2960CFE100051BB5 /* SignInViewController.swift in Sources */,
+				2FBE46532965A50400051BB5 /* CreatePostViewController.swift in Sources */,
 				2FBE463C2964382700051BB5 /* SignUpDataManager.swift in Sources */,
 				2FBE46382964375100051BB5 /* SignUpRequest.swift in Sources */,
 				2FBE457B295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld in Sources */,

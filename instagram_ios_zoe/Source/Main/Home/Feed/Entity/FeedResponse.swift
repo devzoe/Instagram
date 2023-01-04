@@ -23,6 +23,7 @@ struct FeedResult : Decodable {
     var userId: String
     var profileImgUrl: String?
     var postLikeCount: Int
+    var commentCount: Int
     var updateAt: String
     var postImgRes: [PostImages]
 }
