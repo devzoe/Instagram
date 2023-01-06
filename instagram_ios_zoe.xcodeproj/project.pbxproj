@@ -78,6 +78,9 @@
 		2FBE464C2964B2FB00051BB5 /* MyPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464B2964B2FB00051BB5 /* MyPostResponse.swift */; };
 		2FBE46502964B53100051BB5 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464F2964B53100051BB5 /* ProfileResponse.swift */; };
 		2FBE46532965A50400051BB5 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE46522965A50300051BB5 /* CreatePostViewController.swift */; };
+		2FDCF2B62968050200FD1DBA /* DeletePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */; };
+		2FDCF2B8296806B300FD1DBA /* DeletePostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */; };
+		2FDCF2BB2968086100FD1DBA /* DeleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */; };
 		2FE0A1BA29662CB1001A8857 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0A1B829662CB1001A8857 /* PostCollectionViewCell.swift */; };
 		2FE0A1BB29662CB1001A8857 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE0A1B929662CB1001A8857 /* PostCollectionViewCell.xib */; };
 		2FE0A1BD2966E3A5001A8857 /* CreateModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0A1BC2966E3A5001A8857 /* CreateModalViewController.swift */; };
@@ -85,6 +88,8 @@
 		2FF5872729676E3E004C8BE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5872629676E3E004C8BE7 /* GoogleService-Info.plist */; };
 		2FF58729296797A2004C8BE7 /* CreatePostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF58728296797A2004C8BE7 /* CreatePostDataManager.swift */; };
 		2FF5872B29679865004C8BE7 /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5872A29679865004C8BE7 /* PostResponse.swift */; };
+		2FF5872D2967CEEC004C8BE7 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5872C2967CEEC004C8BE7 /* PostDetailViewController.swift */; };
+		2FF5872F2967DF0B004C8BE7 /* MyPostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5872E2967DF0B004C8BE7 /* MyPostDataManager.swift */; };
 		949B388F491D6AE3D54C81B1 /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */; };
 		C296CADFC5AF771CA70DF1A8 /* Pods_instagram_ios_zoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */; };
 /* End PBXBuildFile section */
@@ -183,6 +188,9 @@
 		2FBE464B2964B2FB00051BB5 /* MyPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostResponse.swift; sourceTree = "<group>"; };
 		2FBE464F2964B53100051BB5 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		2FBE46522965A50300051BB5 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostViewController.swift; sourceTree = "<group>"; };
+		2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostDataManager.swift; sourceTree = "<group>"; };
+		2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteResponse.swift; sourceTree = "<group>"; };
 		2FE0A1B829662CB1001A8857 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FE0A1B929662CB1001A8857 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		2FE0A1BC2966E3A5001A8857 /* CreateModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateModalViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +198,8 @@
 		2FF5872629676E3E004C8BE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FF58728296797A2004C8BE7 /* CreatePostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostDataManager.swift; sourceTree = "<group>"; };
 		2FF5872A29679865004C8BE7 /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
+		2FF5872C2967CEEC004C8BE7 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		2FF5872E2967DF0B004C8BE7 /* MyPostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostDataManager.swift; sourceTree = "<group>"; };
 		45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634E153C4F73C1194F9601D1 /* Pods-instagram_ios_zoeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoeTests.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoeTests/Pods-instagram_ios_zoeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -436,6 +446,7 @@
 				2FBE464A2964B2E700051BB5 /* Entity */,
 				2FBE464D2964B47F00051BB5 /* Post */,
 				2FBE46512965A4E100051BB5 /* CreatePost */,
+				2FDCF2B42968045300FD1DBA /* DeletePost */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -617,7 +628,9 @@
 			children = (
 				2FBE463F29646A5E00051BB5 /* MyPostTabViewController.swift */,
 				2FBE464129646B7200051BB5 /* MyPostViewController.swift */,
+				2FF5872E2967DF0B004C8BE7 /* MyPostDataManager.swift */,
 				2FBE464329646B8900051BB5 /* TagPostViewController.swift */,
+				2FF5872C2967CEEC004C8BE7 /* PostDetailViewController.swift */,
 				2FE0A1B829662CB1001A8857 /* PostCollectionViewCell.swift */,
 				2FE0A1B929662CB1001A8857 /* PostCollectionViewCell.xib */,
 				2FBE464E2964B48600051BB5 /* Entity */,
@@ -641,6 +654,24 @@
 				2FF58723296746B6004C8BE7 /* Entity */,
 			);
 			path = CreatePost;
+			sourceTree = "<group>";
+		};
+		2FDCF2B42968045300FD1DBA /* DeletePost */ = {
+			isa = PBXGroup;
+			children = (
+				2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */,
+				2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */,
+				2FDCF2B92968084E00FD1DBA /* Entity */,
+			);
+			path = DeletePost;
+			sourceTree = "<group>";
+		};
+		2FDCF2B92968084E00FD1DBA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		2FF58723296746B6004C8BE7 /* Entity */ = {
@@ -938,7 +969,9 @@
 				2FBE45D12960D11C00051BB5 /* UITextField.swift in Sources */,
 				2FBE45D42960DA3C00051BB5 /* UIViewController.swift in Sources */,
 				2FBE45DE29619EAC00051BB5 /* TabViewController.swift in Sources */,
+				2FDCF2BB2968086100FD1DBA /* DeleteResponse.swift in Sources */,
 				2FBE4624296237C200051BB5 /* SignInResponse.swift in Sources */,
+				2FDCF2B8296806B300FD1DBA /* DeletePostDataManager.swift in Sources */,
 				2FBE4622296237AC00051BB5 /* SignInRequest.swift in Sources */,
 				2FBE45EB2961E28B00051BB5 /* PhoneViewController.swift in Sources */,
 				2FBE45FB2961EFD100051BB5 /* PhoneAuthCodeViewController.swift in Sources */,
@@ -953,11 +986,13 @@
 				2FBE46112962150000051BB5 /* Device.swift in Sources */,
 				2FBE46052962032300051BB5 /* StoryCollectionViewCell.swift in Sources */,
 				2FBE45F32961E2BC00051BB5 /* ServiceAgreementViewController.swift in Sources */,
+				2FDCF2B62968050200FD1DBA /* DeletePostViewController.swift in Sources */,
 				2FBE46002961F95100051BB5 /* HomeViewController.swift in Sources */,
 				2FBE45AD29600E4900051BB5 /* Constant.swift in Sources */,
 				2FBE45DA2960E54A00051BB5 /* SignUpViewController.swift in Sources */,
 				2FBE4573295FE69500051BB5 /* SceneDelegate.swift in Sources */,
 				2FBE462A29623BC100051BB5 /* UIColor.swift in Sources */,
+				2FF5872D2967CEEC004C8BE7 /* PostDetailViewController.swift in Sources */,
 				2FE0A1BA29662CB1001A8857 /* PostCollectionViewCell.swift in Sources */,
 				2FBE45ED2961E29600051BB5 /* EmailViewController.swift in Sources */,
 				2FBE45FE2961F06600051BB5 /* FinalViewController.swift in Sources */,
@@ -973,6 +1008,7 @@
 				2FF58725296746D1004C8BE7 /* PostRequest.swift in Sources */,
 				2FF5872B29679865004C8BE7 /* PostResponse.swift in Sources */,
 				2FBE460D29620B5400051BB5 /* StoryResponse.swift in Sources */,
+				2FF5872F2967DF0B004C8BE7 /* MyPostDataManager.swift in Sources */,
 				2FBE46502964B53100051BB5 /* ProfileResponse.swift in Sources */,
 				2FBE461729622A5100051BB5 /* FeedTableViewCell.swift in Sources */,
 				2FBE45B72960B47700051BB5 /* SignUpSignInViewController.swift in Sources */,

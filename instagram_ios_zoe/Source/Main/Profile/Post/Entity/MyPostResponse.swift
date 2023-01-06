@@ -13,7 +13,7 @@ struct MyPostResponse : Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var result: [MyPostResult]?
+    var result: MyPostResult?
 }
 
 // MARK: - MyPostResult
@@ -26,7 +26,7 @@ struct MyPostResult : Decodable {
     var postLikeCount: Int
     var updateAt: String
     var postImgRes: [MyPostImages]
-    var postContentRes: [MyPostContents]?
+    var postContentRes: [MyPostContents?]
 }
 
 // MARK: - MyPostImages
@@ -37,12 +37,13 @@ struct MyPostImages : Decodable{
 
 // MARK: - MyPostContents
 struct MyPostContents : Decodable{
-    var postCommentId: Int
+    var postCommentIdx: Int
     var reply: String
     var depth: Int
     var userIdx: Int
+    var commentLikeCount : Int
     var userId: String
-    var profileImg: String
+    var profileImg: String?
     var commentIdxA: Int
 }
 

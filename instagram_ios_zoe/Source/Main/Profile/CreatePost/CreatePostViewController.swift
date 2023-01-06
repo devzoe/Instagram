@@ -51,7 +51,6 @@ class CreatePostViewController: UIViewController {
         
         dataManager.postData(postRequest, delegate: self)
     }
-    
 }
 
 extension CreatePostViewController: UITextViewDelegate {
@@ -72,6 +71,8 @@ extension CreatePostViewController: UITextViewDelegate {
 extension CreatePostViewController {
     func didSuccessPost() {
         self.presentAlert(title: "게시물 업로드에 성공하였습니다", message: "")
+        let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
+        self.changeRootViewController(mainTabBarController)
     }
     
     func failedToRequest(message: String) {

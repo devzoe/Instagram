@@ -9,6 +9,8 @@ import UIKit
 
 class MyPostViewController: UIViewController {
     lazy var dataManager: ProfileDataManager = ProfileDataManager()
+    lazy var postDataManager: MyPostDataManager = MyPostDataManager()
+    var postResponse: MyPostResponse = MyPostResponse(isSuccess: false, code: 0, message: "", result: nil)
     let cellMarginSize: CGFloat = 1
     let postCell = "PostCollectionViewCell"
     
@@ -38,6 +40,15 @@ extension MyPostViewController {
             postCollectionView.reloadData()
         }
     }
+    func didSuccessPostDetail(result: MyPostResponse) {
+        //self.presentAlert(title: "게시물 로딩에 성공하였습니다", message: result.message)
+        postResponse = result
+      
+        let postDetailViewController = storyboard?.instantiateViewController(withIdentifier: "PostDetailViewController") as! PostDetailViewController
+        postDetailViewController.postResponse = postResponse
+  
+        self.navigationController?.pushViewController(postDetailViewController, animated: true)
+    }
     
     func failedToRequest(message: String) {
         self.presentAlert(title: message)
@@ -48,6 +59,8 @@ extension MyPostViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         print(indexPath.row)
+        let postIdx = posts![indexPath.row].postIdx
+        postDataManager.getPostData(postIdx, delegate: self)
     }
     
 }
@@ -64,6 +77,7 @@ extension MyPostViewController : UICollectionViewDataSource {
        
         return cell
     }
+    
 }
 
 extension MyPostViewController: UICollectionViewDelegateFlowLayout {
@@ -92,4 +106,5 @@ extension MyPostViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return self.cellMarginSize
     }
+    
 }

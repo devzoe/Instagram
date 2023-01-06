@@ -96,13 +96,13 @@ class CreateModalViewController: BaseViewController {
                 var thumbnail = UIImage()
                 
                 imageManager.requestImage(for: selectedAssets[i],
-                                          targetSize: CGSize(width: 200, height: 200),
+                                          targetSize: CGSize(width: 1024, height: 1024),
                                           contentMode: .aspectFit,
                                           options: option) { (result, info) in
                     thumbnail = result!
                 }
                 
-                let data = thumbnail.jpegData(compressionQuality: 0.7)
+                let data = thumbnail.pngData()
                 let newImage = UIImage(data: data!)
                 //print("이미지 url: ", data)
                 self.selectedImages.append(newImage! as UIImage)
@@ -128,7 +128,7 @@ class CreateModalViewController: BaseViewController {
 
 class FirebaseStorageManager {
     static func uploadImage(image: UIImage, pathRoot: String, completion: @escaping (URL?) -> Void) {
-        guard let imageData = image.jpegData(compressionQuality: 0.4) else { return }
+        guard let imageData = image.pngData() else { return }
         let metaData = StorageMetadata()
         metaData.contentType = "image/jpeg"
         

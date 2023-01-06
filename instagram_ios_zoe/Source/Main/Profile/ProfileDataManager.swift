@@ -11,12 +11,10 @@ class ProfileDataManager {
     func getProfileData(delegate: ProfileViewController) {
         var url = "\(Constant.BASE_URL)/profiles/"
         //내 유저 idx
-        //let userIdx = UserDefaults.standard.integer(forKey: "UserIdx")
-        //url += String(userIdx)
-        // test UserIdx = 3
-        url += "3"
-        print("My url : ", url)
+        let userIdx = UserDefaults.standard.integer(forKey: "UserIdx")
+        url += String(userIdx)
         
+                
         let token = UserDefaults.standard.string(forKey: "LoginUserIdentifier") ?? "none"
         print("My Token : ", token)
         
@@ -48,10 +46,8 @@ class ProfileDataManager {
     func getMyPostData(delegate: MyPostViewController) {
         var url = "\(Constant.BASE_URL)/profiles/"
         //내 유저 idx
-        //let userIdx = UserDefaults.standard.integer(forKey: "UserIdx")
-        //url += String(userIdx)
-        // test UserIdx = 3
-        url += "3"
+        let userIdx = UserDefaults.standard.integer(forKey: "UserIdx")
+        url += String(userIdx)
         print("My url : ", url)
         
         let token = UserDefaults.standard.string(forKey: "LoginUserIdentifier") ?? "none"
