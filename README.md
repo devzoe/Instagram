@@ -40,4 +40,17 @@
 ### 해결해야 하는 이슈
 - 🚨 feed view : table view cell 안에 page view 적용하는 문제 : 적용했으나 스와이프 가능하도록 수정.
 - 🚨 profile view : scroll 가능을 위해 테이블 뷰-> 셀 2가지 채택 -> 아래 셀 내부 컬렉션 뷰. 이런식으로 진행해야 함. 탭맨은 클래스이므로 테이블 셀 안에서 적용할 수가 없음. 다른 방법을 찾아야 함. 여기서 view pager, collection view, scroll view 등... 많이 찾아보기. 
-- 🚨 위의 문제는 collection view header로 해결하기
+- 🚨 위의 문제는 collection view header로 해결하기 
+
+## 2023.01.05 개발 일지
+- 프로필 뷰 : collection view 추가 -> 나의 게시글 썸네일 보여주기
+- 게시글 업로드 선택 뷰
+- 게시글 업로드 뷰
+- 게시글 이미지 선택 : 여러 이미지 선택을 위해 BSImagePicker 사용
+- 이미지 url 얻어오기 위해 firebase사용
+- 이미지 컨트롤러 : userDefaults에 url저장해서 rootView를 CreatePostViewController로 전환
+- 게시글 업로드 api 연결 
+
+### 해결해야 하는 이슈
+- 🚨 결국 프로필 뷰 스크롤 문제는 계속 해결해야 함...
+- 🚨 게시글 업로드 뷰 : 이미지 뷰 다른 사진이 나오는 문제 해결하기.
