@@ -25,11 +25,11 @@ struct FeedResult : Decodable {
     var postLikeCount: Int
     var commentCount: Int
     var updateAt: String
-    var postImgRes: [PostImages]
+    var postImgRes: [FeedPostImages]
 }
 
 // MARK: - PostImages
-struct PostImages : Decodable{
+struct FeedPostImages : Decodable{
     var postImgIdx: Int
     var postImgUrl: String
 }

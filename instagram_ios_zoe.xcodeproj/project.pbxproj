@@ -78,6 +78,13 @@
 		2FBE464C2964B2FB00051BB5 /* MyPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464B2964B2FB00051BB5 /* MyPostResponse.swift */; };
 		2FBE46502964B53100051BB5 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464F2964B53100051BB5 /* ProfileResponse.swift */; };
 		2FBE46532965A50400051BB5 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE46522965A50300051BB5 /* CreatePostViewController.swift */; };
+		2FE0A1BA29662CB1001A8857 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0A1B829662CB1001A8857 /* PostCollectionViewCell.swift */; };
+		2FE0A1BB29662CB1001A8857 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE0A1B929662CB1001A8857 /* PostCollectionViewCell.xib */; };
+		2FE0A1BD2966E3A5001A8857 /* CreateModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0A1BC2966E3A5001A8857 /* CreateModalViewController.swift */; };
+		2FF58725296746D1004C8BE7 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF58724296746D1004C8BE7 /* PostRequest.swift */; };
+		2FF5872729676E3E004C8BE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5872629676E3E004C8BE7 /* GoogleService-Info.plist */; };
+		2FF58729296797A2004C8BE7 /* CreatePostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF58728296797A2004C8BE7 /* CreatePostDataManager.swift */; };
+		2FF5872B29679865004C8BE7 /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5872A29679865004C8BE7 /* PostResponse.swift */; };
 		949B388F491D6AE3D54C81B1 /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */; };
 		C296CADFC5AF771CA70DF1A8 /* Pods_instagram_ios_zoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */; };
 /* End PBXBuildFile section */
@@ -176,6 +183,13 @@
 		2FBE464B2964B2FB00051BB5 /* MyPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostResponse.swift; sourceTree = "<group>"; };
 		2FBE464F2964B53100051BB5 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		2FBE46522965A50300051BB5 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		2FE0A1B829662CB1001A8857 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		2FE0A1B929662CB1001A8857 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
+		2FE0A1BC2966E3A5001A8857 /* CreateModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateModalViewController.swift; sourceTree = "<group>"; };
+		2FF58724296746D1004C8BE7 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
+		2FF5872629676E3E004C8BE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2FF58728296797A2004C8BE7 /* CreatePostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostDataManager.swift; sourceTree = "<group>"; };
+		2FF5872A29679865004C8BE7 /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		45C2A954A29222D3826E121F /* Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe_instagram_ios_zoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5964A29B24F8562D1D037772 /* Pods_instagram_ios_zoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios_zoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634E153C4F73C1194F9601D1 /* Pods-instagram_ios_zoeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoeTests.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoeTests/Pods-instagram_ios_zoeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -246,6 +260,7 @@
 				2FBE457C295FE69700051BB5 /* Assets.xcassets */,
 				2FBE457E295FE69700051BB5 /* LaunchScreen.storyboard */,
 				2FBE4581295FE69700051BB5 /* Info.plist */,
+				2FF5872629676E3E004C8BE7 /* GoogleService-Info.plist */,
 				2FBE4579295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld */,
 			);
 			path = instagram_ios_zoe;
@@ -417,6 +432,7 @@
 				2FBE45CC2960CA1400051BB5 /* ProfileStoryboard.storyboard */,
 				2FBE463D2964694900051BB5 /* ProfileViewController.swift */,
 				2FBE46482964B16800051BB5 /* ProfileDataManager.swift */,
+				2FE0A1BC2966E3A5001A8857 /* CreateModalViewController.swift */,
 				2FBE464A2964B2E700051BB5 /* Entity */,
 				2FBE464D2964B47F00051BB5 /* Post */,
 				2FBE46512965A4E100051BB5 /* CreatePost */,
@@ -602,6 +618,8 @@
 				2FBE463F29646A5E00051BB5 /* MyPostTabViewController.swift */,
 				2FBE464129646B7200051BB5 /* MyPostViewController.swift */,
 				2FBE464329646B8900051BB5 /* TagPostViewController.swift */,
+				2FE0A1B829662CB1001A8857 /* PostCollectionViewCell.swift */,
+				2FE0A1B929662CB1001A8857 /* PostCollectionViewCell.xib */,
 				2FBE464E2964B48600051BB5 /* Entity */,
 			);
 			path = Post;
@@ -619,8 +637,19 @@
 			isa = PBXGroup;
 			children = (
 				2FBE46522965A50300051BB5 /* CreatePostViewController.swift */,
+				2FF58728296797A2004C8BE7 /* CreatePostDataManager.swift */,
+				2FF58723296746B6004C8BE7 /* Entity */,
 			);
 			path = CreatePost;
+			sourceTree = "<group>";
+		};
+		2FF58723296746B6004C8BE7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2FF58724296746D1004C8BE7 /* PostRequest.swift */,
+				2FF5872A29679865004C8BE7 /* PostResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		BC44B8AFC7FDC88D93BB384B /* Pods */ = {
@@ -764,11 +793,13 @@
 				2FBE4580295FE69700051BB5 /* LaunchScreen.storyboard in Resources */,
 				2FBE45B32960A7AB00051BB5 /* SignUpSignInStoryboard.storyboard in Resources */,
 				2FBE45C82960C9F100051BB5 /* ReelsStoryboard.storyboard in Resources */,
+				2FF5872729676E3E004C8BE7 /* GoogleService-Info.plist in Resources */,
 				2FBE45CB2960CA0300051BB5 /* ShopStoryboard.storyboard in Resources */,
 				2FBE461829622A5100051BB5 /* FeedTableViewCell.xib in Resources */,
 				2FBE457D295FE69700051BB5 /* Assets.xcassets in Resources */,
 				2FBE45C42960C9DB00051BB5 /* HomeStoryboard.storyboard in Resources */,
 				2FBE45BB2960BBA900051BB5 /* SignInStoryboard.storyboard in Resources */,
+				2FE0A1BB29662CB1001A8857 /* PostCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +927,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FE0A1BD2966E3A5001A8857 /* CreateModalViewController.swift in Sources */,
+				2FF58729296797A2004C8BE7 /* CreatePostDataManager.swift in Sources */,
 				2FBE464029646A5E00051BB5 /* MyPostTabViewController.swift in Sources */,
 				2FBE462829623ABD00051BB5 /* String.swift in Sources */,
 				2FBE45DC2960F11100051BB5 /* BaseViewController.swift in Sources */,
@@ -925,6 +958,7 @@
 				2FBE45DA2960E54A00051BB5 /* SignUpViewController.swift in Sources */,
 				2FBE4573295FE69500051BB5 /* SceneDelegate.swift in Sources */,
 				2FBE462A29623BC100051BB5 /* UIColor.swift in Sources */,
+				2FE0A1BA29662CB1001A8857 /* PostCollectionViewCell.swift in Sources */,
 				2FBE45ED2961E29600051BB5 /* EmailViewController.swift in Sources */,
 				2FBE45FE2961F06600051BB5 /* FinalViewController.swift in Sources */,
 				2FBE45CF2960CFE100051BB5 /* SignInViewController.swift in Sources */,
@@ -936,6 +970,8 @@
 				2FBE462E296243CC00051BB5 /* UIFont.swift in Sources */,
 				2FBE46142962299600051BB5 /* FeedViewController.swift in Sources */,
 				2FBE45F52961E2CC00051BB5 /* IdViewController.swift in Sources */,
+				2FF58725296746D1004C8BE7 /* PostRequest.swift in Sources */,
+				2FF5872B29679865004C8BE7 /* PostResponse.swift in Sources */,
 				2FBE460D29620B5400051BB5 /* StoryResponse.swift in Sources */,
 				2FBE46502964B53100051BB5 /* ProfileResponse.swift in Sources */,
 				2FBE461729622A5100051BB5 /* FeedTableViewCell.swift in Sources */,
@@ -1120,7 +1156,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = instagram_ios_zoe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1151,7 +1187,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = instagram_ios_zoe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -11,6 +11,8 @@ target 'instagram_ios_zoe' do
   pod 'Alamofire', '~> 5.6.1'
   pod 'Kingfisher', '~> 7.0'
   pod 'Tabman', '~> 2.12'
+  pod 'BSImagePicker', '~> 3.1'
+  pod 'Firebase/Storage'
   target 'instagram_ios_zoeTests' do
     inherit! :search_paths
     # Pods for testing

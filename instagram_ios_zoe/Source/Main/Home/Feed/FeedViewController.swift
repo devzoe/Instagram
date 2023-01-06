@@ -64,7 +64,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension FeedViewController: PageControlDelegate {
-    func imagePageChanged(pageControl: UIPageControl, postImgRes: [PostImages], imageView: UIImageView) {
+    func imagePageChanged(pageControl: UIPageControl, postImgRes: [FeedPostImages], imageView: UIImageView) {
         let feedImgUrl = URL(string: postImgRes[pageControl.currentPage].postImgUrl)
         imageView.kf.setImage(with: feedImgUrl)
     }

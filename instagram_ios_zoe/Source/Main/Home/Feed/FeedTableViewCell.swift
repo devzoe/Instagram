@@ -10,12 +10,12 @@ import Kingfisher
 
 // 페이지 컨트롤 델리게이트
 protocol PageControlDelegate {
-    func imagePageChanged(pageControl : UIPageControl, postImgRes: [PostImages], imageView: UIImageView)
+    func imagePageChanged(pageControl : UIPageControl, postImgRes: [FeedPostImages], imageView: UIImageView)
 }
 
 class FeedTableViewCell: UITableViewCell {
     var delegate: PageControlDelegate?
-    var postImgRes: [PostImages] = []
+    var postImgRes: [FeedPostImages] = []
     var cellHeight: CGFloat = 0
     
     @IBOutlet weak var profileImageView: UIImageView!

@@ -15,8 +15,37 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - Alamofire (5.6.4)
+  - BSImagePicker (3.3.1)
+  - Firebase/CoreOnly (10.3.0):
+    - FirebaseCore (= 10.3.0)
+  - Firebase/Storage (10.3.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (~> 10.3.0)
+  - FirebaseAppCheckInterop (10.3.0)
+  - FirebaseAuthInterop (10.3.0)
+  - FirebaseCore (10.3.0):
+    - FirebaseCoreInternal (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/Logger (~> 7.8)
+  - FirebaseCoreExtension (10.3.0):
+    - FirebaseCore (~> 10.0)
+  - FirebaseCoreInternal (10.3.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseStorage (10.3.0):
+    - FirebaseAppCheckInterop (~> 10.0)
+    - FirebaseAuthInterop (~> 10.0)
+    - FirebaseCore (~> 10.0)
+    - FirebaseCoreExtension (~> 10.0)
+    - GTMSessionFetcher/Core (< 4.0, >= 2.1)
+  - GoogleUtilities/Environment (7.10.0):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.10.0):
+    - GoogleUtilities/Environment
+  - "GoogleUtilities/NSData+zlib (7.10.0)"
+  - GTMSessionFetcher/Core (3.0.0)
   - Kingfisher (7.4.1)
   - Pageboy (3.7.0)
+  - PromisesObjC (2.1.1)
   - SwiftyJSON (4.3.0)
   - Tabman (2.13.0):
     - Pageboy (~> 3.7.0)
@@ -24,6 +53,8 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 4.0)
   - Alamofire (~> 5.6.1)
+  - BSImagePicker (~> 3.1)
+  - Firebase/Storage
   - Kingfisher (~> 7.0)
   - SwiftyJSON (~> 4.0)
   - Tabman (~> 2.12)
@@ -32,19 +63,41 @@ SPEC REPOS:
   trunk:
     - AFNetworking
     - Alamofire
+    - BSImagePicker
+    - Firebase
+    - FirebaseAppCheckInterop
+    - FirebaseAuthInterop
+    - FirebaseCore
+    - FirebaseCoreExtension
+    - FirebaseCoreInternal
+    - FirebaseStorage
+    - GoogleUtilities
+    - GTMSessionFetcher
     - Kingfisher
     - Pageboy
+    - PromisesObjC
     - SwiftyJSON
     - Tabman
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  BSImagePicker: 0fe04b574d4d6b81093785d2af6c26227efc8428
+  Firebase: f92fc551ead69c94168d36c2b26188263860acd9
+  FirebaseAppCheckInterop: 9fc57dfa08f0abb737b185ea065422b55355c909
+  FirebaseAuthInterop: 7a766bd56971347e0de4b7674aaa62ddc7820097
+  FirebaseCore: 988754646ab3bd4bdcb740f1bfe26b9f6c0d5f2a
+  FirebaseCoreExtension: 93d252fabdc9696bf14a73b04d84877ab9b3a832
+  FirebaseCoreInternal: 29b76f784d607df8b2a1259d73c3f04f1210137b
+  FirebaseStorage: 0efbff0ac978981866d89804191688ae50d64033
+  GoogleUtilities: bad72cb363809015b1f7f19beb1f1cd23c589f95
+  GTMSessionFetcher: c1edebe64e9fb4e8f6415d018edf1fd3eac074a1
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
   Pageboy: fe646118f7168960058bea7a96038386aa7c0da8
+  PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   Tabman: 66ea44c44488327ec20f3c8dc5554a5d22f5908c
 
-PODFILE CHECKSUM: 4a120e068fe6359abdbc0de8b3b3524f42372558
+PODFILE CHECKSUM: ab936c562856b6e01ffac9174a109cb58129feb0
 
 COCOAPODS: 1.11.3

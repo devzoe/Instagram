@@ -7,11 +7,15 @@
 
 import UIKit
 import Kingfisher
+import Pageboy
 
 class ProfileViewController: BaseViewController {
     lazy var dataManager: ProfileDataManager = ProfileDataManager()
 
+    
     @IBOutlet weak var userIdBarButton: UIBarButtonItem!
+    
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var postCountLabel: UILabel!
@@ -28,7 +32,15 @@ class ProfileViewController: BaseViewController {
         self.profileImageView.clipsToBounds = true
         
         self.dataManager.getProfileData(delegate: self)
+
     }
+    @IBAction func createButtonTouchUpInside(_ sender: UIBarButtonItem) {
+        let createModalViewController = self.storyboard?.instantiateViewController(identifier: "CreateModalViewController") as! CreateModalViewController
+        
+        self.present(createModalViewController, animated: true, completion: nil)
+    }
+    
+    
 }
 
 extension ProfileViewController {
@@ -57,3 +69,4 @@ extension ProfileViewController {
         self.presentAlert(title: message)
     }
 }
+
