@@ -18,11 +18,10 @@ class FeedViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        DispatchQueue.main.async {
+        //DispatchQueue.main.async {
             self.setupFeedTableView()
-            
             self.dataManager.getFeedData(delegate: self)
-        }
+        //}
     }
     override func viewDidLoad() {
         super.viewDidLoad()
