@@ -39,7 +39,7 @@ class ProfileViewController: BaseViewController {
         self.profileEditButton.setCornerRadius(10)
         self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
         self.profileImageView.clipsToBounds = true
-        
+
         self.dataManager.getProfileData(delegate: self)
 
     }
@@ -53,8 +53,11 @@ class ProfileViewController: BaseViewController {
     }
     @IBAction func createButtonTouchUpInside(_ sender: UIBarButtonItem) {
         let createModalViewController = self.storyboard?.instantiateViewController(identifier: "CreateModalViewController") as! CreateModalViewController
-        
         self.present(createModalViewController, animated: true, completion: nil)
+    }
+    @IBAction func profileEditButtonTouchUpInside(_ sender: UIButton) {
+        let readProfileEditViewController = self.storyboard?.instantiateViewController(identifier: "ReadProfileEditViewController") as! ReadProfileEditViewController
+        self.navigationController?.pushViewController(readProfileEditViewController, animated: true)
     }
     
     

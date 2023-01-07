@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1301DE2CDF3A2D88FF2A2DFB /* Pods_instagram_ios_zoeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C22EBD738C32BC53AE1821 /* Pods_instagram_ios_zoeTests.framework */; };
+		2F8CC7A629693A140011C143 /* ReadProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CC7A529693A140011C143 /* ReadProfileEditViewController.swift */; };
+		2F8CC7A929693A440011C143 /* ReadProfileEditDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CC7A829693A440011C143 /* ReadProfileEditDataManager.swift */; };
+		2F8CC7AC29693B1E0011C143 /* ReadProfileEditResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CC7AB29693B1E0011C143 /* ReadProfileEditResponse.swift */; };
 		2FBE4571295FE69500051BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4570295FE69500051BB5 /* AppDelegate.swift */; };
 		2FBE4573295FE69500051BB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4572295FE69500051BB5 /* SceneDelegate.swift */; };
 		2FBE457B295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE4579295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld */; };
@@ -89,6 +92,9 @@
 		2FE0A1BA29662CB1001A8857 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0A1B829662CB1001A8857 /* PostCollectionViewCell.swift */; };
 		2FE0A1BB29662CB1001A8857 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE0A1B929662CB1001A8857 /* PostCollectionViewCell.xib */; };
 		2FE0A1BD2966E3A5001A8857 /* CreateModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0A1BC2966E3A5001A8857 /* CreateModalViewController.swift */; };
+		2FE3F6082969442300F38963 /* EditProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F6072969442300F38963 /* EditProfileDataManager.swift */; };
+		2FE3F60A296944FC00F38963 /* EditProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F609296944FC00F38963 /* EditProfileRequest.swift */; };
+		2FE3F60C2969450E00F38963 /* EditProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F60B2969450E00F38963 /* EditProfileResponse.swift */; };
 		2FF58725296746D1004C8BE7 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF58724296746D1004C8BE7 /* PostRequest.swift */; };
 		2FF5872729676E3E004C8BE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5872629676E3E004C8BE7 /* GoogleService-Info.plist */; };
 		2FF58729296797A2004C8BE7 /* CreatePostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF58728296797A2004C8BE7 /* CreatePostDataManager.swift */; };
@@ -119,6 +125,9 @@
 /* Begin PBXFileReference section */
 		1934C94B60BF3D333C40B533 /* Pods-instagram_ios_zoeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoeTests.debug.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoeTests/Pods-instagram_ios_zoeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		256C470BFA0EE9CB91B8312F /* Pods-instagram_ios_zoe-instagram_ios_zoeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoe-instagram_ios_zoeUITests.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoe-instagram_ios_zoeUITests/Pods-instagram_ios_zoe-instagram_ios_zoeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2F8CC7A529693A140011C143 /* ReadProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadProfileEditViewController.swift; sourceTree = "<group>"; };
+		2F8CC7A829693A440011C143 /* ReadProfileEditDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadProfileEditDataManager.swift; sourceTree = "<group>"; };
+		2F8CC7AB29693B1E0011C143 /* ReadProfileEditResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadProfileEditResponse.swift; sourceTree = "<group>"; };
 		2FBE456D295FE69500051BB5 /* instagram_ios_zoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram_ios_zoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FBE4570295FE69500051BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FBE4572295FE69500051BB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +213,9 @@
 		2FE0A1B829662CB1001A8857 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FE0A1B929662CB1001A8857 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		2FE0A1BC2966E3A5001A8857 /* CreateModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateModalViewController.swift; sourceTree = "<group>"; };
+		2FE3F6072969442300F38963 /* EditProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileDataManager.swift; sourceTree = "<group>"; };
+		2FE3F609296944FC00F38963 /* EditProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileRequest.swift; sourceTree = "<group>"; };
+		2FE3F60B2969450E00F38963 /* EditProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileResponse.swift; sourceTree = "<group>"; };
 		2FF58724296746D1004C8BE7 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
 		2FF5872629676E3E004C8BE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FF58728296797A2004C8BE7 /* CreatePostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostDataManager.swift; sourceTree = "<group>"; };
@@ -247,6 +259,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F8CC7A4296939EA0011C143 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				2F8CC7A729693A2C0011C143 /* Read */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		2F8CC7A729693A2C0011C143 /* Read */ = {
+			isa = PBXGroup;
+			children = (
+				2F8CC7A529693A140011C143 /* ReadProfileEditViewController.swift */,
+				2FE3F6072969442300F38963 /* EditProfileDataManager.swift */,
+				2F8CC7A829693A440011C143 /* ReadProfileEditDataManager.swift */,
+				2F8CC7AA29693A490011C143 /* Entity */,
+			);
+			path = Read;
+			sourceTree = "<group>";
+		};
+		2F8CC7AA29693A490011C143 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2F8CC7AB29693B1E0011C143 /* ReadProfileEditResponse.swift */,
+				2FE3F609296944FC00F38963 /* EditProfileRequest.swift */,
+				2FE3F60B2969450E00F38963 /* EditProfileResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		2FBE4564295FE69500051BB5 = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +494,7 @@
 				2FBE463D2964694900051BB5 /* ProfileViewController.swift */,
 				2FBE46482964B16800051BB5 /* ProfileDataManager.swift */,
 				2FBE464A2964B2E700051BB5 /* Entity */,
+				2F8CC7A4296939EA0011C143 /* Edit */,
 				2FBE464D2964B47F00051BB5 /* Post */,
 				2FBE46512965A4E100051BB5 /* CreatePost */,
 				2FDCF2B42968045300FD1DBA /* DeletePost */,
@@ -1013,6 +1055,7 @@
 				2FBE4624296237C200051BB5 /* SignInResponse.swift in Sources */,
 				2FDCF2B8296806B300FD1DBA /* DeletePostDataManager.swift in Sources */,
 				2FBE4622296237AC00051BB5 /* SignInRequest.swift in Sources */,
+				2F8CC7A929693A440011C143 /* ReadProfileEditDataManager.swift in Sources */,
 				2FBE45EB2961E28B00051BB5 /* PhoneViewController.swift in Sources */,
 				2FBE45FB2961EFD100051BB5 /* PhoneAuthCodeViewController.swift in Sources */,
 				2FBE4571295FE69500051BB5 /* AppDelegate.swift in Sources */,
@@ -1020,12 +1063,15 @@
 				2FBE4626296239A000051BB5 /* IndicatorView.swift in Sources */,
 				2FBE461D2962302900051BB5 /* FeedDataManager.swift in Sources */,
 				2FBE464C2964B2FB00051BB5 /* MyPostResponse.swift in Sources */,
+				2FE3F60A296944FC00F38963 /* EditProfileRequest.swift in Sources */,
 				2FBE46322962508E00051BB5 /* Date.swift in Sources */,
 				2FBE464229646B7200051BB5 /* MyPostViewController.swift in Sources */,
 				2FBE45EF2961E2A200051BB5 /* NameViewController.swift in Sources */,
 				2FBE46112962150000051BB5 /* Device.swift in Sources */,
+				2F8CC7A629693A140011C143 /* ReadProfileEditViewController.swift in Sources */,
 				2FBE46052962032300051BB5 /* StoryCollectionViewCell.swift in Sources */,
 				2FBE45F32961E2BC00051BB5 /* ServiceAgreementViewController.swift in Sources */,
+				2FE3F60C2969450E00F38963 /* EditProfileResponse.swift in Sources */,
 				2FDCF2B62968050200FD1DBA /* DeletePostViewController.swift in Sources */,
 				2FBE46002961F95100051BB5 /* HomeViewController.swift in Sources */,
 				2FDCF2C62968362100FD1DBA /* UpdatePostDataManager.swift in Sources */,
@@ -1047,12 +1093,14 @@
 				2FBE462E296243CC00051BB5 /* UIFont.swift in Sources */,
 				2FBE46142962299600051BB5 /* FeedViewController.swift in Sources */,
 				2FBE45F52961E2CC00051BB5 /* IdViewController.swift in Sources */,
+				2F8CC7AC29693B1E0011C143 /* ReadProfileEditResponse.swift in Sources */,
 				2FF58725296746D1004C8BE7 /* PostRequest.swift in Sources */,
 				2FF5872B29679865004C8BE7 /* PostResponse.swift in Sources */,
 				2FBE460D29620B5400051BB5 /* StoryResponse.swift in Sources */,
 				2FF5872F2967DF0B004C8BE7 /* MyPostDataManager.swift in Sources */,
 				2FBE46502964B53100051BB5 /* ProfileResponse.swift in Sources */,
 				2FBE461729622A5100051BB5 /* FeedTableViewCell.swift in Sources */,
+				2FE3F6082969442300F38963 /* EditProfileDataManager.swift in Sources */,
 				2FBE45B72960B47700051BB5 /* SignUpSignInViewController.swift in Sources */,
 				2FBE463A2964376200051BB5 /* SignUpResponse.swift in Sources */,
 				2FBE463E2964694900051BB5 /* ProfileViewController.swift in Sources */,
