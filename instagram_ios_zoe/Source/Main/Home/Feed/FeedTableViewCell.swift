@@ -9,14 +9,18 @@ import UIKit
 import Kingfisher
 
 // 페이지 컨트롤 델리게이트
-protocol PageControlDelegate {
+protocol FeedCellDelegate {
     func imagePageChanged(pageControl : UIPageControl, postImgRes: [FeedPostImages], imageView: UIImageView)
+    func commentLabelTapped(postIdx : Int)
 }
 
+
 class FeedTableViewCell: UITableViewCell {
-    var delegate: PageControlDelegate?
+    var delegate: FeedCellDelegate?
     var postImgRes: [FeedPostImages] = []
     var cellHeight: CGFloat = 0
+    var postIdx = 0
+    var tapGestureRecognizer : UITapGestureRecognizer!
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var idLabel: UILabel!
@@ -25,11 +29,21 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var idLabel2: UILabel!
     @IBOutlet weak var feedTextLabel: UILabel!
     
-    @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var feedImagePageControl: UIPageControl!
+    @IBOutlet weak var likeCountLabel: UILabel!
+    @IBOutlet weak var commentCountLabel: UILabel!
+    @IBOutlet weak var updateAtLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didCommentTapped(_:)))
+        self.commentCountLabel.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func didCommentTapped(_ sender: UITapGestureRecognizer) {
+        print("did comment tapped", sender)
+        self.delegate?.commentLabelTapped(postIdx: postIdx)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -64,7 +78,13 @@ class FeedTableViewCell: UITableViewCell {
         
         idLabel2.text = data.userId
         feedTextLabel.text = data.content
+        // 좋아요
         
+        let likeCount = "좋아요 \(data.postLikeCount)개"
+        likeCountLabel.text = likeCount
+        let commentCount = "댓글 \(data.commentCount)개 모두 보기"
+        commentCountLabel.text = commentCount
+        updateAtLabel.text = data.updateAt
     }
     
     @IBAction func imagePageChanged(_ sender: UIPageControl) {

@@ -109,6 +109,9 @@
 		2FE3F62729697B6200F38963 /* SearchingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE3F62529697B6200F38963 /* SearchingTableViewCell.xib */; };
 		2FE3F62929697D6000F38963 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F62829697D6000F38963 /* SearchRequest.swift */; };
 		2FE3F62D29697D7900F38963 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F62C29697D7900F38963 /* SearchResponse.swift */; };
+		2FE3F6362969B39900F38963 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F6352969B39900F38963 /* CommentViewController.swift */; };
+		2FE3F6392969B3DE00F38963 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F6372969B3DE00F38963 /* CommentTableViewCell.swift */; };
+		2FE3F63A2969B3DE00F38963 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE3F6382969B3DE00F38963 /* CommentTableViewCell.xib */; };
 		2FF58725296746D1004C8BE7 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF58724296746D1004C8BE7 /* PostRequest.swift */; };
 		2FF5872729676E3E004C8BE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5872629676E3E004C8BE7 /* GoogleService-Info.plist */; };
 		2FF58729296797A2004C8BE7 /* CreatePostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF58728296797A2004C8BE7 /* CreatePostDataManager.swift */; };
@@ -244,6 +247,9 @@
 		2FE3F62529697B6200F38963 /* SearchingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchingTableViewCell.xib; sourceTree = "<group>"; };
 		2FE3F62829697D6000F38963 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		2FE3F62C29697D7900F38963 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		2FE3F6352969B39900F38963 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		2FE3F6372969B3DE00F38963 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		2FE3F6382969B3DE00F38963 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		2FF58724296746D1004C8BE7 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
 		2FF5872629676E3E004C8BE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FF58728296797A2004C8BE7 /* CreatePostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostDataManager.swift; sourceTree = "<group>"; };
@@ -662,6 +668,7 @@
 				2FBE461C2962302900051BB5 /* FeedDataManager.swift */,
 				2FBE461529622A5100051BB5 /* FeedTableViewCell.swift */,
 				2FBE461629622A5100051BB5 /* FeedTableViewCell.xib */,
+				2FE3F6342969B37900F38963 /* Comment */,
 				2FBE461929622FE200051BB5 /* Entity */,
 			);
 			path = Feed;
@@ -821,6 +828,16 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		2FE3F6342969B37900F38963 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				2FE3F6352969B39900F38963 /* CommentViewController.swift */,
+				2FE3F6372969B3DE00F38963 /* CommentTableViewCell.swift */,
+				2FE3F6382969B3DE00F38963 /* CommentTableViewCell.xib */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
 		2FF58723296746B6004C8BE7 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -975,6 +992,7 @@
 				2FF5872729676E3E004C8BE7 /* GoogleService-Info.plist in Resources */,
 				2FBE45CB2960CA0300051BB5 /* ShopStoryboard.storyboard in Resources */,
 				2FBE461829622A5100051BB5 /* FeedTableViewCell.xib in Resources */,
+				2FE3F63A2969B3DE00F38963 /* CommentTableViewCell.xib in Resources */,
 				2FBE457D295FE69700051BB5 /* Assets.xcassets in Resources */,
 				2FBE45C42960C9DB00051BB5 /* HomeStoryboard.storyboard in Resources */,
 				2FBE45BB2960BBA900051BB5 /* SignInStoryboard.storyboard in Resources */,
@@ -1118,6 +1136,7 @@
 				2FBE464429646B8900051BB5 /* TagPostViewController.swift in Sources */,
 				2FBE45BD2960BDA400051BB5 /* UIBezierPath.swift in Sources */,
 				2FBE45D12960D11C00051BB5 /* UITextField.swift in Sources */,
+				2FE3F6392969B3DE00F38963 /* CommentTableViewCell.swift in Sources */,
 				2FBE45D42960DA3C00051BB5 /* UIViewController.swift in Sources */,
 				2FBE45DE29619EAC00051BB5 /* TabViewController.swift in Sources */,
 				2FDCF2BB2968086100FD1DBA /* DeleteResponse.swift in Sources */,
@@ -1130,6 +1149,7 @@
 				2F8CC7A929693A440011C143 /* ReadProfileEditDataManager.swift in Sources */,
 				2FBE45EB2961E28B00051BB5 /* PhoneViewController.swift in Sources */,
 				2FBE45FB2961EFD100051BB5 /* PhoneAuthCodeViewController.swift in Sources */,
+				2FE3F6362969B39900F38963 /* CommentViewController.swift in Sources */,
 				2FBE4571295FE69500051BB5 /* AppDelegate.swift in Sources */,
 				2FBE46492964B16800051BB5 /* ProfileDataManager.swift in Sources */,
 				2FBE4626296239A000051BB5 /* IndicatorView.swift in Sources */,
