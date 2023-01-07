@@ -7,22 +7,32 @@
 
 import UIKit
 
-class MyPostViewController: UIViewController {
+class MyPostViewController: BaseViewController {
     lazy var dataManager: ProfileDataManager = ProfileDataManager()
     lazy var postDataManager: MyPostDataManager = MyPostDataManager()
+    let postData = PostData.shared
     var postResponse: MyPostResponse = MyPostResponse(isSuccess: false, code: 0, message: "", result: nil)
     let cellMarginSize: CGFloat = 1
     let postCell = "PostCollectionViewCell"
+
     
     var posts : [ProfilePostImg]?
     @IBOutlet weak var postCollectionView: UICollectionView!
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.dataManager.getMyPostData(delegate: self)
+            
+            self.setupPostColletionView()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.dataManager.getMyPostData(delegate: self)
+        //self.dataManager.getMyPostData(delegate: self)
         
-        setupPostColletionView()
+        //setupPostColletionView()
         
     }
     private func setupPostColletionView() {
@@ -43,10 +53,9 @@ extension MyPostViewController {
     func didSuccessPostDetail(result: MyPostResponse) {
         //self.presentAlert(title: "게시물 로딩에 성공하였습니다", message: result.message)
         postResponse = result
-      
+        postData.add(postResponse)
         let postDetailViewController = storyboard?.instantiateViewController(withIdentifier: "PostDetailViewController") as! PostDetailViewController
         postDetailViewController.postResponse = postResponse
-  
         self.navigationController?.pushViewController(postDetailViewController, animated: true)
     }
     

@@ -15,11 +15,18 @@ class FeedViewController: BaseViewController {
     var feeds : [FeedResult] = []
     
     @IBOutlet weak var feedTableView: UITableView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.setupFeedTableView()
+            
+            self.dataManager.getFeedData(delegate: self)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupFeedTableView()
         
-        dataManager.getFeedData(delegate: self)
     }
     
     private func setupFeedTableView() {

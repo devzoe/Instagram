@@ -24,8 +24,17 @@ class ProfileViewController: BaseViewController {
     
     @IBOutlet weak var profileEditButton: UIButton!
     @IBOutlet weak var findPeopleButton: UIButton!
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("profile view will appear")
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("profile view did appear")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("profile view did load")
         self.findPeopleButton.setCornerRadius(10)
         self.profileEditButton.setCornerRadius(10)
         self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
@@ -33,6 +42,14 @@ class ProfileViewController: BaseViewController {
         
         self.dataManager.getProfileData(delegate: self)
 
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("profile view will disappear")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("profile view did disappear")
     }
     @IBAction func createButtonTouchUpInside(_ sender: UIBarButtonItem) {
         let createModalViewController = self.storyboard?.instantiateViewController(identifier: "CreateModalViewController") as! CreateModalViewController

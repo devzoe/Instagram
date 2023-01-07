@@ -25,6 +25,9 @@ class PostDetailViewController: UIViewController {
     
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var menuButton: UIButton!
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
