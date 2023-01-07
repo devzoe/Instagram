@@ -233,6 +233,7 @@
                     <connections>
                         <outlet property="commentTableView" destination="gAE-uP-gDH" id="8Cd-fv-EGm"/>
                         <outlet property="commentTextField" destination="72i-O4-b0f" id="FbC-Vb-EZs"/>
+                        <outlet property="footerView" destination="0by-1y-G0M" id="fnT-xv-MCw"/>
                         <outlet property="postContentLabel" destination="bUF-q2-lSb" id="Buf-7t-FQJ"/>
                         <outlet property="postProfileImageView" destination="Qnj-7t-2vx" id="jaF-yk-eaM"/>
                         <outlet property="postUpdateAt" destination="jMi-dx-bXd" id="BBU-Dy-iE3"/>
