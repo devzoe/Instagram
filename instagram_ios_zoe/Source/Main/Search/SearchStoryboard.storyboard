@@ -58,6 +58,111 @@
             </objects>
             <point key="canvasLocation" x="80" y="91"/>
         </scene>
+        <!--Searching Tab View Controller-->
+        <scene sceneID="2mn-6d-sE5">
+            <objects>
+                <viewController storyboardIdentifier="SearchingTabViewController" id="DRX-6H-hfP" customClass="SearchingTabViewController" customModule="instagram_ios_zoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5FP-j2-3eQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="h3v-Sh-yOL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A75-HI-ac4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824.63768115942037" y="89.732142857142847"/>
+        </scene>
+        <!--Search Account View Controller-->
+        <scene sceneID="sKu-PN-WMR">
+            <objects>
+                <viewController storyboardIdentifier="SearchAccountViewController" id="Wu1-Tr-V2T" customClass="SearchAccountViewController" customModule="instagram_ios_zoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ldh-MO-Q3Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kc8-oN-KjO">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OUl-5e-7BI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kc8-oN-KjO" firstAttribute="top" secondItem="OUl-5e-7BI" secondAttribute="top" id="6y5-yp-8tq"/>
+                            <constraint firstItem="OUl-5e-7BI" firstAttribute="bottom" secondItem="kc8-oN-KjO" secondAttribute="bottom" id="OM2-jV-AF9"/>
+                            <constraint firstItem="kc8-oN-KjO" firstAttribute="leading" secondItem="OUl-5e-7BI" secondAttribute="leading" id="ZRX-rX-eq3"/>
+                            <constraint firstItem="OUl-5e-7BI" firstAttribute="trailing" secondItem="kc8-oN-KjO" secondAttribute="trailing" id="ik9-X9-Xxa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accountTableView" destination="kc8-oN-KjO" id="W71-cf-4SD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y32-nT-swk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541" y="-293"/>
+        </scene>
+        <!--Search Tag View Controller-->
+        <scene sceneID="JcH-C0-8HT">
+            <objects>
+                <viewController storyboardIdentifier="SearchTagViewController" id="IWP-Zz-QKt" customClass="SearchTagViewController" customModule="instagram_ios_zoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LMK-V7-vgi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RjH-hQ-HYF">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="acT-qW-wpi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RjH-hQ-HYF" firstAttribute="leading" secondItem="acT-qW-wpi" secondAttribute="leading" id="24r-rK-Qoj"/>
+                            <constraint firstItem="acT-qW-wpi" firstAttribute="trailing" secondItem="RjH-hQ-HYF" secondAttribute="trailing" id="Gbz-dd-5u1"/>
+                            <constraint firstItem="RjH-hQ-HYF" firstAttribute="top" secondItem="acT-qW-wpi" secondAttribute="top" id="clX-Ty-wjM"/>
+                            <constraint firstItem="acT-qW-wpi" firstAttribute="bottom" secondItem="RjH-hQ-HYF" secondAttribute="bottom" id="iX6-cG-rpi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tagTableView" destination="RjH-hQ-HYF" id="HIb-5n-1nl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kh8-DP-FLf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541" y="356"/>
+        </scene>
+        <!--Search Location View Controller-->
+        <scene sceneID="O45-Og-Q8m">
+            <objects>
+                <viewController storyboardIdentifier="SearchLocationViewController" id="pMo-3K-asc" customClass="SearchLocationViewController" customModule="instagram_ios_zoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r9k-Hl-Ywc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LlW-Fn-gh3">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="owY-2V-Zdo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LlW-Fn-gh3" firstAttribute="leading" secondItem="owY-2V-Zdo" secondAttribute="leading" id="9oq-Ff-z6M"/>
+                            <constraint firstItem="LlW-Fn-gh3" firstAttribute="top" secondItem="owY-2V-Zdo" secondAttribute="top" id="FIN-9Z-ri0"/>
+                            <constraint firstItem="owY-2V-Zdo" firstAttribute="trailing" secondItem="LlW-Fn-gh3" secondAttribute="trailing" id="Ju1-gY-wzm"/>
+                            <constraint firstItem="owY-2V-Zdo" firstAttribute="bottom" secondItem="LlW-Fn-gh3" secondAttribute="bottom" id="PHA-NQ-Qe3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="locationTableView" destination="LlW-Fn-gh3" id="I6A-Ur-S1C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbZ-54-UNO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541" y="1001"/>
+        </scene>
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>

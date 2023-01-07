@@ -20,6 +20,11 @@ class SearchViewController: BaseViewController {
         configure()
         
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        recentSearchesResult = []
+        searchTableView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,12 +62,19 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         print("cell : ", cellData)
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let searchRequest = SearchRequest(word: recentSearchesResult[indexPath.row].searchWord)
+        let searchView = self.storyboard?.instantiateViewController(withIdentifier: "SearchingTabViewController") as! SearchingTabViewController
+        searchView.searchRequest = searchRequest
+        self.navigationController?.pushViewController(searchView, animated: true)
+    }
 }
 
 extension SearchViewController: UISearchResultsUpdating {
     
     // 사용자가 검색창에 텍스트를 입력하면 실행되는 함수 (사용자가 검색하고자 하는 이름을 받아온다)
     func updateSearchResults(for searchController: UISearchController) {
+        
     }
     
 }
@@ -81,10 +93,16 @@ extension SearchViewController: UISearchBarDelegate {
     
     // 서치바에서 취소 버튼을 눌렀을 때 호출
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        recentSearchesResult = []
+        searchTableView.reloadData()
     }
     
     // 서치바 검색이 끝났을 때 호출
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        recentSearchesResult = []
+        recentSearchesResult.append(RecentSearchesResult(searchWord: searchBar.text!, status: ""))
+        print(recentSearchesResult)
+        self.searchTableView.reloadData()
     }
     
     // 서치바 키보드 내리기

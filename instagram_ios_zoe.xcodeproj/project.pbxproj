@@ -100,6 +100,15 @@
 		2FE3F61229695A0E00F38963 /* SearchWordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE3F61029695A0E00F38963 /* SearchWordTableViewCell.xib */; };
 		2FE3F61429695C1500F38963 /* RecentSearchesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F61329695C1500F38963 /* RecentSearchesDataManager.swift */; };
 		2FE3F61729695CEC00F38963 /* RecentSearchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F61629695CEC00F38963 /* RecentSearchesResponse.swift */; };
+		2FE3F619296972BA00F38963 /* SearchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F618296972BA00F38963 /* SearchDataManager.swift */; };
+		2FE3F61D2969785500F38963 /* SearchingTabViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F61C2969785500F38963 /* SearchingTabViewViewController.swift */; };
+		2FE3F61F29697A7E00F38963 /* SearchAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F61E29697A7E00F38963 /* SearchAccountViewController.swift */; };
+		2FE3F62129697A9100F38963 /* SearchTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F62029697A9100F38963 /* SearchTagViewController.swift */; };
+		2FE3F62329697A9E00F38963 /* SearchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F62229697A9E00F38963 /* SearchLocationViewController.swift */; };
+		2FE3F62629697B6200F38963 /* SearchingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F62429697B6200F38963 /* SearchingTableViewCell.swift */; };
+		2FE3F62729697B6200F38963 /* SearchingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE3F62529697B6200F38963 /* SearchingTableViewCell.xib */; };
+		2FE3F62929697D6000F38963 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F62829697D6000F38963 /* SearchRequest.swift */; };
+		2FE3F62D29697D7900F38963 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F62C29697D7900F38963 /* SearchResponse.swift */; };
 		2FF58725296746D1004C8BE7 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF58724296746D1004C8BE7 /* PostRequest.swift */; };
 		2FF5872729676E3E004C8BE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5872629676E3E004C8BE7 /* GoogleService-Info.plist */; };
 		2FF58729296797A2004C8BE7 /* CreatePostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF58728296797A2004C8BE7 /* CreatePostDataManager.swift */; };
@@ -226,6 +235,15 @@
 		2FE3F61029695A0E00F38963 /* SearchWordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchWordTableViewCell.xib; sourceTree = "<group>"; };
 		2FE3F61329695C1500F38963 /* RecentSearchesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchesDataManager.swift; sourceTree = "<group>"; };
 		2FE3F61629695CEC00F38963 /* RecentSearchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchesResponse.swift; sourceTree = "<group>"; };
+		2FE3F618296972BA00F38963 /* SearchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataManager.swift; sourceTree = "<group>"; };
+		2FE3F61C2969785500F38963 /* SearchingTabViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingTabViewViewController.swift; sourceTree = "<group>"; };
+		2FE3F61E29697A7E00F38963 /* SearchAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAccountViewController.swift; sourceTree = "<group>"; };
+		2FE3F62029697A9100F38963 /* SearchTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTagViewController.swift; sourceTree = "<group>"; };
+		2FE3F62229697A9E00F38963 /* SearchLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationViewController.swift; sourceTree = "<group>"; };
+		2FE3F62429697B6200F38963 /* SearchingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingTableViewCell.swift; sourceTree = "<group>"; };
+		2FE3F62529697B6200F38963 /* SearchingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchingTableViewCell.xib; sourceTree = "<group>"; };
+		2FE3F62829697D6000F38963 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
+		2FE3F62C29697D7900F38963 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		2FF58724296746D1004C8BE7 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
 		2FF5872629676E3E004C8BE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FF58728296797A2004C8BE7 /* CreatePostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostDataManager.swift; sourceTree = "<group>"; };
@@ -537,6 +555,7 @@
 				2FE3F61329695C1500F38963 /* RecentSearchesDataManager.swift */,
 				2FE3F60F29695A0E00F38963 /* SearchWordTableViewCell.swift */,
 				2FE3F61029695A0E00F38963 /* SearchWordTableViewCell.xib */,
+				2FE3F61A296976AE00F38963 /* Searching */,
 				2FE3F61529695CCB00F38963 /* Entity */,
 			);
 			path = Search;
@@ -778,6 +797,30 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		2FE3F61A296976AE00F38963 /* Searching */ = {
+			isa = PBXGroup;
+			children = (
+				2FE3F61C2969785500F38963 /* SearchingTabViewViewController.swift */,
+				2FE3F61E29697A7E00F38963 /* SearchAccountViewController.swift */,
+				2FE3F62029697A9100F38963 /* SearchTagViewController.swift */,
+				2FE3F62229697A9E00F38963 /* SearchLocationViewController.swift */,
+				2FE3F618296972BA00F38963 /* SearchDataManager.swift */,
+				2FE3F62429697B6200F38963 /* SearchingTableViewCell.swift */,
+				2FE3F62529697B6200F38963 /* SearchingTableViewCell.xib */,
+				2FE3F61B2969774E00F38963 /* Entity */,
+			);
+			path = Searching;
+			sourceTree = "<group>";
+		};
+		2FE3F61B2969774E00F38963 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2FE3F62829697D6000F38963 /* SearchRequest.swift */,
+				2FE3F62C29697D7900F38963 /* SearchResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		2FF58723296746B6004C8BE7 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -935,6 +978,7 @@
 				2FBE457D295FE69700051BB5 /* Assets.xcassets in Resources */,
 				2FBE45C42960C9DB00051BB5 /* HomeStoryboard.storyboard in Resources */,
 				2FBE45BB2960BBA900051BB5 /* SignInStoryboard.storyboard in Resources */,
+				2FE3F62729697B6200F38963 /* SearchingTableViewCell.xib in Resources */,
 				2FE0A1BB29662CB1001A8857 /* PostCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1077,7 +1121,9 @@
 				2FBE45D42960DA3C00051BB5 /* UIViewController.swift in Sources */,
 				2FBE45DE29619EAC00051BB5 /* TabViewController.swift in Sources */,
 				2FDCF2BB2968086100FD1DBA /* DeleteResponse.swift in Sources */,
+				2FE3F62629697B6200F38963 /* SearchingTableViewCell.swift in Sources */,
 				2FBE4624296237C200051BB5 /* SignInResponse.swift in Sources */,
+				2FE3F62129697A9100F38963 /* SearchTagViewController.swift in Sources */,
 				2FDCF2B8296806B300FD1DBA /* DeletePostDataManager.swift in Sources */,
 				2FE3F60E29694E6500F38963 /* SearchViewController.swift in Sources */,
 				2FBE4622296237AC00051BB5 /* SignInRequest.swift in Sources */,
@@ -1109,22 +1155,28 @@
 				2FE3F61729695CEC00F38963 /* RecentSearchesResponse.swift in Sources */,
 				2FF5872D2967CEEC004C8BE7 /* PostDetailViewController.swift in Sources */,
 				2FE0A1BA29662CB1001A8857 /* PostCollectionViewCell.swift in Sources */,
+				2FE3F62329697A9E00F38963 /* SearchLocationViewController.swift in Sources */,
 				2FBE45ED2961E29600051BB5 /* EmailViewController.swift in Sources */,
 				2FBE45FE2961F06600051BB5 /* FinalViewController.swift in Sources */,
 				2FBE45CF2960CFE100051BB5 /* SignInViewController.swift in Sources */,
 				2FBE46532965A50400051BB5 /* CreatePostViewController.swift in Sources */,
 				2FBE463C2964382700051BB5 /* SignUpDataManager.swift in Sources */,
 				2FBE46382964375100051BB5 /* SignUpRequest.swift in Sources */,
+				2FE3F61D2969785500F38963 /* SearchingTabViewViewController.swift in Sources */,
 				2FBE457B295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld in Sources */,
+				2FE3F619296972BA00F38963 /* SearchDataManager.swift in Sources */,
 				2FBE46082962058000051BB5 /* StoryViewController.swift in Sources */,
 				2FBE462E296243CC00051BB5 /* UIFont.swift in Sources */,
 				2FBE46142962299600051BB5 /* FeedViewController.swift in Sources */,
 				2FBE45F52961E2CC00051BB5 /* IdViewController.swift in Sources */,
+				2FE3F61F29697A7E00F38963 /* SearchAccountViewController.swift in Sources */,
 				2F8CC7AC29693B1E0011C143 /* ReadProfileEditResponse.swift in Sources */,
 				2FF58725296746D1004C8BE7 /* PostRequest.swift in Sources */,
 				2FF5872B29679865004C8BE7 /* PostResponse.swift in Sources */,
 				2FBE460D29620B5400051BB5 /* StoryResponse.swift in Sources */,
 				2FE3F61429695C1500F38963 /* RecentSearchesDataManager.swift in Sources */,
+				2FE3F62D29697D7900F38963 /* SearchResponse.swift in Sources */,
+				2FE3F62929697D6000F38963 /* SearchRequest.swift in Sources */,
 				2FF5872F2967DF0B004C8BE7 /* MyPostDataManager.swift in Sources */,
 				2FBE46502964B53100051BB5 /* ProfileResponse.swift in Sources */,
 				2FBE461729622A5100051BB5 /* FeedTableViewCell.swift in Sources */,
