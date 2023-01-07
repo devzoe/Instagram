@@ -95,6 +95,10 @@ extension CommentViewController {
         // 댓글 생성 성공.
         self.commentTableView.reloadData()
     }
+    func didDeleteComment() {
+        // 댓글 생성 성공.
+        self.commentTableView.reloadData()
+    }
     
     func failedToRequest(message: String) {
         self.presentAlert(title: message)
@@ -117,6 +121,15 @@ extension CommentViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return  (commentTableView.bounds.height) * 0.15
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            let commentIdx = commentList[indexPath.row].postCommentIdx
+            commentDataManager.deleteComment(commentIdx, delegate: self)
+        } else if editingStyle == .insert {
+        }
     }
     
 }
