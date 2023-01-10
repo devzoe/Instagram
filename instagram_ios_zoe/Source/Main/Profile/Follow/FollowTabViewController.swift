@@ -16,7 +16,19 @@ class FollowTabViewController: TabmanViewController {
     var followingResult : [FollowingResult] = []
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        print("tab viewwillappear")
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("tab viewdidappear")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("tab view will disappear")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("tab view did disappear")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,28 +39,29 @@ class FollowTabViewController: TabmanViewController {
         if let secondVC = storyboard?.instantiateViewController(withIdentifier: "FollowingViewController") {
             viewControllers.append(secondVC)
         }
-        
-        
         self.setFollowTabBarUI(self)
+        print("data")
         self.dataManager.gotFollower(delegate: self)
-                
+        
     }
         
 }
 extension FollowTabViewController {
     func didGetFollower(result: [FollowerResult]) {
-        self.followerResult = result
-        if let followerVC = storyboard?.instantiateViewController(withIdentifier: "FollowerViewController") as? FollowerViewController {
-            followerVC.followerResult = followerResult
+        print("did get follower")
+        for i in 0..<result.count {
+            if (result[i].followYn == "ACTIVE") {
+                followerResult.append(result[i])
+            }
         }
         self.dataManager.gotFollowing(delegate: self)
-
-
     }
     func didGetFollowing(result: [FollowingResult]) {
-        self.followingResult = result
-        if let followingVC = storyboard?.instantiateViewController(withIdentifier: "FollowingViewController") as? FollowingViewController {
-            followingVC.followingResult = followingResult
+        print("did get following")
+        for i in 0..<result.count {
+            if (result[i].followYn == "ACTIVE") {
+                followingResult.append(result[i])
+            }
         }
         self.dataSource = self
     }

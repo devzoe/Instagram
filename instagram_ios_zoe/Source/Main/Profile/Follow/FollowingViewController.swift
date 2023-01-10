@@ -7,23 +7,79 @@
 
 import UIKit
 
-class FollowingViewController: UIViewController {
+class FollowingViewController: BaseViewController {
+    lazy var dataManager : FollowDataManager = FollowDataManager()
     var followingResult : [FollowingResult] = []
+    let cellId = "FollowingTableViewCell"
+    @IBOutlet weak var followingTableView: UITableView!
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("following viewwillappear")
+        self.setTableView()
+        self.dataManager.gotFollowingInTable(delegate: self)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("following viewdidappear")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print("following viewdidload")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("following view will disappear")
+        followingResult.removeAll()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("following view did disappear")
+    }
+    func setTableView() {
+        self.followingTableView.delegate = self
+        self.followingTableView.dataSource = self
+       // self.followingTableView.register(FollowingTableViewCell.self, forCellReuseIdentifier: cellId)
+    }
+}
+extension FollowingViewController {
+    func didGetFollowing(result: [FollowingResult]) {
+        for i in 0..<result.count {
+            if (result[i].followYn == "ACTIVE") {
+                self.followingResult.append(result[i])
+            }
+        }
+        
+        self.followingTableView.reloadData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
     }
-    */
-
 }
+extension FollowingViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return followingResult.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = followingTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! FollowingTableViewCell
+        
+        let cellData = followingResult[indexPath.row]
+        cell.get(data: cellData)
+        cell.selectionStyle = .none
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "UserProfileTableViewController") as! UserProfileTableViewController
+        let profileId = followingResult[indexPath.row].id
+        let profileIdx = followingResult[indexPath.row].userIdx
+        profileVC.profileId = profileId
+        UserDefaults.standard.set(profileIdx, forKey: "profileIdx")
+        print("profileId : ", profileId)
+        print("profileIdx: ", profileIdx)
+        self.navigationController?.pushViewController(profileVC, animated: true)
+        
+    }
+    
+}
+

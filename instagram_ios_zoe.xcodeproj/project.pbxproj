@@ -74,7 +74,6 @@
 		2FBE46382964375100051BB5 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE46372964375100051BB5 /* SignUpRequest.swift */; };
 		2FBE463A2964376200051BB5 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE46392964376200051BB5 /* SignUpResponse.swift */; };
 		2FBE463C2964382700051BB5 /* SignUpDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE463B2964382700051BB5 /* SignUpDataManager.swift */; };
-		2FBE463E2964694900051BB5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE463D2964694900051BB5 /* ProfileViewController.swift */; };
 		2FBE464029646A5E00051BB5 /* MyPostTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE463F29646A5E00051BB5 /* MyPostTabViewController.swift */; };
 		2FBE464229646B7200051BB5 /* MyPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464129646B7200051BB5 /* MyPostViewController.swift */; };
 		2FBE464429646B8900051BB5 /* TagPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464329646B8900051BB5 /* TagPostViewController.swift */; };
@@ -88,6 +87,14 @@
 		2FC4F1DF296D5FC900E010EE /* FollowDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1DE296D5FC900E010EE /* FollowDataManager.swift */; };
 		2FC4F1E2296D5FF700E010EE /* FollowerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1E1296D5FF700E010EE /* FollowerResponse.swift */; };
 		2FC4F1E4296D600300E010EE /* FollowingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1E3296D600300E010EE /* FollowingResponse.swift */; };
+		2FC4F1E6296DC01F00E010EE /* FollowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1E5296DC01F00E010EE /* FollowerTableViewCell.swift */; };
+		2FC4F1E8296DC02C00E010EE /* FollowingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1E7296DC02C00E010EE /* FollowingTableViewCell.swift */; };
+		2FC4F1EB296DDB3500E010EE /* UserProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1EA296DDB3500E010EE /* UserProfileTableViewController.swift */; };
+		2FC4F1ED296DDB4E00E010EE /* UserTopProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1EC296DDB4E00E010EE /* UserTopProfileViewController.swift */; };
+		2FC4F1EF296DDB7700E010EE /* UserTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1EE296DDB7700E010EE /* UserTabViewController.swift */; };
+		2FC4F1F1296DDB8600E010EE /* UserPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1F0296DDB8600E010EE /* UserPostViewController.swift */; };
+		2FC4F1F3296DDB9700E010EE /* UserTagPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1F2296DDB9700E010EE /* UserTagPostViewController.swift */; };
+		2FC4F1F5296DE3F700E010EE /* UserProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1F4296DE3F700E010EE /* UserProfileDataManager.swift */; };
 		2FDCF2B62968050200FD1DBA /* DeletePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */; };
 		2FDCF2B8296806B300FD1DBA /* DeletePostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */; };
 		2FDCF2BB2968086100FD1DBA /* DeleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */; };
@@ -99,7 +106,6 @@
 		2FE0A1BA29662CB1001A8857 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0A1B829662CB1001A8857 /* PostCollectionViewCell.swift */; };
 		2FE0A1BB29662CB1001A8857 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE0A1B929662CB1001A8857 /* PostCollectionViewCell.xib */; };
 		2FE0A1BD2966E3A5001A8857 /* CreateModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0A1BC2966E3A5001A8857 /* CreateModalViewController.swift */; };
-		2FE385122969DF1200C2FBBE /* ProfileViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE385112969DF1200C2FBBE /* ProfileViewController2.swift */; };
 		2FE3851A296B14B500C2FBBE /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE38519296B14B500C2FBBE /* ProfileTableViewController.swift */; };
 		2FE3851C296B165D00C2FBBE /* TopProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3851B296B165D00C2FBBE /* TopProfileViewController.swift */; };
 		2FE38529296B296C00C2FBBE /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE38523296B296B00C2FBBE /* Roboto-Regular.ttf */; };
@@ -234,7 +240,6 @@
 		2FBE46372964375100051BB5 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		2FBE46392964376200051BB5 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		2FBE463B2964382700051BB5 /* SignUpDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataManager.swift; sourceTree = "<group>"; };
-		2FBE463D2964694900051BB5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2FBE463F29646A5E00051BB5 /* MyPostTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostTabViewController.swift; sourceTree = "<group>"; };
 		2FBE464129646B7200051BB5 /* MyPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostViewController.swift; sourceTree = "<group>"; };
 		2FBE464329646B8900051BB5 /* TagPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPostViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +253,14 @@
 		2FC4F1DE296D5FC900E010EE /* FollowDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowDataManager.swift; sourceTree = "<group>"; };
 		2FC4F1E1296D5FF700E010EE /* FollowerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerResponse.swift; sourceTree = "<group>"; };
 		2FC4F1E3296D600300E010EE /* FollowingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingResponse.swift; sourceTree = "<group>"; };
+		2FC4F1E5296DC01F00E010EE /* FollowerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerTableViewCell.swift; sourceTree = "<group>"; };
+		2FC4F1E7296DC02C00E010EE /* FollowingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingTableViewCell.swift; sourceTree = "<group>"; };
+		2FC4F1EA296DDB3500E010EE /* UserProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewController.swift; sourceTree = "<group>"; };
+		2FC4F1EC296DDB4E00E010EE /* UserTopProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTopProfileViewController.swift; sourceTree = "<group>"; };
+		2FC4F1EE296DDB7700E010EE /* UserTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTabViewController.swift; sourceTree = "<group>"; };
+		2FC4F1F0296DDB8600E010EE /* UserPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostViewController.swift; sourceTree = "<group>"; };
+		2FC4F1F2296DDB9700E010EE /* UserTagPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTagPostViewController.swift; sourceTree = "<group>"; };
+		2FC4F1F4296DE3F700E010EE /* UserProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDataManager.swift; sourceTree = "<group>"; };
 		2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostViewController.swift; sourceTree = "<group>"; };
 		2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostDataManager.swift; sourceTree = "<group>"; };
 		2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteResponse.swift; sourceTree = "<group>"; };
@@ -259,7 +272,6 @@
 		2FE0A1B829662CB1001A8857 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FE0A1B929662CB1001A8857 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		2FE0A1BC2966E3A5001A8857 /* CreateModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateModalViewController.swift; sourceTree = "<group>"; };
-		2FE385112969DF1200C2FBBE /* ProfileViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController2.swift; sourceTree = "<group>"; };
 		2FE38519296B14B500C2FBBE /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		2FE3851B296B165D00C2FBBE /* TopProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopProfileViewController.swift; sourceTree = "<group>"; };
 		2FE38523296B296B00C2FBBE /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -574,12 +586,11 @@
 		2FBE45BF2960C99600051BB5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				2FC4F1E9296DD9ED00E010EE /* UserProfile */,
 				2FC4F1D7296D5B8700E010EE /* Follow */,
 				2FBE45CC2960CA1400051BB5 /* ProfileStoryboard.storyboard */,
 				2FE38519296B14B500C2FBBE /* ProfileTableViewController.swift */,
 				2FE3851B296B165D00C2FBBE /* TopProfileViewController.swift */,
-				2FBE463D2964694900051BB5 /* ProfileViewController.swift */,
-				2FE385112969DF1200C2FBBE /* ProfileViewController2.swift */,
 				2FBE46482964B16800051BB5 /* ProfileDataManager.swift */,
 				2FBE464A2964B2E700051BB5 /* Entity */,
 				2F8CC7A4296939EA0011C143 /* Edit */,
@@ -810,7 +821,9 @@
 			children = (
 				2FC4F1D8296D5BAC00E010EE /* FollowTabViewController.swift */,
 				2FC4F1DA296D5C0300E010EE /* FollowerViewController.swift */,
+				2FC4F1E5296DC01F00E010EE /* FollowerTableViewCell.swift */,
 				2FC4F1DC296D5C0E00E010EE /* FollowingViewController.swift */,
+				2FC4F1E7296DC02C00E010EE /* FollowingTableViewCell.swift */,
 				2FC4F1DE296D5FC900E010EE /* FollowDataManager.swift */,
 				2FC4F1E0296D5FD500E010EE /* Entity */,
 			);
@@ -824,6 +837,19 @@
 				2FC4F1E3296D600300E010EE /* FollowingResponse.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		2FC4F1E9296DD9ED00E010EE /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				2FC4F1EA296DDB3500E010EE /* UserProfileTableViewController.swift */,
+				2FC4F1EC296DDB4E00E010EE /* UserTopProfileViewController.swift */,
+				2FC4F1EE296DDB7700E010EE /* UserTabViewController.swift */,
+				2FC4F1F0296DDB8600E010EE /* UserPostViewController.swift */,
+				2FC4F1F2296DDB9700E010EE /* UserTagPostViewController.swift */,
+				2FC4F1F4296DE3F700E010EE /* UserProfileDataManager.swift */,
+			);
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 		2FDCF2B42968045300FD1DBA /* DeletePost */ = {
@@ -1236,6 +1262,7 @@
 				2FC4F1DB296D5C0300E010EE /* FollowerViewController.swift in Sources */,
 				2FBE45BD2960BDA400051BB5 /* UIBezierPath.swift in Sources */,
 				2FBE45D12960D11C00051BB5 /* UITextField.swift in Sources */,
+				2FC4F1ED296DDB4E00E010EE /* UserTopProfileViewController.swift in Sources */,
 				2FE3F6392969B3DE00F38963 /* CommentTableViewCell.swift in Sources */,
 				2FBE45D42960DA3C00051BB5 /* UIViewController.swift in Sources */,
 				2FBE45DE29619EAC00051BB5 /* TabViewController.swift in Sources */,
@@ -1244,6 +1271,7 @@
 				2FBE4624296237C200051BB5 /* SignInResponse.swift in Sources */,
 				2FE3F62129697A9100F38963 /* SearchTagViewController.swift in Sources */,
 				2FDCF2B8296806B300FD1DBA /* DeletePostDataManager.swift in Sources */,
+				2FC4F1F1296DDB8600E010EE /* UserPostViewController.swift in Sources */,
 				2FE3F60E29694E6500F38963 /* SearchViewController.swift in Sources */,
 				2FBE4622296237AC00051BB5 /* SignInRequest.swift in Sources */,
 				2F8CC7A929693A440011C143 /* ReadProfileEditDataManager.swift in Sources */,
@@ -1273,10 +1301,12 @@
 				2FBE46002961F95100051BB5 /* HomeViewController.swift in Sources */,
 				2FDCF2C62968362100FD1DBA /* UpdatePostDataManager.swift in Sources */,
 				2FBE45AD29600E4900051BB5 /* Constant.swift in Sources */,
+				2FC4F1E6296DC01F00E010EE /* FollowerTableViewCell.swift in Sources */,
 				2FC4F1DF296D5FC900E010EE /* FollowDataManager.swift in Sources */,
 				2FDCF2C22968358800FD1DBA /* UpdatePostRequest.swift in Sources */,
 				2FBE45DA2960E54A00051BB5 /* SignUpViewController.swift in Sources */,
 				2FBE4573295FE69500051BB5 /* SceneDelegate.swift in Sources */,
+				2FC4F1F5296DE3F700E010EE /* UserProfileDataManager.swift in Sources */,
 				2FBE462A29623BC100051BB5 /* UIColor.swift in Sources */,
 				2FE3F61729695CEC00F38963 /* RecentSearchesResponse.swift in Sources */,
 				2FF5872D2967CEEC004C8BE7 /* PostDetailViewController.swift in Sources */,
@@ -1297,11 +1327,12 @@
 				2FBE46082962058000051BB5 /* StoryViewController.swift in Sources */,
 				2FBE462E296243CC00051BB5 /* UIFont.swift in Sources */,
 				2FBE46142962299600051BB5 /* FeedViewController.swift in Sources */,
+				2FC4F1E8296DC02C00E010EE /* FollowingTableViewCell.swift in Sources */,
 				2FBE45F52961E2CC00051BB5 /* IdViewController.swift in Sources */,
+				2FC4F1EB296DDB3500E010EE /* UserProfileTableViewController.swift in Sources */,
 				2FE3F61F29697A7E00F38963 /* SearchAccountViewController.swift in Sources */,
 				2F8CC7AC29693B1E0011C143 /* ReadProfileEditResponse.swift in Sources */,
 				2FF58725296746D1004C8BE7 /* PostRequest.swift in Sources */,
-				2FE385122969DF1200C2FBBE /* ProfileViewController2.swift in Sources */,
 				2FF5872B29679865004C8BE7 /* PostResponse.swift in Sources */,
 				2FBE460D29620B5400051BB5 /* StoryResponse.swift in Sources */,
 				2FE3F61429695C1500F38963 /* RecentSearchesDataManager.swift in Sources */,
@@ -1312,8 +1343,9 @@
 				2FBE461729622A5100051BB5 /* FeedTableViewCell.swift in Sources */,
 				2FE3F6082969442300F38963 /* EditProfileDataManager.swift in Sources */,
 				2FBE45B72960B47700051BB5 /* SignUpSignInViewController.swift in Sources */,
+				2FC4F1F3296DDB9700E010EE /* UserTagPostViewController.swift in Sources */,
+				2FC4F1EF296DDB7700E010EE /* UserTabViewController.swift in Sources */,
 				2FBE463A2964376200051BB5 /* SignUpResponse.swift in Sources */,
-				2FBE463E2964694900051BB5 /* ProfileViewController.swift in Sources */,
 				2FBE460A2962097A00051BB5 /* StoryDataManager.swift in Sources */,
 				2FE3F63F2969C46E00F38963 /* CommentRequest.swift in Sources */,
 				2FDCF2C4296835C900FD1DBA /* UpdatePostResponse.swift in Sources */,

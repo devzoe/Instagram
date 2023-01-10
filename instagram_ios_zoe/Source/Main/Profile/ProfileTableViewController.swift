@@ -9,7 +9,6 @@ import UIKit
 
 class ProfileTableViewController: UITableViewController {
     lazy var dataManager: ProfileDataManager = ProfileDataManager()
-    @IBOutlet weak var userIdBarButton: UIBarButtonItem!
     @IBOutlet weak var userIdButton: UIButton!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

@@ -1,14 +1,14 @@
 //
-//  TopProfileViewController.swift
+//  UserTopProfileViewController.swift
 //  instagram_ios_zoe
 //
-//  Created by 남경민 on 2023/01/09.
+//  Created by 남경민 on 2023/01/11.
 //
 
 import UIKit
 
-class TopProfileViewController: UIViewController {
-    lazy var dataManager: ProfileDataManager = ProfileDataManager()
+class UserTopProfileViewController: UIViewController {
+    lazy var dataManager: UserProfileDataManager = UserProfileDataManager()
     @IBOutlet weak var profileImageView: UIImageView!
     
     @IBOutlet weak var postCountLabel: UILabel!
@@ -20,15 +20,17 @@ class TopProfileViewController: UIViewController {
     @IBOutlet weak var introductionLabel: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!
     
-    @IBOutlet weak var editProfileButton: UIButton!
+    @IBOutlet weak var followYnButton: UIButton!
+    
+    
     @IBOutlet weak var findUserButton: UIButton!
     
-    @IBOutlet weak var editProfileTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var messageButton: UIButton!
+    
     @IBOutlet weak var websiteLabelTopConstraint: NSLayoutConstraint!
    
-    @IBOutlet weak var postLabel: UILabel!
-    @IBOutlet weak var followerLabel: UILabel!
-    @IBOutlet weak var followingLabel: UILabel!
+    @IBOutlet weak var followYnButtonTopConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var followerView: UIView!
     @IBOutlet weak var followingView: UIView!
     
@@ -36,17 +38,14 @@ class TopProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.findUserButton.setCornerRadius(10)
-        self.editProfileButton.setCornerRadius(10)
+        self.followYnButton.setCornerRadius(10)
+        self.messageButton.setCornerRadius(10)
         DispatchQueue.main.async {
             self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
             self.profileImageView.clipsToBounds = true
-            //self.userNameLabel.font = .NotoSans(.medium, size: 13)
-            //self.postLabel.font = .NotoSans(.regular, size: 15)
-            //self.followerLabel.font = .NotoSans(.regular, size: 15)
-            //self.followingLabel.font = .NotoSans(.regular, size: 15)
-            //self.editProfileButton.titleLabel?.font = .NotoSans(.medium, size: 15)
         }
-        self.dataManager.getProfileData(delegate: self)
+        let profileIdx = UserDefaults.standard.integer(forKey: "profileIdx")
+        self.dataManager.getProfileData(profileIdx: profileIdx, delegate: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,15 +65,9 @@ class TopProfileViewController: UIViewController {
         self.navigationController?.pushViewController(followingViewController, animated: true)
 
     }
-    
-    @IBAction func editProfileButtonTouchUpInside(_ sender: UIButton) {
-        let readProfileEditViewController = self.storyboard?.instantiateViewController(identifier: "ReadProfileEditViewController") as! ReadProfileEditViewController
-        self.navigationController?.pushViewController(readProfileEditViewController, animated: true)
-    }
-    
 }
 
-extension TopProfileViewController {
+extension UserTopProfileViewController {
     func didSetProfile(result: ProfileResult) {
         //self.presentAlert(title: "프로필 로딩에 성공하였습니다", message: result.userId)
         // 프로필 이미지
@@ -106,7 +99,7 @@ extension TopProfileViewController {
             // 프로필 편집 버튼 topAnchor 변경
             self.websiteLabelTopConstraint.isActive = false
             self.websiteLabelTopConstraint = websiteLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 10)
-            self.editProfileTopConstraint.isActive = true
+            self.followYnButtonTopConstraint.isActive = true
             
             //self.websiteLabel.font = .NotoSans(.regular, size: 11)
             self.websiteLabel.text = result.website
@@ -116,9 +109,9 @@ extension TopProfileViewController {
             // 웹사이트가 없는 경우
             websiteLabel.isHidden = true
             
-            self.editProfileTopConstraint.isActive = false
-            self.editProfileTopConstraint = editProfileButton.topAnchor.constraint(equalTo: introductionLabel.bottomAnchor, constant: 10)
-            self.editProfileTopConstraint.isActive = true
+            self.followYnButtonTopConstraint.isActive = false
+            self.followYnButtonTopConstraint = followYnButton.topAnchor.constraint(equalTo: introductionLabel.bottomAnchor, constant: 10)
+            self.followYnButtonTopConstraint.isActive = true
             
             //self.introductionLabel.font = .NotoSans(.regular, size: 13)
             self.introductionLabel.text = result.introduction
@@ -127,9 +120,15 @@ extension TopProfileViewController {
             // 둘 다 없는 경우
             self.introductionLabel.isHidden = true
             self.websiteLabel.isHidden = true
-            self.editProfileTopConstraint.isActive = false
-            self.editProfileTopConstraint = editProfileButton.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 5)
-            self.editProfileTopConstraint.isActive = true
+            self.followYnButtonTopConstraint.isActive = false
+            self.followYnButtonTopConstraint = followYnButton.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 5)
+            self.followYnButtonTopConstraint.isActive = true
+        }
+        
+        if (result.followStatus == "ACTIVE") {
+            self.followYnButton.setTitle("팔로잉", for: .normal)
+        } else {
+            self.followYnButton.setTitle("팔로우", for: .normal) 
         }
     }
     
