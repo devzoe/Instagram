@@ -29,6 +29,9 @@ class TopProfileViewController: UIViewController {
     @IBOutlet weak var postLabel: UILabel!
     @IBOutlet weak var followerLabel: UILabel!
     @IBOutlet weak var followingLabel: UILabel!
+    @IBOutlet weak var followerView: UIView!
+    @IBOutlet weak var followingView: UIView!
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -47,7 +50,21 @@ class TopProfileViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didFollowerTapped(_:)))
+        self.followerView.addGestureRecognizer(tapGestureRecognizer)
+        var tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(didFollowingTapped(_:)))
+        self.followingView.addGestureRecognizer(tapGestureRecognizer2)
+    }
+    @objc func didFollowerTapped(_ sender: UITapGestureRecognizer) {
+        print("did follower tapped", sender)
+        let followerViewController = self.storyboard?.instantiateViewController(identifier: "FollowTabViewController") as! FollowTabViewController
+        self.navigationController?.pushViewController(followerViewController, animated: true)
+    }
+    @objc func didFollowingTapped(_ sender: UITapGestureRecognizer) {
+        print("did following tapped", sender)
+        let followingViewController = self.storyboard?.instantiateViewController(identifier: "FollowTabViewController") as! FollowTabViewController
+        self.navigationController?.pushViewController(followingViewController, animated: true)
+
     }
     
     @IBAction func editProfileButtonTouchUpInside(_ sender: UIButton) {

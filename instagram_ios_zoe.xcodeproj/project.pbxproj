@@ -82,6 +82,12 @@
 		2FBE464C2964B2FB00051BB5 /* MyPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464B2964B2FB00051BB5 /* MyPostResponse.swift */; };
 		2FBE46502964B53100051BB5 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE464F2964B53100051BB5 /* ProfileResponse.swift */; };
 		2FBE46532965A50400051BB5 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE46522965A50300051BB5 /* CreatePostViewController.swift */; };
+		2FC4F1D9296D5BAC00E010EE /* FollowTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1D8296D5BAC00E010EE /* FollowTabViewController.swift */; };
+		2FC4F1DB296D5C0300E010EE /* FollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1DA296D5C0300E010EE /* FollowerViewController.swift */; };
+		2FC4F1DD296D5C0E00E010EE /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1DC296D5C0E00E010EE /* FollowingViewController.swift */; };
+		2FC4F1DF296D5FC900E010EE /* FollowDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1DE296D5FC900E010EE /* FollowDataManager.swift */; };
+		2FC4F1E2296D5FF700E010EE /* FollowerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1E1296D5FF700E010EE /* FollowerResponse.swift */; };
+		2FC4F1E4296D600300E010EE /* FollowingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1E3296D600300E010EE /* FollowingResponse.swift */; };
 		2FDCF2B62968050200FD1DBA /* DeletePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */; };
 		2FDCF2B8296806B300FD1DBA /* DeletePostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */; };
 		2FDCF2BB2968086100FD1DBA /* DeleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */; };
@@ -236,6 +242,12 @@
 		2FBE464B2964B2FB00051BB5 /* MyPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostResponse.swift; sourceTree = "<group>"; };
 		2FBE464F2964B53100051BB5 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		2FBE46522965A50300051BB5 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		2FC4F1D8296D5BAC00E010EE /* FollowTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTabViewController.swift; sourceTree = "<group>"; };
+		2FC4F1DA296D5C0300E010EE /* FollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerViewController.swift; sourceTree = "<group>"; };
+		2FC4F1DC296D5C0E00E010EE /* FollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
+		2FC4F1DE296D5FC900E010EE /* FollowDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowDataManager.swift; sourceTree = "<group>"; };
+		2FC4F1E1296D5FF700E010EE /* FollowerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerResponse.swift; sourceTree = "<group>"; };
+		2FC4F1E3296D600300E010EE /* FollowingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingResponse.swift; sourceTree = "<group>"; };
 		2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostViewController.swift; sourceTree = "<group>"; };
 		2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostDataManager.swift; sourceTree = "<group>"; };
 		2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteResponse.swift; sourceTree = "<group>"; };
@@ -562,6 +574,7 @@
 		2FBE45BF2960C99600051BB5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				2FC4F1D7296D5B8700E010EE /* Follow */,
 				2FBE45CC2960CA1400051BB5 /* ProfileStoryboard.storyboard */,
 				2FE38519296B14B500C2FBBE /* ProfileTableViewController.swift */,
 				2FE3851B296B165D00C2FBBE /* TopProfileViewController.swift */,
@@ -790,6 +803,27 @@
 				2FF58723296746B6004C8BE7 /* Entity */,
 			);
 			path = CreatePost;
+			sourceTree = "<group>";
+		};
+		2FC4F1D7296D5B8700E010EE /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				2FC4F1D8296D5BAC00E010EE /* FollowTabViewController.swift */,
+				2FC4F1DA296D5C0300E010EE /* FollowerViewController.swift */,
+				2FC4F1DC296D5C0E00E010EE /* FollowingViewController.swift */,
+				2FC4F1DE296D5FC900E010EE /* FollowDataManager.swift */,
+				2FC4F1E0296D5FD500E010EE /* Entity */,
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		2FC4F1E0296D5FD500E010EE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2FC4F1E1296D5FF700E010EE /* FollowerResponse.swift */,
+				2FC4F1E3296D600300E010EE /* FollowingResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		2FDCF2B42968045300FD1DBA /* DeletePost */ = {
@@ -1194,10 +1228,12 @@
 				2FE3F6412969C47B00F38963 /* CommentResponse.swift in Sources */,
 				2FBE464029646A5E00051BB5 /* MyPostTabViewController.swift in Sources */,
 				2FBE462829623ABD00051BB5 /* String.swift in Sources */,
+				2FC4F1E4296D600300E010EE /* FollowingResponse.swift in Sources */,
 				2FE3F61129695A0E00F38963 /* SearchWordTableViewCell.swift in Sources */,
 				2FBE45DC2960F11100051BB5 /* BaseViewController.swift in Sources */,
 				2FBE45E22961A58100051BB5 /* TabmanViewController.swift in Sources */,
 				2FBE464429646B8900051BB5 /* TagPostViewController.swift in Sources */,
+				2FC4F1DB296D5C0300E010EE /* FollowerViewController.swift in Sources */,
 				2FBE45BD2960BDA400051BB5 /* UIBezierPath.swift in Sources */,
 				2FBE45D12960D11C00051BB5 /* UITextField.swift in Sources */,
 				2FE3F6392969B3DE00F38963 /* CommentTableViewCell.swift in Sources */,
@@ -1215,6 +1251,7 @@
 				2FBE45FB2961EFD100051BB5 /* PhoneAuthCodeViewController.swift in Sources */,
 				2FE3F6362969B39900F38963 /* CommentViewController.swift in Sources */,
 				2FBE4571295FE69500051BB5 /* AppDelegate.swift in Sources */,
+				2FC4F1D9296D5BAC00E010EE /* FollowTabViewController.swift in Sources */,
 				2FBE46492964B16800051BB5 /* ProfileDataManager.swift in Sources */,
 				2FBE4626296239A000051BB5 /* IndicatorView.swift in Sources */,
 				2FBE461D2962302900051BB5 /* FeedDataManager.swift in Sources */,
@@ -1227,6 +1264,7 @@
 				2F8CC7A629693A140011C143 /* ReadProfileEditViewController.swift in Sources */,
 				2FE3851C296B165D00C2FBBE /* TopProfileViewController.swift in Sources */,
 				2FBE46052962032300051BB5 /* StoryCollectionViewCell.swift in Sources */,
+				2FC4F1E2296D5FF700E010EE /* FollowerResponse.swift in Sources */,
 				2FE3F63C2969C45A00F38963 /* CommentDataManager.swift in Sources */,
 				2FBE45F32961E2BC00051BB5 /* ServiceAgreementViewController.swift in Sources */,
 				2FE3F60C2969450E00F38963 /* EditProfileResponse.swift in Sources */,
@@ -1235,6 +1273,7 @@
 				2FBE46002961F95100051BB5 /* HomeViewController.swift in Sources */,
 				2FDCF2C62968362100FD1DBA /* UpdatePostDataManager.swift in Sources */,
 				2FBE45AD29600E4900051BB5 /* Constant.swift in Sources */,
+				2FC4F1DF296D5FC900E010EE /* FollowDataManager.swift in Sources */,
 				2FDCF2C22968358800FD1DBA /* UpdatePostRequest.swift in Sources */,
 				2FBE45DA2960E54A00051BB5 /* SignUpViewController.swift in Sources */,
 				2FBE4573295FE69500051BB5 /* SceneDelegate.swift in Sources */,
@@ -1242,6 +1281,7 @@
 				2FE3F61729695CEC00F38963 /* RecentSearchesResponse.swift in Sources */,
 				2FF5872D2967CEEC004C8BE7 /* PostDetailViewController.swift in Sources */,
 				2FE0A1BA29662CB1001A8857 /* PostCollectionViewCell.swift in Sources */,
+				2FC4F1DD296D5C0E00E010EE /* FollowingViewController.swift in Sources */,
 				2FE3F62329697A9E00F38963 /* SearchLocationViewController.swift in Sources */,
 				2FBE45ED2961E29600051BB5 /* EmailViewController.swift in Sources */,
 				2FBE45FE2961F06600051BB5 /* FinalViewController.swift in Sources */,
