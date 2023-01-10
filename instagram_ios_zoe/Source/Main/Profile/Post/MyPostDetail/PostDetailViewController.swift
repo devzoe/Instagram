@@ -7,52 +7,62 @@
 
 import UIKit
 
-class PostDetailViewController: UIViewController {
+class PostDetailViewController: BaseViewController {
     var postResponse: MyPostResponse = MyPostResponse(isSuccess: false, code: 0, message: "", result: nil)
-    @IBOutlet weak var navigationTitle: UINavigationItem!
+    let cellId = "PostTableViewCell"
+    @IBOutlet weak var postTableView: UITableView!
     
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var userIdLabel: UILabel!
-    
-    @IBOutlet weak var userIdLabel2: UILabel!
-    
-    @IBOutlet weak var contentLabel: UILabel!
-    
-    @IBOutlet weak var postImageScrollView: UIScrollView!
-    @IBOutlet weak var postImagePageControl: UIPageControl!
-    @IBOutlet weak var viewInScrollView: UIView!
-    
-    
-    @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet weak var menuButton: UIButton!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.setUpTableView()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.setUpUI()
+        //DispatchQueue.main.async {
+         //   self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
+         //   self.profileImageView.clipsToBounds = true
+        //}
+    }
+    func setUpTableView(){
+        self.postTableView.delegate = self
+        self.postTableView.dataSource = self
+        self.postTableView.register(UINib(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
+    }
+}
 
-    }
-    func setUpUI() {
-        self.navigationTitle.title = "게시물"
-        if let profileImage = postResponse.result?.profileImgUrl {
-            self.profileImageView.kf.setImage(with: URL(string: profileImage))
-        } else {
-            self.profileImageView.image = UIImage(named: "고양이1")
-        }
-        self.userIdLabel.text = postResponse.result?.userId
-        self.userIdLabel2.text = postResponse.result?.userId
-        self.contentLabel.text = postResponse.result?.content
-    }
-    @IBAction func backButtonTouchUpInside(_ sender: UIButton) {
+extension PostDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
-    @IBAction func menuButtonTouchUpInside(_ sender: UIButton) {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = postTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! PostTableViewCell
+        let cellData = postResponse.result!
+        cell.get(data: cellData)
+        cell.postImgRes = cellData.postImgRes
+        cell.selectionStyle = .none
+        cell.delegate = self
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return  (postTableView.bounds.height) * 1
+    }
+}
+extension PostDetailViewController: PostCellDelegate {
+    func imagePageChanged(pageControl: UIPageControl, postImgRes: [MyPostImages], imageView: UIImageView) {
+        let postImgUrl = URL(string: postImgRes[pageControl.currentPage].postImgUrl)
+        imageView.kf.setImage(with: postImgUrl)
+    }
+    
+    func commentLabelTapped(postIdx: Int) {
+        print("")
+    }
+    func menuButtonTapped() {
         let deletePostViewController = self.storyboard?.instantiateViewController(identifier: "DeletePostViewController") as! DeletePostViewController
         deletePostViewController.postIdx = postResponse.result!.postIdx
         self.present(deletePostViewController, animated: true, completion: nil)
-        
     }
     
+  
 }

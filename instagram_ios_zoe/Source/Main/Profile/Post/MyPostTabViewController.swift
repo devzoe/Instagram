@@ -45,11 +45,11 @@ extension MyPostTabViewController: PageboyViewControllerDataSource, TMBarDataSou
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
         let item = TMBarItem(title: "")
         if (index == 0) {
-            item.title = "게시물"
-            //item.image = UIImage(systemName: "rectangle.split.3x3")
+            //item.title = "게시물"
+            item.image = UIImage(systemName: "squareshape.split.3x3")
         } else if (index == 1) {
-            item.title = "태그된 게시물"
-            //item.image = UIImage(systemName: "person.crop.rectangle")
+            //item.title = "태그된 게시물"
+            item.image = UIImage(systemName: "person.crop.rectangle")
         }
         return item
     }

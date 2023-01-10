@@ -11,25 +11,29 @@ import Kingfisher
 class CommentViewController: BaseViewController {
     lazy var postDataManager : MyPostDataManager = MyPostDataManager()
     lazy var commentDataManager : CommentDataManager = CommentDataManager()
+    var postResponse = MyPostResponse(isSuccess: false, code: 0, message: "", result: nil)
     var postIdx = 0
     let cellId = "CommentTableViewCell"
-    @IBOutlet weak var postProfileImageView: UIImageView!
-    @IBOutlet weak var postUserIdLabel: UILabel!
-    @IBOutlet weak var postUpdateAt: UILabel!
-    @IBOutlet weak var postContentLabel: UILabel!
+    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var commentTextField: UITextField!
     
     @IBOutlet weak var commentTableView: UITableView!
     @IBOutlet weak var footerView: UIView!
     
-    
     var commentList : [MyPostContents] = []
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        DispatchQueue.main.async {
+            self.profileImage.layer.cornerRadius = self.profileImage.frame.width / 2
+            self.profileImage.clipsToBounds = true
+            //self.commentTextField.layer.cornerRadius = self.commentTextField.bounds.size.height * 0.5
+
+        }
+        
         self.setUpCommentTableView()
         self.postDataManager.getPost(postIdx, delegate: self)
-        
         // 키보드 감지
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardUp), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDown), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -48,6 +52,7 @@ class CommentViewController: BaseViewController {
     func setUpCommentTableView() {
         self.commentTableView.delegate = self
         self.commentTableView.dataSource = self
+        self.commentTableView.register(CommentHeaderView.self, forHeaderFooterViewReuseIdentifier: CommentHeaderView.headerViewID)
         self.commentTableView.register(UINib(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
     }
     
@@ -72,20 +77,10 @@ class CommentViewController: BaseViewController {
         let commentRequest = CommentRequest(reply: reply!, depth: 0, commentAIdx: 0)
         commentDataManager.postComment(postIdx, commentRequest, delegate: self)
     }
-    
-    
-    
 }
 extension CommentViewController {
     func didSuccessPostData(result: MyPostResponse) {
-        if let url = result.result?.profileImgUrl {
-            postProfileImageView.kf.setImage(with: URL(string: url))
-        } else {
-            postProfileImageView.image = UIImage(named: "고양이1")
-        }
-        postUserIdLabel.text = result.result?.userId
-        postUpdateAt.text = result.result?.updateAt
-        postContentLabel.text = result.result?.content
+        postResponse = result
         profileImage.image = UIImage(named: "고양이1")
         commentTextField.placeholder = "댓글 달기..."
         commentList = result.result?.postContentRes as! [MyPostContents]
@@ -107,15 +102,20 @@ extension CommentViewController {
 
 
 extension CommentViewController : UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return commentList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = commentTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CommentTableViewCell
-        let cellData = commentList[indexPath.row]
-        cell.get(data: cellData)
-        cell.selectionStyle = .none
+        if indexPath.section == 0 {
+            let cellData = commentList[indexPath.row]
+            cell.get(data: cellData)
+            cell.selectionStyle = .none
+        }
         return cell
     }
     
@@ -130,6 +130,27 @@ extension CommentViewController : UITableViewDelegate, UITableViewDataSource {
             commentDataManager.deleteComment(commentIdx, delegate: self)
         } else if editingStyle == .insert {
         }
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        guard section == 0, let commentHeaderView = tableView.dequeueReusableHeaderFooterView(withIdentifier: CommentHeaderView.headerViewID) as? CommentHeaderView else {
+            return UIView()
+        }
+        
+        if let url = postResponse.result?.profileImgUrl {
+            commentHeaderView.postProfileImageView.kf.setImage(with: URL(string: url))
+        } else {
+            commentHeaderView.postProfileImageView.image = UIImage(named: "고양이1")
+        }
+        
+        commentHeaderView.userIdLabel.text = postResponse.result?.userId
+        commentHeaderView.updateAtLabel.text = postResponse.result?.updateAt
+        commentHeaderView.contentLabel.text = postResponse.result?.content
+        
+        return commentHeaderView
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 120
     }
     
 }

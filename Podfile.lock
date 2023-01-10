@@ -42,10 +42,11 @@ PODS:
   - GoogleUtilities/Logger (7.10.0):
     - GoogleUtilities/Environment
   - "GoogleUtilities/NSData+zlib (7.10.0)"
-  - GTMSessionFetcher/Core (3.0.0)
-  - Kingfisher (7.4.1)
+  - GTMSessionFetcher/Core (3.1.0)
+  - Kingfisher (7.5.0)
   - Pageboy (3.7.0)
   - PromisesObjC (2.1.1)
+  - SnapKit (5.6.0)
   - SwiftyJSON (4.3.0)
   - Tabman (2.13.0):
     - Pageboy (~> 3.7.0)
@@ -56,6 +57,7 @@ DEPENDENCIES:
   - BSImagePicker (~> 3.1)
   - Firebase/Storage
   - Kingfisher (~> 7.0)
+  - SnapKit (~> 5.6.0)
   - SwiftyJSON (~> 4.0)
   - Tabman (~> 2.12)
 
@@ -76,6 +78,7 @@ SPEC REPOS:
     - Kingfisher
     - Pageboy
     - PromisesObjC
+    - SnapKit
     - SwiftyJSON
     - Tabman
 
@@ -91,13 +94,14 @@ SPEC CHECKSUMS:
   FirebaseCoreInternal: 29b76f784d607df8b2a1259d73c3f04f1210137b
   FirebaseStorage: 0efbff0ac978981866d89804191688ae50d64033
   GoogleUtilities: bad72cb363809015b1f7f19beb1f1cd23c589f95
-  GTMSessionFetcher: c1edebe64e9fb4e8f6415d018edf1fd3eac074a1
-  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
+  GTMSessionFetcher: c9e714f7eec91a55641e2bab9f45fd83a219b882
+  Kingfisher: b9c2a4a4af2990a768445c277359b27bde287d71
   Pageboy: fe646118f7168960058bea7a96038386aa7c0da8
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   Tabman: 66ea44c44488327ec20f3c8dc5554a5d22f5908c
 
-PODFILE CHECKSUM: ab936c562856b6e01ffac9174a109cb58129feb0
+PODFILE CHECKSUM: fd0118434225dd067c1a5f9fa89f0e832a28a1b1
 
 COCOAPODS: 1.11.3

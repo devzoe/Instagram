@@ -21,11 +21,18 @@ class UpdatePostViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("update post view will appear")
+        DispatchQueue.main.async {
+            self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
+            self.profileImageView.clipsToBounds = true
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.topItem?.title = "정보 수정"
         self.setUI()
+        // 키보드 감지
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardUp), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDown), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
@@ -50,6 +57,22 @@ class UpdatePostViewController: BaseViewController {
         let postIdx = (postData.postResponse?.result?.postIdx)!
         self.dataManager.updatePostData(postIdx, postRequest, delegate: self)
     }
+    @objc func keyboardUp(notification:NSNotification) {
+        if let keyboardFrame:NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            
+            UIView.animate(
+                withDuration: 0.3
+                , animations: {
+                    self.postContentTextView.transform = CGAffineTransform(translationX: 0, y: -keyboardRectangle.height)
+                }
+            )
+        }
+    }
+    @objc func keyboardDown() {
+        self.postContentTextView.transform = .identity
+    }
+
     
 }
 extension UpdatePostViewController: UITextViewDelegate {

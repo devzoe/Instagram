@@ -68,6 +68,8 @@ class DeletePostViewController: BaseViewController {
 extension DeletePostViewController {
     func didDeletePost(result: DeletePostResponse) {
         print("게시물 삭제 성공")
+        let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
+        self.changeRootViewController(mainTabBarController)
     }
     
     func failedToRequest(message: String) {

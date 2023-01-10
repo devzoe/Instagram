@@ -21,6 +21,7 @@ struct ProfileResult: Decodable {
     let userId, name: String
     let introduction, profileImg, website: String?
     let postCount, followerCount, followingCount: Int
+    let followStatus : String?
     let profilePostImgs: [ProfilePostImg]?
 }
 

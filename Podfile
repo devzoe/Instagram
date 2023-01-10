@@ -13,6 +13,7 @@ target 'instagram_ios_zoe' do
   pod 'Tabman', '~> 2.12'
   pod 'BSImagePicker', '~> 3.1'
   pod 'Firebase/Storage'
+  pod 'SnapKit', '~> 5.6.0'
   target 'instagram_ios_zoeTests' do
     inherit! :search_paths
     # Pods for testing

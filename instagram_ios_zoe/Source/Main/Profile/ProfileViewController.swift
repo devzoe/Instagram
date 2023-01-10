@@ -40,7 +40,7 @@ class ProfileViewController: BaseViewController {
         self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
         self.profileImageView.clipsToBounds = true
 
-        self.dataManager.getProfileData(delegate: self)
+        //self.dataManager.getProfileData(delegate: self)
 
     }
     override func viewWillDisappear(_ animated: Bool) {

@@ -7,22 +7,40 @@
 
 import UIKit
 import Kingfisher
+import FirebaseStorage
+import Firebase
 
 class CreatePostViewController: UIViewController {
     lazy var dataManager: CreatePostDataManager = CreatePostDataManager()
+    let postUrl : PostUrl = PostUrl.shared
     var postRequest : PostRequest = PostRequest(content: "", postImgReqs: [])
-    var count = 0
     let placeholder = "문구 입력..."
     @IBOutlet weak var postThumbnailImageView: UIImageView!
     @IBOutlet weak var postContentTextView: UITextView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("create view will appear")
+        // 이미지 업로드
+        for i in 0..<self.postUrl.dataCount() {
+            FirebaseStorageManager.uploadImage(imageData: self.postUrl.readData(at: i), pathRoot: "image") { url in
+                if let url = url {
+                    let urlString = url.absoluteString
+                    self.postRequest.postImgReqs.append(PostImageReqs(postImgUrl: urlString))
+                    print("url add", urlString)
+                }
+            }
+        }
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("create view did appear")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.topItem?.title = "새 게시물"
-        //postRequest.postImgReqs.append(PostImageReqs(postImgUrl: ""))
-        DispatchQueue.main.async {
-            self.postThumbnailImageView.kf.setImage(with: URL(string: UserDefaults.standard.string(forKey: "myImageUrl/0")!))
-        }
+        print("create post view did load")
+        self.postThumbnailImageView.image = postUrl.thumnail
         
         setupTextView()
     }
@@ -35,27 +53,22 @@ class CreatePostViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
     @IBAction func postButtonTouchUpInside(_ sender: Any) {
-        
-        let count = UserDefaults.standard.integer(forKey: "myImageUrlCount")
-        print(count)
-        for i in 0..<count {
-            postRequest.postImgReqs.append(PostImageReqs(postImgUrl:UserDefaults.standard.string(forKey: "myImageUrl/\(i)")!))
-            print("유저 디폴트 : ",UserDefaults.standard.string(forKey: "myImageUrl/\(i)")!)
-            print("이미지 url : \(i)", postRequest.postImgReqs[i].postImgUrl)
-        }
         postRequest.content = postContentTextView.text
         print("문구 : ", postRequest.content)
         print("이미지 : ", postRequest.postImgReqs)
         
         dataManager.postData(postRequest, delegate: self)
     }
+    
+    @IBAction func backButtonTouchUpInside(_ sender: UIButton) {
+    }
+    
 }
 
 extension CreatePostViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
-        
+
         postContentTextView.textColor = .black
         postContentTextView.text = nil
         
@@ -70,12 +83,38 @@ extension CreatePostViewController: UITextViewDelegate {
 
 extension CreatePostViewController {
     func didSuccessPost() {
-        self.presentAlert(title: "게시물 업로드에 성공하였습니다", message: "")
+        //self.presentAlert(title: "게시물 업로드에 성공하였습니다", message: "")
         let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
         self.changeRootViewController(mainTabBarController)
     }
     
     func failedToRequest(message: String) {
         self.presentAlert(title: message)
+    }
+}
+
+class FirebaseStorageManager {
+    static func uploadImage(imageData: Data, pathRoot: String, completion: @escaping (URL?) -> Void) {
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpeg"
+        let imageName = UUID().uuidString + String(Date().timeIntervalSince1970)
+        let firebaseReference = Storage.storage().reference().child("\(imageName)")
+        firebaseReference.putData(imageData, metadata: metaData) { metaData, error in
+            firebaseReference.downloadURL { url, _ in
+                completion(url)
+            }
+        }
+    }
+    static func downloadImage(urlString: String, completion: @escaping (UIImage?) -> Void) {
+        let storageReference = Storage.storage().reference(forURL: urlString)
+        let megaByte = Int64(1 * 1024 * 1024)
+        
+        storageReference.getData(maxSize: megaByte) { data, error in
+            guard let imageData = data else {
+                completion(nil)
+                return
+            }
+            completion(UIImage(data: imageData))
+        }
     }
 }

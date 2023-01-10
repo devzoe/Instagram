@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1301DE2CDF3A2D88FF2A2DFB /* Pods_instagram_ios_zoeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C22EBD738C32BC53AE1821 /* Pods_instagram_ios_zoeTests.framework */; };
+		2F43F7DC296C9BC300521BC5 /* CommentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F43F7DB296C9BC300521BC5 /* CommentHeaderView.swift */; };
 		2F8CC7A629693A140011C143 /* ReadProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CC7A529693A140011C143 /* ReadProfileEditViewController.swift */; };
 		2F8CC7A929693A440011C143 /* ReadProfileEditDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CC7A829693A440011C143 /* ReadProfileEditDataManager.swift */; };
 		2F8CC7AC29693B1E0011C143 /* ReadProfileEditResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CC7AB29693B1E0011C143 /* ReadProfileEditResponse.swift */; };
@@ -92,6 +93,18 @@
 		2FE0A1BA29662CB1001A8857 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0A1B829662CB1001A8857 /* PostCollectionViewCell.swift */; };
 		2FE0A1BB29662CB1001A8857 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE0A1B929662CB1001A8857 /* PostCollectionViewCell.xib */; };
 		2FE0A1BD2966E3A5001A8857 /* CreateModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE0A1BC2966E3A5001A8857 /* CreateModalViewController.swift */; };
+		2FE385122969DF1200C2FBBE /* ProfileViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE385112969DF1200C2FBBE /* ProfileViewController2.swift */; };
+		2FE3851A296B14B500C2FBBE /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE38519296B14B500C2FBBE /* ProfileTableViewController.swift */; };
+		2FE3851C296B165D00C2FBBE /* TopProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3851B296B165D00C2FBBE /* TopProfileViewController.swift */; };
+		2FE38529296B296C00C2FBBE /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE38523296B296B00C2FBBE /* Roboto-Regular.ttf */; };
+		2FE3852A296B296C00C2FBBE /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE38524296B296B00C2FBBE /* Roboto-Bold.ttf */; };
+		2FE3852B296B296C00C2FBBE /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE38525296B296B00C2FBBE /* Roboto-Medium.ttf */; };
+		2FE3852C296B296C00C2FBBE /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE38526296B296B00C2FBBE /* NotoSansKR-Bold.otf */; };
+		2FE3852D296B296C00C2FBBE /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE38527296B296C00C2FBBE /* NotoSansKR-Medium.otf */; };
+		2FE3852E296B296C00C2FBBE /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE38528296B296C00C2FBBE /* NotoSansKR-Regular.otf */; };
+		2FE38530296BCDCB00C2FBBE /* PostUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3852F296BCDCB00C2FBBE /* PostUrl.swift */; };
+		2FE38537296C131000C2FBBE /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE38535296C131000C2FBBE /* PostTableViewCell.swift */; };
+		2FE38538296C131000C2FBBE /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE38536296C131000C2FBBE /* PostTableViewCell.xib */; };
 		2FE3F6082969442300F38963 /* EditProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F6072969442300F38963 /* EditProfileDataManager.swift */; };
 		2FE3F60A296944FC00F38963 /* EditProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F609296944FC00F38963 /* EditProfileRequest.swift */; };
 		2FE3F60C2969450E00F38963 /* EditProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE3F60B2969450E00F38963 /* EditProfileResponse.swift */; };
@@ -145,6 +158,7 @@
 /* Begin PBXFileReference section */
 		1934C94B60BF3D333C40B533 /* Pods-instagram_ios_zoeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoeTests.debug.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoeTests/Pods-instagram_ios_zoeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		256C470BFA0EE9CB91B8312F /* Pods-instagram_ios_zoe-instagram_ios_zoeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios_zoe-instagram_ios_zoeUITests.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios_zoe-instagram_ios_zoeUITests/Pods-instagram_ios_zoe-instagram_ios_zoeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2F43F7DB296C9BC300521BC5 /* CommentHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentHeaderView.swift; sourceTree = "<group>"; };
 		2F8CC7A529693A140011C143 /* ReadProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadProfileEditViewController.swift; sourceTree = "<group>"; };
 		2F8CC7A829693A440011C143 /* ReadProfileEditDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadProfileEditDataManager.swift; sourceTree = "<group>"; };
 		2F8CC7AB29693B1E0011C143 /* ReadProfileEditResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadProfileEditResponse.swift; sourceTree = "<group>"; };
@@ -233,6 +247,18 @@
 		2FE0A1B829662CB1001A8857 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FE0A1B929662CB1001A8857 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		2FE0A1BC2966E3A5001A8857 /* CreateModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateModalViewController.swift; sourceTree = "<group>"; };
+		2FE385112969DF1200C2FBBE /* ProfileViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController2.swift; sourceTree = "<group>"; };
+		2FE38519296B14B500C2FBBE /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		2FE3851B296B165D00C2FBBE /* TopProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopProfileViewController.swift; sourceTree = "<group>"; };
+		2FE38523296B296B00C2FBBE /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		2FE38524296B296B00C2FBBE /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		2FE38525296B296B00C2FBBE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		2FE38526296B296B00C2FBBE /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		2FE38527296B296C00C2FBBE /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		2FE38528296B296C00C2FBBE /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		2FE3852F296BCDCB00C2FBBE /* PostUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUrl.swift; sourceTree = "<group>"; };
+		2FE38535296C131000C2FBBE /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		2FE38536296C131000C2FBBE /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		2FE3F6072969442300F38963 /* EditProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileDataManager.swift; sourceTree = "<group>"; };
 		2FE3F609296944FC00F38963 /* EditProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileRequest.swift; sourceTree = "<group>"; };
 		2FE3F60B2969450E00F38963 /* EditProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileResponse.swift; sourceTree = "<group>"; };
@@ -406,6 +432,12 @@
 			isa = PBXGroup;
 			children = (
 				2FBE462F2962473E00051BB5 /* billabong.otf */,
+				2FE38526296B296B00C2FBBE /* NotoSansKR-Bold.otf */,
+				2FE38527296B296C00C2FBBE /* NotoSansKR-Medium.otf */,
+				2FE38528296B296C00C2FBBE /* NotoSansKR-Regular.otf */,
+				2FE38524296B296B00C2FBBE /* Roboto-Bold.ttf */,
+				2FE38525296B296B00C2FBBE /* Roboto-Medium.ttf */,
+				2FE38523296B296B00C2FBBE /* Roboto-Regular.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -531,7 +563,10 @@
 			isa = PBXGroup;
 			children = (
 				2FBE45CC2960CA1400051BB5 /* ProfileStoryboard.storyboard */,
+				2FE38519296B14B500C2FBBE /* ProfileTableViewController.swift */,
+				2FE3851B296B165D00C2FBBE /* TopProfileViewController.swift */,
 				2FBE463D2964694900051BB5 /* ProfileViewController.swift */,
+				2FE385112969DF1200C2FBBE /* ProfileViewController2.swift */,
 				2FBE46482964B16800051BB5 /* ProfileDataManager.swift */,
 				2FBE464A2964B2E700051BB5 /* Entity */,
 				2F8CC7A4296939EA0011C143 /* Edit */,
@@ -727,9 +762,9 @@
 			children = (
 				2FBE463F29646A5E00051BB5 /* MyPostTabViewController.swift */,
 				2FBE464129646B7200051BB5 /* MyPostViewController.swift */,
+				2FBE464329646B8900051BB5 /* TagPostViewController.swift */,
 				2FF5872E2967DF0B004C8BE7 /* MyPostDataManager.swift */,
 				2FDCF2BC2968178500FD1DBA /* MyPostDetail */,
-				2FBE464329646B8900051BB5 /* TagPostViewController.swift */,
 				2FE0A1B829662CB1001A8857 /* PostCollectionViewCell.swift */,
 				2FE0A1B929662CB1001A8857 /* PostCollectionViewCell.xib */,
 			);
@@ -751,6 +786,7 @@
 				2FE0A1BC2966E3A5001A8857 /* CreateModalViewController.swift */,
 				2FBE46522965A50300051BB5 /* CreatePostViewController.swift */,
 				2FF58728296797A2004C8BE7 /* CreatePostDataManager.swift */,
+				2FE3852F296BCDCB00C2FBBE /* PostUrl.swift */,
 				2FF58723296746B6004C8BE7 /* Entity */,
 			);
 			path = CreatePost;
@@ -778,6 +814,8 @@
 			isa = PBXGroup;
 			children = (
 				2FF5872C2967CEEC004C8BE7 /* PostDetailViewController.swift */,
+				2FE38535296C131000C2FBBE /* PostTableViewCell.swift */,
+				2FE38536296C131000C2FBBE /* PostTableViewCell.xib */,
 				2FBE464E2964B48600051BB5 /* Entity */,
 			);
 			path = MyPostDetail;
@@ -838,6 +876,7 @@
 			isa = PBXGroup;
 			children = (
 				2FE3F6352969B39900F38963 /* CommentViewController.swift */,
+				2F43F7DB296C9BC300521BC5 /* CommentHeaderView.swift */,
 				2FE3F63B2969C45A00F38963 /* CommentDataManager.swift */,
 				2FE3F6372969B3DE00F38963 /* CommentTableViewCell.swift */,
 				2FE3F6382969B3DE00F38963 /* CommentTableViewCell.xib */,
@@ -1000,21 +1039,28 @@
 				2FBE45D82960E12900051BB5 /* MainStoryboard.storyboard in Resources */,
 				2FBE45C62960C9E600051BB5 /* SearchStoryboard.storyboard in Resources */,
 				2FBE45CD2960CA1400051BB5 /* ProfileStoryboard.storyboard in Resources */,
+				2FE3852A296B296C00C2FBBE /* Roboto-Bold.ttf in Resources */,
 				2FBE46302962473E00051BB5 /* billabong.otf in Resources */,
 				2FBE46062962032300051BB5 /* StoryCollectionViewCell.xib in Resources */,
+				2FE3852D296B296C00C2FBBE /* NotoSansKR-Medium.otf in Resources */,
 				2FBE4580295FE69700051BB5 /* LaunchScreen.storyboard in Resources */,
 				2FBE45B32960A7AB00051BB5 /* SignUpSignInStoryboard.storyboard in Resources */,
 				2FBE45C82960C9F100051BB5 /* ReelsStoryboard.storyboard in Resources */,
+				2FE3852C296B296C00C2FBBE /* NotoSansKR-Bold.otf in Resources */,
+				2FE3852B296B296C00C2FBBE /* Roboto-Medium.ttf in Resources */,
+				2FE3852E296B296C00C2FBBE /* NotoSansKR-Regular.otf in Resources */,
 				2FE3F61229695A0E00F38963 /* SearchWordTableViewCell.xib in Resources */,
 				2FF5872729676E3E004C8BE7 /* GoogleService-Info.plist in Resources */,
 				2FBE45CB2960CA0300051BB5 /* ShopStoryboard.storyboard in Resources */,
 				2FBE461829622A5100051BB5 /* FeedTableViewCell.xib in Resources */,
 				2FE3F63A2969B3DE00F38963 /* CommentTableViewCell.xib in Resources */,
+				2FE38529296B296C00C2FBBE /* Roboto-Regular.ttf in Resources */,
 				2FBE457D295FE69700051BB5 /* Assets.xcassets in Resources */,
 				2FBE45C42960C9DB00051BB5 /* HomeStoryboard.storyboard in Resources */,
 				2FBE45BB2960BBA900051BB5 /* SignInStoryboard.storyboard in Resources */,
 				2FE3F62729697B6200F38963 /* SearchingTableViewCell.xib in Resources */,
 				2FE0A1BB29662CB1001A8857 /* PostCollectionViewCell.xib in Resources */,
+				2FE38538296C131000C2FBBE /* PostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1179,11 +1225,13 @@
 				2FBE45EF2961E2A200051BB5 /* NameViewController.swift in Sources */,
 				2FBE46112962150000051BB5 /* Device.swift in Sources */,
 				2F8CC7A629693A140011C143 /* ReadProfileEditViewController.swift in Sources */,
+				2FE3851C296B165D00C2FBBE /* TopProfileViewController.swift in Sources */,
 				2FBE46052962032300051BB5 /* StoryCollectionViewCell.swift in Sources */,
 				2FE3F63C2969C45A00F38963 /* CommentDataManager.swift in Sources */,
 				2FBE45F32961E2BC00051BB5 /* ServiceAgreementViewController.swift in Sources */,
 				2FE3F60C2969450E00F38963 /* EditProfileResponse.swift in Sources */,
 				2FDCF2B62968050200FD1DBA /* DeletePostViewController.swift in Sources */,
+				2FE38530296BCDCB00C2FBBE /* PostUrl.swift in Sources */,
 				2FBE46002961F95100051BB5 /* HomeViewController.swift in Sources */,
 				2FDCF2C62968362100FD1DBA /* UpdatePostDataManager.swift in Sources */,
 				2FBE45AD29600E4900051BB5 /* Constant.swift in Sources */,
@@ -1197,7 +1245,9 @@
 				2FE3F62329697A9E00F38963 /* SearchLocationViewController.swift in Sources */,
 				2FBE45ED2961E29600051BB5 /* EmailViewController.swift in Sources */,
 				2FBE45FE2961F06600051BB5 /* FinalViewController.swift in Sources */,
+				2FE3851A296B14B500C2FBBE /* ProfileTableViewController.swift in Sources */,
 				2FBE45CF2960CFE100051BB5 /* SignInViewController.swift in Sources */,
+				2FE38537296C131000C2FBBE /* PostTableViewCell.swift in Sources */,
 				2FBE46532965A50400051BB5 /* CreatePostViewController.swift in Sources */,
 				2FBE463C2964382700051BB5 /* SignUpDataManager.swift in Sources */,
 				2FBE46382964375100051BB5 /* SignUpRequest.swift in Sources */,
@@ -1211,6 +1261,7 @@
 				2FE3F61F29697A7E00F38963 /* SearchAccountViewController.swift in Sources */,
 				2F8CC7AC29693B1E0011C143 /* ReadProfileEditResponse.swift in Sources */,
 				2FF58725296746D1004C8BE7 /* PostRequest.swift in Sources */,
+				2FE385122969DF1200C2FBBE /* ProfileViewController2.swift in Sources */,
 				2FF5872B29679865004C8BE7 /* PostResponse.swift in Sources */,
 				2FBE460D29620B5400051BB5 /* StoryResponse.swift in Sources */,
 				2FE3F61429695C1500F38963 /* RecentSearchesDataManager.swift in Sources */,
@@ -1231,6 +1282,7 @@
 				2FBE45F12961E2AD00051BB5 /* PasswordViewController.swift in Sources */,
 				2FBE45F82961E48300051BB5 /* BirthdayViewController.swift in Sources */,
 				2FBE461B29622FF600051BB5 /* FeedResponse.swift in Sources */,
+				2F43F7DC296C9BC300521BC5 /* CommentHeaderView.swift in Sources */,
 				2FBE46352962622300051BB5 /* EmailAuthCodeViewController.swift in Sources */,
 				2FBE46202962376100051BB5 /* SignInDataManager.swift in Sources */,
 			);
@@ -1407,6 +1459,7 @@
 				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = instagram_ios_zoe/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "게시물에 사진을 업로드하기 위해 사진 접근 권한이 필요합니다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = SignUpSignInStoryboard;
@@ -1438,6 +1491,7 @@
 				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = instagram_ios_zoe/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "게시물에 사진을 업로드하기 위해 사진 접근 권한이 필요합니다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = SignUpSignInStoryboard;

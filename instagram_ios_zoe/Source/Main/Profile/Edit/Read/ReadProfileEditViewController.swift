@@ -22,7 +22,6 @@ class ReadProfileEditViewController: BaseViewController {
     lazy var rightButton: UIBarButtonItem = {
         let button = UIBarButtonItem(title: "수정", style: .plain, target: self, action: #selector(buttonPressed(_:)))
         button.tag = 2
-        
         return button
     }()
     
@@ -32,6 +31,10 @@ class ReadProfileEditViewController: BaseViewController {
             self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
             self.profileImageView.clipsToBounds = true
         }
+        setTextField(textfield: userIdTextField)
+        setTextField(textfield: userNameTextField)
+        setTextField(textfield: introductionTextField)
+        setTextField(textfield: websiteTextField)
         self.dataManager.getProfileData(delegate: self)
         // Set it to the right of the navigation bar.
         self.navigationItem.rightBarButtonItem = self.rightButton
@@ -52,18 +55,28 @@ class ReadProfileEditViewController: BaseViewController {
             editProfileRequest.website = websiteTextField.text
         }
     }
+    func setTextField(textfield : UITextField) {
+        textfield.borderStyle = .none
+        let border = CALayer()
+        border.frame = CGRect(x: 0, y: textfield.frame.size.height-1, width: textfield.frame.width, height: 1)
+        border.backgroundColor = UIColor.white.cgColor
+        textfield.layer.addSublayer((border))
+        textfield.textAlignment = .left
+        textfield.textColor = UIColor.white
+    }
 }
 
 extension ReadProfileEditViewController {
     func didSetProfile(result: ReadProfileEditResult) {
-        self.presentAlert(title: "프로필 로딩에 성공하였습니다", message: result.userId)
+        //self.presentAlert(title: "프로필 로딩에 성공하였습니다", message: result.userId)
         DispatchQueue.main.async {
             if let url = result.profileImg {
                 self.profileImageView.kf.setImage(with: URL(string: url))
             } else {
                 self.profileImageView.image = UIImage(named: "고양이1")
             }
-            
+            self.userNameTextField.textColor = .black
+            self.userIdTextField.textColor = .black
             self.userNameTextField.text = result.name
             self.userIdTextField.text = result.userId
             if let introduction = result.introduction {

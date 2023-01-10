@@ -82,6 +82,7 @@ extension FeedViewController: FeedCellDelegate {
         let comment = UIStoryboard.init(name: "HomeStoryboard", bundle: nil)
         let commentViewController = comment.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
         commentViewController.postIdx = postIdx
+        UserDefaults.standard.set(postIdx, forKey: "postIdx")
         self.navigationController?.pushViewController(commentViewController, animated: true)
         
     }

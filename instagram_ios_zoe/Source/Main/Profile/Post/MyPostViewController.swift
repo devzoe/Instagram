@@ -22,7 +22,6 @@ class MyPostViewController: BaseViewController {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
             self.dataManager.getMyPostData(delegate: self)
-            
             self.setupPostColletionView()
         }
     }

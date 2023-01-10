@@ -91,5 +91,44 @@ class FeedTableViewCell: UITableViewCell {
         print("pageChanged")
         self.delegate?.imagePageChanged(pageControl: sender, postImgRes: postImgRes, imageView: feedImageView)
     }
+    
+    func getPost(data: MyPostResult) {
+        DispatchQueue.main.async {
+            self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
+            self.profileImageView.clipsToBounds = true
+        }
+        feedImagePageControl.numberOfPages = data.postImgRes.count
+        feedImagePageControl.currentPage = 0
+        feedImagePageControl.pageIndicatorTintColor = .lightGray
+        feedImagePageControl.currentPageIndicatorTintColor = .buttonIsEnableTrue
+        
+        // 프로필 이미지
+        if let url = data.profileImgUrl {
+            let profileImgUrl = URL(string: url)
+            profileImageView.kf.setImage(with: profileImgUrl)
+        } else {
+            profileImageView.image = UIImage(named: "고양이1")
+        }
+
+        // user id
+        idLabel.text = data.userId
+        
+        //피드 이미지
+        let postImgUrl = URL(string: (data.postImgRes[0].postImgUrl))
+        feedImageView.kf.setImage(with: postImgUrl)
+        
+        
+        idLabel2.text = data.userId
+        feedTextLabel.text = data.content
+        
+        // 좋아요
+        let likeCount = "좋아요 \(data.postLikeCount)개"
+        likeCountLabel.text = likeCount
+        //let commentCount = "댓글 \(data.commentCount)개 모두 보기"
+        //commentCountLabel.text = commentCount
+        commentCountLabel.isHidden = true
+        updateAtLabel.text = data.updateAt
+        
+    }
 }
 
