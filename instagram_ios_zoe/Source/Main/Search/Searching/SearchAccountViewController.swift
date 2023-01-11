@@ -43,6 +43,11 @@ extension SearchAccountViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return  (accountTableView.bounds.height) * 0.15
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //let profileView = self.storyboard?.instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
+        //self.navigationController?.pushViewController(profileView, animated: true)
+    }
 }
 
 extension SearchAccountViewController {

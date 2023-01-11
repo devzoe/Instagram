@@ -59,13 +59,13 @@ class TopProfileViewController: UIViewController {
     @objc func didFollowerTapped(_ sender: UITapGestureRecognizer) {
         print("did follower tapped", sender)
         let followerViewController = self.storyboard?.instantiateViewController(identifier: "FollowTabViewController") as! FollowTabViewController
-        profile.profileIdx = UserDefaults.standard.integer(forKey: "UserIdx")
+        
         self.navigationController?.pushViewController(followerViewController, animated: true)
     }
     @objc func didFollowingTapped(_ sender: UITapGestureRecognizer) {
         print("did following tapped", sender)
         let followingViewController = self.storyboard?.instantiateViewController(identifier: "FollowTabViewController") as! FollowTabViewController
-        profile.profileIdx = UserDefaults.standard.integer(forKey: "UserIdx")
+        
         self.navigationController?.pushViewController(followingViewController, animated: true)
 
     }
@@ -133,6 +133,9 @@ extension TopProfileViewController {
             self.editProfileTopConstraint.isActive = false
             self.editProfileTopConstraint = editProfileButton.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 5)
             self.editProfileTopConstraint.isActive = true
+            
+            profile.AfterUserIdx = result.userIdx
+            profile.AfterUserId = result.userId
         }
     }
     

@@ -29,6 +29,8 @@ class ProfileTableViewController: UITableViewController {
         self.present(createModalViewController, animated: true, completion: nil)
     }
     @IBAction func settingButtonTouchUpInside(_ sender: UIButton) {
+        let settingModalViewController = self.storyboard?.instantiateViewController(identifier: "SettingModalViewController") as! SettingModalViewController
+        self.present(settingModalViewController, animated: true, completion: nil)
     }
     
     // MARK: - Table view data source

@@ -31,6 +31,7 @@ class CreateModalViewController: BaseViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("view will disappear")
+        
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -67,13 +68,13 @@ class CreateModalViewController: BaseViewController {
         })
     }
     func viewChanged() {
-       
-        //self.presentingViewController?.dismiss(animated: false) {
-        //    print("dismiss")
-        //}
+        let navi = self.presentingViewController?.children[4] as! UINavigationController
         let createPostViewController = UIStoryboard(name: "ProfileStoryboard", bundle: nil).instantiateViewController(identifier: "CreatePostViewController")
-        self.changeRootViewController(createPostViewController)
-
+        self.presentingViewController?.dismiss(animated: true) {
+            print("dismiss")
+            navi.pushViewController(createPostViewController, animated: true)
+        }
+        
     }
     func convertAssetToData() {
         self.postUrl.removeAll()

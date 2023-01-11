@@ -9,7 +9,8 @@ import UIKit
 
 class UserTopProfileViewController: UIViewController {
     lazy var dataManager: UserProfileDataManager = UserProfileDataManager()
-    
+    lazy var followDataManager = FollowDataManager()
+    var followYn = ""
     let profile = Profile.shared
     @IBOutlet weak var profileImageView: UIImageView!
     
@@ -45,7 +46,7 @@ class UserTopProfileViewController: UIViewController {
             self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
             self.profileImageView.clipsToBounds = true
         }
-        let profileIdx = profile.profileIdx
+        let profileIdx = profile.AfterUserIdx
         self.dataManager.getProfileData(profileIdx: profileIdx, delegate: self)
     }
     override func viewDidLoad() {
@@ -66,8 +67,23 @@ class UserTopProfileViewController: UIViewController {
         let followingViewController = self.storyboard?.instantiateViewController(identifier: "FollowTabViewController") as! FollowTabViewController
                 
         self.navigationController?.pushViewController(followingViewController, animated: true)
-
     }
+    
+    @IBAction func followYnButtonTouchUpInside(_ sender: UIButton) {
+        if (followYn == "ACTIVE") { // 이미 팔로우 함. 누르면 언팔
+            let followIdx = String(profile.AfterUserIdx)
+            let status = "INACTIVE"
+            let followRequest = FollowRequest(followIdx: followIdx, status: status)
+            
+        } else { // 팔로우 해야 함. 누르면 팔로잉
+            let followIdx = String(profile.AfterUserIdx)
+            let status = "ACTIVE"
+            let followRequest = FollowRequest(followIdx: followIdx, status: status)
+            self.followDataManager.setFollow(followRequest, delegate: self)
+        }
+        
+    }
+    
 }
 
 extension UserTopProfileViewController {
@@ -129,10 +145,33 @@ extension UserTopProfileViewController {
         }
         
         if (result.followStatus == "ACTIVE") {
+            self.followYn = "ACTIVE"
             self.followYnButton.setTitle("팔로잉", for: .normal)
+            self.followYnButton.backgroundColor = .lightGray
+            self.followYnButton.titleLabel?.tintColor = .black
         } else {
-            self.followYnButton.setTitle("팔로우", for: .normal) 
+            self.followYn = "INACTIVE"
+            self.followYnButton.setTitle("팔로우", for: .normal)
+            self.followYnButton.backgroundColor = .blue
+            self.followYnButton.titleLabel?.tintColor = .white
         }
+        
+        
+    }
+    func didSuccessFollow() {
+        if (followYn == "ACTIVE") { // 이미 팔로우 함
+            self.followYn = "INACTIVE"
+            self.followYnButton.setTitle("팔로우", for: .normal)
+            self.followYnButton.backgroundColor = .blue
+            self.followYnButton.titleLabel?.tintColor = .white
+            
+        } else { // 팔로우 해야 함.
+            self.followYn = "ACTIVE"
+            self.followYnButton.setTitle("팔로잉", for: .normal)
+            self.followYnButton.backgroundColor = .lightGray
+            self.followYnButton.titleLabel?.tintColor = .black
+        }
+        
     }
     
     func failedToRequest(message: String) {

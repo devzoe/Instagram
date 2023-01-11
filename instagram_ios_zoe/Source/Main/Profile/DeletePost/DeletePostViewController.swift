@@ -50,17 +50,12 @@ class DeletePostViewController: BaseViewController {
     
     // 게시물 수정 화면으로 전환
     @objc func didTapUpdateView(_ sender: UITapGestureRecognizer) {
-        var rootView = self.presentingViewController
-        print(rootView)
-        self.dismiss(animated: true) {
-            print("push는 일어남?")
-            
-            print(rootView)
-            let updatePostViewController = self.storyboard?.instantiateViewController(identifier: "UpdatePostNavigationController")
-            updatePostViewController?.modalPresentationStyle = .fullScreen
-            rootView?.present(updatePostViewController!, animated: true)
+        let navi = self.presentingViewController?.children[4] as! UINavigationController
+        let updatePostViewController = UIStoryboard(name: "ProfileStoryboard", bundle: nil).instantiateViewController(identifier: "UpdatePostViewController")
+        self.presentingViewController?.dismiss(animated: true) {
+            print("dismiss")
+            navi.pushViewController(updatePostViewController, animated: true)
         }
-        
     }
 }
 

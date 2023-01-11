@@ -14,23 +14,32 @@ class SearchViewController: BaseViewController {
     var recentSearchesResult : [RecentSearchesResult] = []
     let cellId = "SearchWordTableViewCell"
     var randomPosts : [RecommendPostResult] = []
+    let cellMarginSize: CGFloat = 1
     @IBOutlet weak var searchTableView: UITableView!
     @IBOutlet weak var recommendPostCollectionView: UICollectionView!
-    let cellMarginSize: CGFloat = 1
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("search view will appear")
         searchTableView.isHidden = true
         recommendPostCollectionView.isHidden = false
         setUpUI()
         setUpCollectionView()
         self.randomPostDataManager.getRandomPost(delegate: self)
+        self.searchTableView.keyboardDismissMode = .onDrag
     }
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        print("search view will disappear")
         recentSearchesResult = []
+        randomPosts = []
         searchTableView.reloadData()
+        recommendPostCollectionView.reloadData()
         searchTableView.isHidden = true
+        recommendPostCollectionView.isHidden = false
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +91,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension SearchViewController: UISearchResultsUpdating {
-    
     // 사용자가 검색창에 텍스트를 입력하면 실행되는 함수 (사용자가 검색하고자 하는 이름을 받아온다)
     func updateSearchResults(for searchController: UISearchController) {
         
@@ -99,11 +107,16 @@ extension SearchViewController: UISearchBarDelegate {
         searchTableView.isHidden = false
         configure()
         datamanager.getRecentSearchesData(delegate: self)
+        // Dismiss Keyboard When Tapped Arround
     }
     
     // 서치바에서 검색버튼을 눌렀을 때 호출
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         dismissKeyboard()
+        let searchRequest = SearchRequest(word: searchBar.text!)
+        let searchView = self.storyboard?.instantiateViewController(withIdentifier: "SearchingTabViewController") as! SearchingTabViewController
+        searchView.searchRequest = searchRequest
+        self.navigationController?.pushViewController(searchView, animated: true)
     }
     
     // 서치바에서 취소 버튼을 눌렀을 때 호출
@@ -116,10 +129,10 @@ extension SearchViewController: UISearchBarDelegate {
     
     // 서치바 검색이 끝났을 때 호출
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        recentSearchesResult = []
-        recentSearchesResult.append(RecentSearchesResult(searchWord: searchBar.text!, status: ""))
+        datamanager.getRecentSearchesData(delegate: self)
+        //recentSearchesResult.append(RecentSearchesResult(searchWord: searchBar.text!, status: ""))
         print(recentSearchesResult)
-        self.searchTableView.reloadData()
+        //self.searchTableView.reloadData()
     }
     
     // 서치바 키보드 내리기

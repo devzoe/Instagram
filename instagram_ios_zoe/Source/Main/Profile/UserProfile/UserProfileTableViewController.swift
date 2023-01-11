@@ -8,12 +8,12 @@
 import UIKit
 
 class UserProfileTableViewController: UITableViewController {
-    var profileId = ""
+    let profile = Profile.shared
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("profile tableview will appear")
         // 아이디
-        self.navigationController?.title = profileId
+        self.navigationItem.title = profile.AfterUserId
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font: UIFont.Roboto(.medium, size: 17)
         ]
@@ -25,6 +25,12 @@ class UserProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("tableviewdidload")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //profile.AfterUserIdx = profile.BeforeUserIdx
+        //profile.AfterUserId = profile.BeforeUserId
+        
     }
     @IBAction func settingButtonTouchUpInside(_ sender: UIButton) {
     }

@@ -17,7 +17,7 @@ class FollowingViewController: BaseViewController {
         super.viewWillAppear(animated)
         print("following viewwillappear")
         self.setTableView()
-        let userIdx = profile.profileIdx
+        let userIdx = profile.AfterUserIdx
         self.dataManager.gotFollowingInTable(userIdx: userIdx, delegate: self)
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -75,8 +75,10 @@ extension FollowingViewController : UITableViewDelegate, UITableViewDataSource {
         let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "UserProfileTableViewController") as! UserProfileTableViewController
         let profileId = followingResult[indexPath.row].id
         let profileIdx = followingResult[indexPath.row].userIdx
-        profileVC.profileId = profileId
-        profile.profileIdx = profileIdx
+        profile.BeforeUserId = profile.AfterUserId
+        profile.BeforeUserIdx = profile.AfterUserIdx
+        profile.AfterUserId = profileId
+        profile.AfterUserIdx = profileIdx
         print("profileId : ", profileId)
         print("profileIdx: ", profileIdx)
         self.navigationController?.pushViewController(profileVC, animated: true)

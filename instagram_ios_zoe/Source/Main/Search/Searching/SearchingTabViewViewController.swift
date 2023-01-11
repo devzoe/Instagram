@@ -16,6 +16,7 @@ class SearchingTabViewController: TabmanViewController {
         let firstVC = storyboard?.instantiateViewController(withIdentifier: "SearchAccountViewController") as! SearchAccountViewController
         viewControllers.append(firstVC)
         firstVC.searchRequest = searchRequest
+        print(searchRequest)
         
         if let secondVC = storyboard?.instantiateViewController(withIdentifier: "SearchTagViewController") {
             viewControllers.append(secondVC)

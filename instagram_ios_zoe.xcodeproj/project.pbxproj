@@ -98,6 +98,18 @@
 		2FC4F1F7296ECF7A00E010EE /* RecommendPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1F6296ECF7A00E010EE /* RecommendPostCollectionViewCell.swift */; };
 		2FC4F1FB296ED3EF00E010EE /* RecommendPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1FA296ED3EF00E010EE /* RecommendPostResponse.swift */; };
 		2FC4F1FD296ED4A500E010EE /* RecommendPostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1FC296ED4A500E010EE /* RecommendPostDataManager.swift */; };
+		2FC4F200296EFD5800E010EE /* SettingModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1FF296EFD5800E010EE /* SettingModalViewController.swift */; };
+		2FC4F202296EFEC000E010EE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F201296EFEC000E010EE /* SettingViewController.swift */; };
+		2FC4F206296F035600E010EE /* LogOutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F205296F035600E010EE /* LogOutRequest.swift */; };
+		2FC4F208296F036100E010EE /* LogOutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F207296F036100E010EE /* LogOutResponse.swift */; };
+		2FC4F20A296F03B000E010EE /* LogOutDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F209296F03B000E010EE /* LogOutDataManager.swift */; };
+		2FC4F20D296F05DF00E010EE /* ProfilesUserInfoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F20C296F05DF00E010EE /* ProfilesUserInfoDataManager.swift */; };
+		2FC4F210296F05F900E010EE /* ProfilesUserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F20F296F05F900E010EE /* ProfilesUserInfoResponse.swift */; };
+		2FC4F212296F108E00E010EE /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F211296F108E00E010EE /* PrivacyViewController.swift */; };
+		2FC4F216296F27FF00E010EE /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F215296F27FF00E010EE /* UserInfoResponse.swift */; };
+		2FC4F218296F280D00E010EE /* UserInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F217296F280D00E010EE /* UserInfoRequest.swift */; };
+		2FC4F21A296F55DB00E010EE /* FollowRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F219296F55DB00E010EE /* FollowRequest.swift */; };
+		2FC4F21C296F55E600E010EE /* FollowResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F21B296F55E600E010EE /* FollowResponse.swift */; };
 		2FDCF2B62968050200FD1DBA /* DeletePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */; };
 		2FDCF2B8296806B300FD1DBA /* DeletePostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */; };
 		2FDCF2BB2968086100FD1DBA /* DeleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */; };
@@ -267,6 +279,18 @@
 		2FC4F1F6296ECF7A00E010EE /* RecommendPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FC4F1FA296ED3EF00E010EE /* RecommendPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPostResponse.swift; sourceTree = "<group>"; };
 		2FC4F1FC296ED4A500E010EE /* RecommendPostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPostDataManager.swift; sourceTree = "<group>"; };
+		2FC4F1FF296EFD5800E010EE /* SettingModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModalViewController.swift; sourceTree = "<group>"; };
+		2FC4F201296EFEC000E010EE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		2FC4F205296F035600E010EE /* LogOutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutRequest.swift; sourceTree = "<group>"; };
+		2FC4F207296F036100E010EE /* LogOutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutResponse.swift; sourceTree = "<group>"; };
+		2FC4F209296F03B000E010EE /* LogOutDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutDataManager.swift; sourceTree = "<group>"; };
+		2FC4F20C296F05DF00E010EE /* ProfilesUserInfoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesUserInfoDataManager.swift; sourceTree = "<group>"; };
+		2FC4F20F296F05F900E010EE /* ProfilesUserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesUserInfoResponse.swift; sourceTree = "<group>"; };
+		2FC4F211296F108E00E010EE /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		2FC4F215296F27FF00E010EE /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
+		2FC4F217296F280D00E010EE /* UserInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoRequest.swift; sourceTree = "<group>"; };
+		2FC4F219296F55DB00E010EE /* FollowRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowRequest.swift; sourceTree = "<group>"; };
+		2FC4F21B296F55E600E010EE /* FollowResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowResponse.swift; sourceTree = "<group>"; };
 		2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostViewController.swift; sourceTree = "<group>"; };
 		2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostDataManager.swift; sourceTree = "<group>"; };
 		2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteResponse.swift; sourceTree = "<group>"; };
@@ -592,6 +616,7 @@
 		2FBE45BF2960C99600051BB5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				2FC4F1FE296EFD2C00E010EE /* Setting */,
 				2FC4F1E9296DD9ED00E010EE /* UserProfile */,
 				2FC4F1D7296D5B8700E010EE /* Follow */,
 				2FBE45CC2960CA1400051BB5 /* ProfileStoryboard.storyboard */,
@@ -842,6 +867,8 @@
 			children = (
 				2FC4F1E1296D5FF700E010EE /* FollowerResponse.swift */,
 				2FC4F1E3296D600300E010EE /* FollowingResponse.swift */,
+				2FC4F219296F55DB00E010EE /* FollowRequest.swift */,
+				2FC4F21B296F55E600E010EE /* FollowResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -873,6 +900,55 @@
 			isa = PBXGroup;
 			children = (
 				2FC4F1FA296ED3EF00E010EE /* RecommendPostResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2FC4F1FE296EFD2C00E010EE /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				2FC4F1FF296EFD5800E010EE /* SettingModalViewController.swift */,
+				2FC4F201296EFEC000E010EE /* SettingViewController.swift */,
+				2FC4F211296F108E00E010EE /* PrivacyViewController.swift */,
+				2FC4F20B296F05C100E010EE /* ProfilesUserInfo */,
+				2FC4F203296F033300E010EE /* LogOut */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		2FC4F203296F033300E010EE /* LogOut */ = {
+			isa = PBXGroup;
+			children = (
+				2FC4F209296F03B000E010EE /* LogOutDataManager.swift */,
+				2FC4F204296F034500E010EE /* Entity */,
+			);
+			path = LogOut;
+			sourceTree = "<group>";
+		};
+		2FC4F204296F034500E010EE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2FC4F205296F035600E010EE /* LogOutRequest.swift */,
+				2FC4F207296F036100E010EE /* LogOutResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2FC4F20B296F05C100E010EE /* ProfilesUserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				2FC4F20C296F05DF00E010EE /* ProfilesUserInfoDataManager.swift */,
+				2FC4F20E296F05E400E010EE /* Entity */,
+			);
+			path = ProfilesUserInfo;
+			sourceTree = "<group>";
+		};
+		2FC4F20E296F05E400E010EE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2FC4F20F296F05F900E010EE /* ProfilesUserInfoResponse.swift */,
+				2FC4F217296F280D00E010EE /* UserInfoRequest.swift */,
+				2FC4F215296F27FF00E010EE /* UserInfoResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1285,10 +1361,12 @@
 				2FBE45E22961A58100051BB5 /* TabmanViewController.swift in Sources */,
 				2FBE464429646B8900051BB5 /* TagPostViewController.swift in Sources */,
 				2FC4F1DB296D5C0300E010EE /* FollowerViewController.swift in Sources */,
+				2FC4F210296F05F900E010EE /* ProfilesUserInfoResponse.swift in Sources */,
 				2FBE45BD2960BDA400051BB5 /* UIBezierPath.swift in Sources */,
 				2FBE45D12960D11C00051BB5 /* UITextField.swift in Sources */,
 				2FC4F1ED296DDB4E00E010EE /* UserTopProfileViewController.swift in Sources */,
 				2FE3F6392969B3DE00F38963 /* CommentTableViewCell.swift in Sources */,
+				2FC4F21C296F55E600E010EE /* FollowResponse.swift in Sources */,
 				2FBE45D42960DA3C00051BB5 /* UIViewController.swift in Sources */,
 				2FC4F1FB296ED3EF00E010EE /* RecommendPostResponse.swift in Sources */,
 				2FBE45DE29619EAC00051BB5 /* TabViewController.swift in Sources */,
@@ -1305,15 +1383,18 @@
 				2FBE45FB2961EFD100051BB5 /* PhoneAuthCodeViewController.swift in Sources */,
 				2FE3F6362969B39900F38963 /* CommentViewController.swift in Sources */,
 				2FBE4571295FE69500051BB5 /* AppDelegate.swift in Sources */,
+				2FC4F20D296F05DF00E010EE /* ProfilesUserInfoDataManager.swift in Sources */,
 				2FC4F1D9296D5BAC00E010EE /* FollowTabViewController.swift in Sources */,
 				2FBE46492964B16800051BB5 /* ProfileDataManager.swift in Sources */,
 				2FBE4626296239A000051BB5 /* IndicatorView.swift in Sources */,
+				2FC4F202296EFEC000E010EE /* SettingViewController.swift in Sources */,
 				2FBE461D2962302900051BB5 /* FeedDataManager.swift in Sources */,
 				2FBE464C2964B2FB00051BB5 /* MyPostResponse.swift in Sources */,
 				2FE3F60A296944FC00F38963 /* EditProfileRequest.swift in Sources */,
 				2FBE46322962508E00051BB5 /* Date.swift in Sources */,
 				2FBE464229646B7200051BB5 /* MyPostViewController.swift in Sources */,
 				2FBE45EF2961E2A200051BB5 /* NameViewController.swift in Sources */,
+				2FC4F218296F280D00E010EE /* UserInfoRequest.swift in Sources */,
 				2FBE46112962150000051BB5 /* Device.swift in Sources */,
 				2F8CC7A629693A140011C143 /* ReadProfileEditViewController.swift in Sources */,
 				2FE3851C296B165D00C2FBBE /* TopProfileViewController.swift in Sources */,
@@ -1330,6 +1411,7 @@
 				2FC4F1E6296DC01F00E010EE /* FollowerTableViewCell.swift in Sources */,
 				2FC4F1DF296D5FC900E010EE /* FollowDataManager.swift in Sources */,
 				2FDCF2C22968358800FD1DBA /* UpdatePostRequest.swift in Sources */,
+				2FC4F20A296F03B000E010EE /* LogOutDataManager.swift in Sources */,
 				2FBE45DA2960E54A00051BB5 /* SignUpViewController.swift in Sources */,
 				2FBE4573295FE69500051BB5 /* SceneDelegate.swift in Sources */,
 				2FC4F1F5296DE3F700E010EE /* UserProfileDataManager.swift in Sources */,
@@ -1348,6 +1430,7 @@
 				2FBE463C2964382700051BB5 /* SignUpDataManager.swift in Sources */,
 				2FBE46382964375100051BB5 /* SignUpRequest.swift in Sources */,
 				2FE3F61D2969785500F38963 /* SearchingTabViewViewController.swift in Sources */,
+				2FC4F208296F036100E010EE /* LogOutResponse.swift in Sources */,
 				2FBE457B295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld in Sources */,
 				2FE3F619296972BA00F38963 /* SearchDataManager.swift in Sources */,
 				2FBE46082962058000051BB5 /* StoryViewController.swift in Sources */,
@@ -1363,7 +1446,9 @@
 				2FBE460D29620B5400051BB5 /* StoryResponse.swift in Sources */,
 				2FE3F61429695C1500F38963 /* RecentSearchesDataManager.swift in Sources */,
 				2FE3F62D29697D7900F38963 /* SearchResponse.swift in Sources */,
+				2FC4F206296F035600E010EE /* LogOutRequest.swift in Sources */,
 				2FE3F62929697D6000F38963 /* SearchRequest.swift in Sources */,
+				2FC4F200296EFD5800E010EE /* SettingModalViewController.swift in Sources */,
 				2FF5872F2967DF0B004C8BE7 /* MyPostDataManager.swift in Sources */,
 				2FBE46502964B53100051BB5 /* ProfileResponse.swift in Sources */,
 				2FBE461729622A5100051BB5 /* FeedTableViewCell.swift in Sources */,
@@ -1373,14 +1458,17 @@
 				2FC4F1EF296DDB7700E010EE /* UserTabViewController.swift in Sources */,
 				2FC4F1F7296ECF7A00E010EE /* RecommendPostCollectionViewCell.swift in Sources */,
 				2FBE463A2964376200051BB5 /* SignUpResponse.swift in Sources */,
+				2FC4F212296F108E00E010EE /* PrivacyViewController.swift in Sources */,
 				2FBE460A2962097A00051BB5 /* StoryDataManager.swift in Sources */,
 				2FE3F63F2969C46E00F38963 /* CommentRequest.swift in Sources */,
 				2FDCF2C4296835C900FD1DBA /* UpdatePostResponse.swift in Sources */,
 				2FDCF2C82969286C00FD1DBA /* PostData.swift in Sources */,
+				2FC4F216296F27FF00E010EE /* UserInfoResponse.swift in Sources */,
 				2FBE45B52960B3AF00051BB5 /* UIButton.swift in Sources */,
 				2FBE45F12961E2AD00051BB5 /* PasswordViewController.swift in Sources */,
 				2FBE45F82961E48300051BB5 /* BirthdayViewController.swift in Sources */,
 				2FBE461B29622FF600051BB5 /* FeedResponse.swift in Sources */,
+				2FC4F21A296F55DB00E010EE /* FollowRequest.swift in Sources */,
 				2F43F7DC296C9BC300521BC5 /* CommentHeaderView.swift in Sources */,
 				2FBE46352962622300051BB5 /* EmailAuthCodeViewController.swift in Sources */,
 				2FC4F1FD296ED4A500E010EE /* RecommendPostDataManager.swift in Sources */,
