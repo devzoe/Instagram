@@ -110,6 +110,7 @@
 		2FC4F218296F280D00E010EE /* UserInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F217296F280D00E010EE /* UserInfoRequest.swift */; };
 		2FC4F21A296F55DB00E010EE /* FollowRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F219296F55DB00E010EE /* FollowRequest.swift */; };
 		2FC4F21C296F55E600E010EE /* FollowResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F21B296F55E600E010EE /* FollowResponse.swift */; };
+		2FC4F21E296F68F800E010EE /* CloseAccountDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F21D296F68F800E010EE /* CloseAccountDataManager.swift */; };
 		2FDCF2B62968050200FD1DBA /* DeletePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */; };
 		2FDCF2B8296806B300FD1DBA /* DeletePostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */; };
 		2FDCF2BB2968086100FD1DBA /* DeleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */; };
@@ -291,6 +292,7 @@
 		2FC4F217296F280D00E010EE /* UserInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoRequest.swift; sourceTree = "<group>"; };
 		2FC4F219296F55DB00E010EE /* FollowRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowRequest.swift; sourceTree = "<group>"; };
 		2FC4F21B296F55E600E010EE /* FollowResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowResponse.swift; sourceTree = "<group>"; };
+		2FC4F21D296F68F800E010EE /* CloseAccountDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseAccountDataManager.swift; sourceTree = "<group>"; };
 		2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostViewController.swift; sourceTree = "<group>"; };
 		2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostDataManager.swift; sourceTree = "<group>"; };
 		2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteResponse.swift; sourceTree = "<group>"; };
@@ -909,6 +911,7 @@
 			children = (
 				2FC4F1FF296EFD5800E010EE /* SettingModalViewController.swift */,
 				2FC4F201296EFEC000E010EE /* SettingViewController.swift */,
+				2FC4F21D296F68F800E010EE /* CloseAccountDataManager.swift */,
 				2FC4F211296F108E00E010EE /* PrivacyViewController.swift */,
 				2FC4F20B296F05C100E010EE /* ProfilesUserInfo */,
 				2FC4F203296F033300E010EE /* LogOut */,
@@ -1386,6 +1389,7 @@
 				2FC4F20D296F05DF00E010EE /* ProfilesUserInfoDataManager.swift in Sources */,
 				2FC4F1D9296D5BAC00E010EE /* FollowTabViewController.swift in Sources */,
 				2FBE46492964B16800051BB5 /* ProfileDataManager.swift in Sources */,
+				2FC4F21E296F68F800E010EE /* CloseAccountDataManager.swift in Sources */,
 				2FBE4626296239A000051BB5 /* IndicatorView.swift in Sources */,
 				2FC4F202296EFEC000E010EE /* SettingViewController.swift in Sources */,
 				2FBE461D2962302900051BB5 /* FeedDataManager.swift in Sources */,

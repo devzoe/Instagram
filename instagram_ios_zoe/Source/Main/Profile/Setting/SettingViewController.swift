@@ -10,6 +10,7 @@ import UIKit
 class SettingViewController: BaseViewController {
     lazy var profileDataManager = ProfilesUserInfoDataManager()
     lazy var logOutDataManager = LogOutDataManager()
+    lazy var closeAccountDataManager = CloseAccountDataManager()
     var email = ""
     var phone = ""
     var profileUserInfo = ProfilesUserInfoResult(userIdx: 0, email: "", phone: "", sex: "", birth: "")
@@ -38,11 +39,25 @@ class SettingViewController: BaseViewController {
         self.presentAlert(title: "로그아웃 하시겠어요?", isCancelActionIncluded: true, with: action)
     }
     
+    @IBAction func closeAccountButtonTouchUpInside(_ sender: UIButton) {
+        let action = UIAlertAction(title: "탈퇴하기", style: .default) { action in
+            
+            self.closeAccountDataManager.closeAccount(delegate: self)
+        }
+        self.presentAlert(title: "회원 탈퇴하시겠어요?", isCancelActionIncluded: true, with: action)
+    }
+    
 }
 
 extension SettingViewController {
     func didSuccessLogOut(_ result: LogOutResponse) {
         self.presentAlert(title: "로그아웃 성공하였습니다", message: "")
+        
+        let signUpSignInController = UIStoryboard(name: "SignUpSignInStoryboard", bundle: nil).instantiateViewController(identifier: "SignUpSignInViewController")
+        self.changeRootViewController(signUpSignInController)
+    }
+    func didSuccessCloseAccount(_ result: LogOutResponse) {
+        self.presentAlert(title: "탈퇴 성공하였습니다", message: "")
         
         let signUpSignInController = UIStoryboard(name: "SignUpSignInStoryboard", bundle: nil).instantiateViewController(identifier: "SignUpSignInViewController")
         self.changeRootViewController(signUpSignInController)

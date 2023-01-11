@@ -2398,6 +2398,15 @@
                                     <action selector="logOutButtonTouchUpInside:" destination="fED-hC-gx8" eventType="touchUpInside" id="ONO-iC-Yso"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5S-sV-u3b">
+                                <rect key="frame" x="20" y="572.5" width="52" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="회원탈퇴"/>
+                                <connections>
+                                    <action selector="closeAccountButtonTouchUpInside:" destination="fED-hC-gx8" eventType="touchUpInside" id="9Tu-hd-4pR"/>
+                                    <action selector="logOutButtonTouchUpInside:" destination="fED-hC-gx8" eventType="touchUpInside" id="AoO-ux-omb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GPZ-Tz-LK9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2409,6 +2418,8 @@
                             <constraint firstItem="p2S-hT-UGK" firstAttribute="top" secondItem="T6y-aR-oGN" secondAttribute="bottom" constant="20" id="Ltd-4V-6dY"/>
                             <constraint firstItem="KYH-kL-0QT" firstAttribute="leading" secondItem="p2S-hT-UGK" secondAttribute="leading" id="Q3j-Ro-Zdh"/>
                             <constraint firstItem="GPZ-Tz-LK9" firstAttribute="bottom" secondItem="aR9-6T-SbL" secondAttribute="bottom" priority="230" id="UbM-13-DdB"/>
+                            <constraint firstItem="c5S-sV-u3b" firstAttribute="leading" secondItem="KYH-kL-0QT" secondAttribute="leading" id="VzW-yq-TI8"/>
+                            <constraint firstItem="c5S-sV-u3b" firstAttribute="top" secondItem="KYH-kL-0QT" secondAttribute="bottom" constant="10" id="ZoG-Hw-duz"/>
                             <constraint firstItem="GPZ-Tz-LK9" firstAttribute="trailing" secondItem="T6y-aR-oGN" secondAttribute="trailing" id="fbX-3Y-1lu"/>
                             <constraint firstItem="aR9-6T-SbL" firstAttribute="trailing" secondItem="GPZ-Tz-LK9" secondAttribute="trailing" id="kM3-MS-UUD"/>
                             <constraint firstItem="aR9-6T-SbL" firstAttribute="leading" secondItem="GPZ-Tz-LK9" secondAttribute="leading" id="lGt-OI-dVq"/>

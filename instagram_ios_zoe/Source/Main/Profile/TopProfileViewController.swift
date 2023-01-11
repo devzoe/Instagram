@@ -134,6 +134,7 @@ extension TopProfileViewController {
             self.editProfileTopConstraint = editProfileButton.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 5)
             self.editProfileTopConstraint.isActive = true
             
+           
             profile.AfterUserIdx = result.userIdx
             profile.AfterUserId = result.userId
         }

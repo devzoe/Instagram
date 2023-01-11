@@ -51,6 +51,8 @@ class UserTopProfileViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = profile.AfterUserId
+
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didFollowerTapped(_:)))
         self.followerView.addGestureRecognizer(tapGestureRecognizer)
         let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(didFollowingTapped(_:)))
@@ -74,6 +76,7 @@ class UserTopProfileViewController: UIViewController {
             let followIdx = String(profile.AfterUserIdx)
             let status = "INACTIVE"
             let followRequest = FollowRequest(followIdx: followIdx, status: status)
+            self.followDataManager.setFollow(followRequest, delegate: self)
             
         } else { // 팔로우 해야 함. 누르면 팔로잉
             let followIdx = String(profile.AfterUserIdx)

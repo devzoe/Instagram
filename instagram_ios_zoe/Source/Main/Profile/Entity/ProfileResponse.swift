@@ -34,6 +34,7 @@ struct ProfilePostImg: Decodable {
 
 class Profile {
     static let shared = Profile()
+    var beforeCheck = false
     var BeforeUserIdx: Int = 0
     var BeforeUserId : String = ""
     var AfterUserIdx: Int = 0

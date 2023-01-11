@@ -32,9 +32,10 @@ class FollowTabViewController: TabmanViewController {
         super.viewDidDisappear(animated)
         print("tab view did disappear")
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = profile.AfterUserId
+        self.title = profile.AfterUserId
         if let firstVC = storyboard?.instantiateViewController(withIdentifier: "FollowerViewController") {
             viewControllers.append(firstVC)
             
