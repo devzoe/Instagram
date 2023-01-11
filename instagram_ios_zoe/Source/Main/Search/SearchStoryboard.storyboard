@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,6 +36,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wHF-kX-IQ8">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lWB-dJ-4jH">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="RecommendPostCollectionViewCell" reuseIdentifier="RecommendPostCollectionViewCell" id="cNQ-gb-efS" customClass="RecommendPostCollectionViewCell" customModule="instagram_ios_zoe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="52P-lx-pOg">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mPD-e7-JDJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mPD-e7-JDJ" firstAttribute="top" secondItem="52P-lx-pOg" secondAttribute="top" id="2yt-i6-kML"/>
+                                                <constraint firstAttribute="bottom" secondItem="mPD-e7-JDJ" secondAttribute="bottom" id="8DW-8r-KFB"/>
+                                                <constraint firstItem="mPD-e7-JDJ" firstAttribute="leading" secondItem="52P-lx-pOg" secondAttribute="leading" id="RQB-tr-uRa"/>
+                                                <constraint firstAttribute="trailing" secondItem="mPD-e7-JDJ" secondAttribute="trailing" id="i8m-0k-Kfu"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="postImageView" destination="mPD-e7-JDJ" id="fMt-1m-c2j"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IZu-ZL-uHI">
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -44,13 +79,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IZu-ZL-uHI" secondAttribute="trailing" id="3NV-ij-jij"/>
+                            <constraint firstItem="wHF-kX-IQ8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="AlZ-rV-3a5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="IZu-ZL-uHI" secondAttribute="bottom" id="LBO-BQ-SCj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wHF-kX-IQ8" secondAttribute="trailing" id="MOd-6f-gbH"/>
                             <constraint firstItem="IZu-ZL-uHI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="V9Z-cJ-q8O"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wHF-kX-IQ8" secondAttribute="bottom" id="Ys1-eH-TCI"/>
                             <constraint firstItem="IZu-ZL-uHI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="cKB-AU-QUH"/>
+                            <constraint firstItem="wHF-kX-IQ8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="veT-32-NU8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RxG-Hj-kFV"/>
                     <connections>
+                        <outlet property="recommendPostCollectionView" destination="wHF-kX-IQ8" id="8mY-H6-p74"/>
                         <outlet property="searchTableView" destination="IZu-ZL-uHI" id="eTW-A5-V3R"/>
                     </connections>
                 </viewController>

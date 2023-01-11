@@ -9,6 +9,8 @@ import UIKit
 
 class UserTopProfileViewController: UIViewController {
     lazy var dataManager: UserProfileDataManager = UserProfileDataManager()
+    
+    let profile = Profile.shared
     @IBOutlet weak var profileImageView: UIImageView!
     
     @IBOutlet weak var postCountLabel: UILabel!
@@ -30,10 +32,9 @@ class UserTopProfileViewController: UIViewController {
     @IBOutlet weak var websiteLabelTopConstraint: NSLayoutConstraint!
    
     @IBOutlet weak var followYnButtonTopConstraint: NSLayoutConstraint!
-    
+
     @IBOutlet weak var followerView: UIView!
     @IBOutlet weak var followingView: UIView!
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -44,24 +45,26 @@ class UserTopProfileViewController: UIViewController {
             self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
             self.profileImageView.clipsToBounds = true
         }
-        let profileIdx = UserDefaults.standard.integer(forKey: "profileIdx")
+        let profileIdx = profile.profileIdx
         self.dataManager.getProfileData(profileIdx: profileIdx, delegate: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didFollowerTapped(_:)))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didFollowerTapped(_:)))
         self.followerView.addGestureRecognizer(tapGestureRecognizer)
-        var tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(didFollowingTapped(_:)))
+        let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(didFollowingTapped(_:)))
         self.followingView.addGestureRecognizer(tapGestureRecognizer2)
     }
     @objc func didFollowerTapped(_ sender: UITapGestureRecognizer) {
         print("did follower tapped", sender)
         let followerViewController = self.storyboard?.instantiateViewController(identifier: "FollowTabViewController") as! FollowTabViewController
+        
         self.navigationController?.pushViewController(followerViewController, animated: true)
     }
     @objc func didFollowingTapped(_ sender: UITapGestureRecognizer) {
         print("did following tapped", sender)
         let followingViewController = self.storyboard?.instantiateViewController(identifier: "FollowTabViewController") as! FollowTabViewController
+                
         self.navigationController?.pushViewController(followingViewController, animated: true)
 
     }

@@ -14,6 +14,7 @@ class FollowTabViewController: TabmanViewController {
     private var viewControllers: Array<UIViewController> = []
     var followerResult : [FollowerResult] = []
     var followingResult : [FollowingResult] = []
+    let profile = Profile.shared
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("tab viewwillappear")
@@ -41,7 +42,8 @@ class FollowTabViewController: TabmanViewController {
         }
         self.setFollowTabBarUI(self)
         print("data")
-        self.dataManager.gotFollower(delegate: self)
+        let userIdx = profile.profileIdx
+        self.dataManager.gotFollower(userIdx : userIdx, delegate: self)
         
     }
         
@@ -54,7 +56,8 @@ extension FollowTabViewController {
                 followerResult.append(result[i])
             }
         }
-        self.dataManager.gotFollowing(delegate: self)
+        let userIdx = profile.profileIdx
+        self.dataManager.gotFollowing(userIdx : userIdx, delegate: self)
     }
     func didGetFollowing(result: [FollowingResult]) {
         print("did get following")

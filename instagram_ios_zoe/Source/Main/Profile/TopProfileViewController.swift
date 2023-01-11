@@ -9,6 +9,7 @@ import UIKit
 
 class TopProfileViewController: UIViewController {
     lazy var dataManager: ProfileDataManager = ProfileDataManager()
+    let profile = Profile.shared
     @IBOutlet weak var profileImageView: UIImageView!
     
     @IBOutlet weak var postCountLabel: UILabel!
@@ -50,19 +51,21 @@ class TopProfileViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didFollowerTapped(_:)))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didFollowerTapped(_:)))
         self.followerView.addGestureRecognizer(tapGestureRecognizer)
-        var tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(didFollowingTapped(_:)))
+        let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(didFollowingTapped(_:)))
         self.followingView.addGestureRecognizer(tapGestureRecognizer2)
     }
     @objc func didFollowerTapped(_ sender: UITapGestureRecognizer) {
         print("did follower tapped", sender)
         let followerViewController = self.storyboard?.instantiateViewController(identifier: "FollowTabViewController") as! FollowTabViewController
+        profile.profileIdx = UserDefaults.standard.integer(forKey: "UserIdx")
         self.navigationController?.pushViewController(followerViewController, animated: true)
     }
     @objc func didFollowingTapped(_ sender: UITapGestureRecognizer) {
         print("did following tapped", sender)
         let followingViewController = self.storyboard?.instantiateViewController(identifier: "FollowTabViewController") as! FollowTabViewController
+        profile.profileIdx = UserDefaults.standard.integer(forKey: "UserIdx")
         self.navigationController?.pushViewController(followingViewController, animated: true)
 
     }

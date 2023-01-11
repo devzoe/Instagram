@@ -95,6 +95,9 @@
 		2FC4F1F1296DDB8600E010EE /* UserPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1F0296DDB8600E010EE /* UserPostViewController.swift */; };
 		2FC4F1F3296DDB9700E010EE /* UserTagPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1F2296DDB9700E010EE /* UserTagPostViewController.swift */; };
 		2FC4F1F5296DE3F700E010EE /* UserProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1F4296DE3F700E010EE /* UserProfileDataManager.swift */; };
+		2FC4F1F7296ECF7A00E010EE /* RecommendPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1F6296ECF7A00E010EE /* RecommendPostCollectionViewCell.swift */; };
+		2FC4F1FB296ED3EF00E010EE /* RecommendPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1FA296ED3EF00E010EE /* RecommendPostResponse.swift */; };
+		2FC4F1FD296ED4A500E010EE /* RecommendPostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F1FC296ED4A500E010EE /* RecommendPostDataManager.swift */; };
 		2FDCF2B62968050200FD1DBA /* DeletePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */; };
 		2FDCF2B8296806B300FD1DBA /* DeletePostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */; };
 		2FDCF2BB2968086100FD1DBA /* DeleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */; };
@@ -261,6 +264,9 @@
 		2FC4F1F0296DDB8600E010EE /* UserPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostViewController.swift; sourceTree = "<group>"; };
 		2FC4F1F2296DDB9700E010EE /* UserTagPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTagPostViewController.swift; sourceTree = "<group>"; };
 		2FC4F1F4296DE3F700E010EE /* UserProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDataManager.swift; sourceTree = "<group>"; };
+		2FC4F1F6296ECF7A00E010EE /* RecommendPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPostCollectionViewCell.swift; sourceTree = "<group>"; };
+		2FC4F1FA296ED3EF00E010EE /* RecommendPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPostResponse.swift; sourceTree = "<group>"; };
+		2FC4F1FC296ED4A500E010EE /* RecommendPostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPostDataManager.swift; sourceTree = "<group>"; };
 		2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostViewController.swift; sourceTree = "<group>"; };
 		2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostDataManager.swift; sourceTree = "<group>"; };
 		2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteResponse.swift; sourceTree = "<group>"; };
@@ -626,6 +632,7 @@
 				2FE3F61329695C1500F38963 /* RecentSearchesDataManager.swift */,
 				2FE3F60F29695A0E00F38963 /* SearchWordTableViewCell.swift */,
 				2FE3F61029695A0E00F38963 /* SearchWordTableViewCell.xib */,
+				2FC4F1F8296ECFF500E010EE /* RecommendPost */,
 				2FE3F61A296976AE00F38963 /* Searching */,
 				2FE3F61529695CCB00F38963 /* Entity */,
 			);
@@ -850,6 +857,24 @@
 				2FC4F1F4296DE3F700E010EE /* UserProfileDataManager.swift */,
 			);
 			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		2FC4F1F8296ECFF500E010EE /* RecommendPost */ = {
+			isa = PBXGroup;
+			children = (
+				2FC4F1F6296ECF7A00E010EE /* RecommendPostCollectionViewCell.swift */,
+				2FC4F1FC296ED4A500E010EE /* RecommendPostDataManager.swift */,
+				2FC4F1F9296ED3CD00E010EE /* Entity */,
+			);
+			path = RecommendPost;
+			sourceTree = "<group>";
+		};
+		2FC4F1F9296ED3CD00E010EE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2FC4F1FA296ED3EF00E010EE /* RecommendPostResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		2FDCF2B42968045300FD1DBA /* DeletePost */ = {
@@ -1265,6 +1290,7 @@
 				2FC4F1ED296DDB4E00E010EE /* UserTopProfileViewController.swift in Sources */,
 				2FE3F6392969B3DE00F38963 /* CommentTableViewCell.swift in Sources */,
 				2FBE45D42960DA3C00051BB5 /* UIViewController.swift in Sources */,
+				2FC4F1FB296ED3EF00E010EE /* RecommendPostResponse.swift in Sources */,
 				2FBE45DE29619EAC00051BB5 /* TabViewController.swift in Sources */,
 				2FDCF2BB2968086100FD1DBA /* DeleteResponse.swift in Sources */,
 				2FE3F62629697B6200F38963 /* SearchingTableViewCell.swift in Sources */,
@@ -1345,6 +1371,7 @@
 				2FBE45B72960B47700051BB5 /* SignUpSignInViewController.swift in Sources */,
 				2FC4F1F3296DDB9700E010EE /* UserTagPostViewController.swift in Sources */,
 				2FC4F1EF296DDB7700E010EE /* UserTabViewController.swift in Sources */,
+				2FC4F1F7296ECF7A00E010EE /* RecommendPostCollectionViewCell.swift in Sources */,
 				2FBE463A2964376200051BB5 /* SignUpResponse.swift in Sources */,
 				2FBE460A2962097A00051BB5 /* StoryDataManager.swift in Sources */,
 				2FE3F63F2969C46E00F38963 /* CommentRequest.swift in Sources */,
@@ -1356,6 +1383,7 @@
 				2FBE461B29622FF600051BB5 /* FeedResponse.swift in Sources */,
 				2F43F7DC296C9BC300521BC5 /* CommentHeaderView.swift in Sources */,
 				2FBE46352962622300051BB5 /* EmailAuthCodeViewController.swift in Sources */,
+				2FC4F1FD296ED4A500E010EE /* RecommendPostDataManager.swift in Sources */,
 				2FBE46202962376100051BB5 /* SignInDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

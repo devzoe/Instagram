@@ -18,7 +18,8 @@ struct ProfileResponse: Decodable {
 // MARK: - Result
 struct ProfileResult: Decodable {
     let userIdx: Int
-    let userId, name: String
+    let userId : String
+    let name: String?
     let introduction, profileImg, website: String?
     let postCount, followerCount, followingCount: Int
     let followStatus : String?
@@ -29,4 +30,9 @@ struct ProfileResult: Decodable {
 struct ProfilePostImg: Decodable {
     let postIdx: Int
     let postImgUrl: String
+}
+
+class Profile {
+    static let shared = Profile()
+    var profileIdx = UserDefaults.standard.integer(forKey: "UserIdx")
 }

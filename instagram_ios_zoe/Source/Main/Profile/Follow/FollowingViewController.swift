@@ -11,12 +11,14 @@ class FollowingViewController: BaseViewController {
     lazy var dataManager : FollowDataManager = FollowDataManager()
     var followingResult : [FollowingResult] = []
     let cellId = "FollowingTableViewCell"
+    let profile = Profile.shared
     @IBOutlet weak var followingTableView: UITableView!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("following viewwillappear")
         self.setTableView()
-        self.dataManager.gotFollowingInTable(delegate: self)
+        let userIdx = profile.profileIdx
+        self.dataManager.gotFollowingInTable(userIdx: userIdx, delegate: self)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -74,12 +76,10 @@ extension FollowingViewController : UITableViewDelegate, UITableViewDataSource {
         let profileId = followingResult[indexPath.row].id
         let profileIdx = followingResult[indexPath.row].userIdx
         profileVC.profileId = profileId
-        UserDefaults.standard.set(profileIdx, forKey: "profileIdx")
+        profile.profileIdx = profileIdx
         print("profileId : ", profileId)
         print("profileIdx: ", profileIdx)
         self.navigationController?.pushViewController(profileVC, animated: true)
-        
     }
-    
 }
 

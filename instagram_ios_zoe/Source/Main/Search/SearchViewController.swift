@@ -10,20 +10,27 @@ import UIKit
 class SearchViewController: BaseViewController {
     let searchController = UISearchController(searchResultsController: nil)
     lazy var datamanager : RecentSearchesDataManager = RecentSearchesDataManager()
+    lazy var randomPostDataManager = RecommendPostDataManager()
     var recentSearchesResult : [RecentSearchesResult] = []
     let cellId = "SearchWordTableViewCell"
-    
+    var randomPosts : [RecommendPostResult] = []
     @IBOutlet weak var searchTableView: UITableView!
+    @IBOutlet weak var recommendPostCollectionView: UICollectionView!
+    let cellMarginSize: CGFloat = 1
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        searchTableView.isHidden = true
+        recommendPostCollectionView.isHidden = false
         setUpUI()
-        configure()
-        
+        setUpCollectionView()
+        self.randomPostDataManager.getRandomPost(delegate: self)
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         recentSearchesResult = []
         searchTableView.reloadData()
+        searchTableView.isHidden = true
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +50,10 @@ class SearchViewController: BaseViewController {
         self.searchTableView.register(UINib(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
         self.searchTableView.dataSource = self
         self.searchTableView.delegate = self
+    }
+    func setUpCollectionView() {
+        self.recommendPostCollectionView.dataSource = self
+        self.recommendPostCollectionView.delegate = self
     }
 
 }
@@ -79,10 +90,14 @@ extension SearchViewController: UISearchResultsUpdating {
     
 }
 
+// 서치바
 extension SearchViewController: UISearchBarDelegate {
     // 서치바에서 검색을 시작할 때 호출
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         print("검색 시작")
+        recommendPostCollectionView.isHidden = true
+        searchTableView.isHidden = false
+        configure()
         datamanager.getRecentSearchesData(delegate: self)
     }
     
@@ -95,6 +110,8 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         recentSearchesResult = []
         searchTableView.reloadData()
+        recommendPostCollectionView.isHidden = false
+        searchTableView.isHidden = true
     }
     
     // 서치바 검색이 끝났을 때 호출
@@ -111,6 +128,7 @@ extension SearchViewController: UISearchBarDelegate {
     }
 }
 
+// api
 extension SearchViewController {
     func didSuccessRecentSearches(result: RecentSearchesResponse) {
         print("검색 결과 불러오기")
@@ -119,7 +137,55 @@ extension SearchViewController {
         print(recentSearchesResult)
         self.searchTableView.reloadData()
     }
+    func didGetRandomPost(result: [RecommendPostResult]) {
+        self.randomPosts = result
+        self.recommendPostCollectionView.reloadData()
+    }
     func failedToRequest(message: String) {
         self.presentAlert(title: message)
     }
 }
+
+// collection view
+extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return randomPosts.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendPostCollectionViewCell", for: indexPath) as! RecommendPostCollectionViewCell
+        let cellData = randomPosts[indexPath.row]
+        cell.get(data: cellData)
+        return cell
+    }
+}
+
+extension SearchViewController: UICollectionViewDelegateFlowLayout {
+    
+    // 셀 크기 지정
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width
+        let numberOfItemsPerRow: CGFloat = 3
+        let spacing: CGFloat = self.cellMarginSize
+        let availableWidth = width - spacing * (numberOfItemsPerRow + 1)
+        let itemDimension = floor(availableWidth / numberOfItemsPerRow)
+
+        return CGSize(width: itemDimension, height: itemDimension)
+    }
+    // 섹션에서 콘텐츠를 배치하는 데 사용되는 여백
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+    }
+    
+    // 그리드의 항목 줄 사이에 사용할 최소 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return self.cellMarginSize
+    }
+
+    // 같은 행에 있는 항목 사이에 사용할 최소 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return self.cellMarginSize
+    }
+    
+}
+
