@@ -42,7 +42,7 @@ class UpdatePostViewController: BaseViewController {
         if let url = postData.postResponse?.result?.profileImgUrl {
             self.profileImageView.kf.setImage(with: URL(string: url))
         } else {
-            self.profileImageView.image = UIImage(named: "고양이1")
+            self.profileImageView.image = UIImage(named: "default_profile")
         }
         self.userIdLabel.text = postData.postResponse?.result?.userId
         self.postImageView.kf.setImage(with: URL(string: (postData.postResponse?.result?.postImgRes[0].postImgUrl)!))

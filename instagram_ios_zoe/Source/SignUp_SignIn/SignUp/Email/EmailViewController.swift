@@ -27,9 +27,10 @@ class EmailViewController: BaseViewController {
         if (isValidEmail(testStr: emailTextField.text!)){
             userInfo.email = emailTextField.text!
             print(userInfo)
-            let codeViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "EmailAuthCodeViewController") as! EmailAuthCodeViewController
-            //codeViewController.userInfo = userInfo
-            self.navigationController?.pushViewController(codeViewController, animated: true)
+            let nameViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "NameViewController") as! NameViewController
+            nameViewController.userInfo = userInfo
+            self.navigationController?.pushViewController(nameViewController, animated: true)
+        
         } else {
             print("올바른 이메일 주소를 입력하세요.")
         }

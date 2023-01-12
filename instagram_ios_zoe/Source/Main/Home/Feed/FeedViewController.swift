@@ -68,16 +68,12 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return  (feedTableView.bounds.height) * 1.2
+        return  (feedTableView.bounds.height) * 0.8
     }
      
 }
 
 extension FeedViewController: FeedCellDelegate {
-    func imagePageChanged(pageControl: UIPageControl, postImgRes: [FeedPostImages], imageView: UIImageView) {
-        let feedImgUrl = URL(string: postImgRes[pageControl.currentPage].postImgUrl)
-        imageView.kf.setImage(with: feedImgUrl)
-    }
     func commentLabelTapped(postIdx: Int) {
         let comment = UIStoryboard.init(name: "HomeStoryboard", bundle: nil)
         let commentViewController = comment.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController

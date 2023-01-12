@@ -25,4 +25,10 @@ extension UIColor {
     
     class var buttonIsEnableFalse: UIColor { UIColor(hex: 0xB6D7F4) }
     class var buttonIsEnableTrue: UIColor { UIColor(hex: 0x4295F7)}
+    class var labelGray:UIColor {
+        UIColor(hex: 0x6F6F6F)
+    }
+    class var buttonGray: UIColor{
+        UIColor(hex: 0xECECEC)
+    }
 }

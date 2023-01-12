@@ -21,7 +21,7 @@ class CommentHeaderView: UITableViewHeaderFooterView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.adjustsFontForContentSizeCategory = true
-        label.font = .systemFont(ofSize: 11)
+        label.font = .systemFont(ofSize: 11, weight: .medium)
         return label
     }()
     var updateAtLabel: UILabel = {
@@ -29,13 +29,14 @@ class CommentHeaderView: UITableViewHeaderFooterView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.adjustsFontForContentSizeCategory = true
         label.font = .systemFont(ofSize: 10)
+        label.textColor = .labelGray
         return label
     }()
     var contentLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.adjustsFontForContentSizeCategory = true
-        label.font = .systemFont(ofSize: 13)
+        label.font = .systemFont(ofSize: 14)
         return label
     }()
     
@@ -62,9 +63,9 @@ class CommentHeaderView: UITableViewHeaderFooterView {
             self.postProfileImageView.clipsToBounds = true
         }
         postProfileImageView.snp.makeConstraints({ make in
-            make.top.equalToSuperview().offset(10)
-            make.leading.equalToSuperview().offset(10)
-            make.width.equalToSuperview().multipliedBy(0.1)
+            make.top.equalToSuperview().offset(15)
+            make.leading.equalToSuperview().offset(15)
+            make.width.equalToSuperview().multipliedBy(0.08)
             make.height.equalTo(postProfileImageView.snp.width)
         })
         userIdLabel.snp.makeConstraints { make in
@@ -72,12 +73,12 @@ class CommentHeaderView: UITableViewHeaderFooterView {
             make.top.equalTo(postProfileImageView.snp.top)
         }
         updateAtLabel.snp.makeConstraints { make in
-            make.leading.equalTo(userIdLabel.snp.trailing).offset(10)
+            make.leading.equalTo(userIdLabel.snp.trailing).offset(5)
             make.top.equalTo(userIdLabel.snp.top)
         }
         contentLabel.snp.makeConstraints { make in
             make.leading.equalTo(userIdLabel.snp.leading)
-            make.top.equalTo(userIdLabel.snp.bottom).offset(10)
+            make.top.equalTo(userIdLabel.snp.bottom).offset(5)
         }
         
         

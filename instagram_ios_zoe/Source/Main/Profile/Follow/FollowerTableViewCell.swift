@@ -15,9 +15,17 @@ class FollowerTableViewCell: UITableViewCell {
     @IBOutlet weak var userIdLabel: UILabel!
     
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        DispatchQueue.main.async {
+            self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
+            self.profileImageView.clipsToBounds = true
+            
+            self.deleteButton.setCornerRadius(10)
+        }
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,7 +37,7 @@ class FollowerTableViewCell: UITableViewCell {
         if let url = data.profileImg {
             profileImageView.kf.setImage(with: URL(string: url))
         } else {
-            profileImageView.image = UIImage(named: "고양이1")
+            profileImageView.image = UIImage(named: "default_profile")
         }
         userIdLabel.text = data.id
         if let name = data.name {

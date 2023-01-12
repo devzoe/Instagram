@@ -33,7 +33,7 @@ class SearchingTableViewCell: UITableViewCell {
         if let url = data.img {
             profileImageView.kf.setImage(with: URL(string: url))
         } else {
-            profileImageView.image = UIImage(named: "고양이1")
+            profileImageView.image = UIImage(named: "default_profile")
         }
         userIdLabel.text = data.name
         userNameLabel.text = data.detail

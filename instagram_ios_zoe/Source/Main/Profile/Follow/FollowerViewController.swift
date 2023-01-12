@@ -16,6 +16,7 @@ class FollowerViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("follower viewwillappear")
+        
         self.setTableView()
         let userIdx = profile.AfterUserIdx
         self.dataManager.gotFollowerInTable(userIdx: userIdx,delegate: self)

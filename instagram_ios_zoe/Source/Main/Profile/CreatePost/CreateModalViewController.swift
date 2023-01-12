@@ -43,12 +43,12 @@ class CreateModalViewController: BaseViewController {
         // [ImagePickerController 객체 생성 실시]
         let imagePicker = ImagePickerController()
         imagePicker.settings.theme.selectionStyle = .numbered // 이미지 선택 시 표시
-        imagePicker.settings.theme.backgroundColor = .darkGray // 배경 색상
-        imagePicker.albumButton.tintColor = .black // 버튼 색상
-        imagePicker.cancelButton.tintColor = .black // 버튼 색상
-        imagePicker.doneButton.tintColor = .black // 버튼 색상
-        imagePicker.settings.theme.selectionFillColor = .black // 선택 배경 색상 (Circle)
-        imagePicker.settings.theme.selectionStrokeColor = .white // 선택 표시 색상 (Circle)
+        imagePicker.settings.theme.backgroundColor = .white // 배경 색상
+        imagePicker.albumButton.tintColor = .buttonIsEnableTrue // 버튼 색상
+        imagePicker.cancelButton.tintColor = .buttonIsEnableTrue // 버튼 색상
+        imagePicker.doneButton.tintColor = .buttonIsEnableTrue // 버튼 색상
+        imagePicker.settings.theme.selectionFillColor = .white // 선택 배경 색상 (Circle)
+        imagePicker.settings.theme.selectionStrokeColor = .buttonIsEnableTrue // 선택 표시 색상 (Circle)
         imagePicker.settings.selection.max = 10 // 최대 선택 개수
         imagePicker.settings.fetch.assets.supportedMediaTypes = [.image] // 이미지 타입
         

@@ -96,23 +96,21 @@ extension MyPostViewController: UICollectionViewDelegateFlowLayout {
         let numberOfItemsPerRow: CGFloat = 3
         let spacing: CGFloat = self.cellMarginSize
         let availableWidth = width - spacing * (numberOfItemsPerRow + 1)
-        let itemDimension = floor(availableWidth / numberOfItemsPerRow)
+        let itemDimension = availableWidth / numberOfItemsPerRow
 
         return CGSize(width: itemDimension, height: itemDimension)
     }
     // 섹션에서 콘텐츠를 배치하는 데 사용되는 여백
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
-    
     // 그리드의 항목 줄 사이에 사용할 최소 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return self.cellMarginSize
     }
-
     // 같은 행에 있는 항목 사이에 사용할 최소 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return self.cellMarginSize
+        return 0
     }
     
 }

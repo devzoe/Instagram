@@ -42,7 +42,8 @@ struct MyPostContents : Decodable{
     var depth: Int
     var userIdx: Int
     var commentLikeCount : Int
-    var userId: String
+    var userId: String?
+    var updatedAt : String
     var profileImg: String?
     var commentIdxA: Int
 }

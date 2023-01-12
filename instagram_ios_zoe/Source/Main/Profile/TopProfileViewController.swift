@@ -23,7 +23,7 @@ class TopProfileViewController: UIViewController {
     
     @IBOutlet weak var editProfileButton: UIButton!
     @IBOutlet weak var findUserButton: UIButton!
-    
+    @IBOutlet weak var introductionTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var editProfileTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var websiteLabelTopConstraint: NSLayoutConstraint!
    
@@ -67,25 +67,24 @@ class TopProfileViewController: UIViewController {
         let followingViewController = self.storyboard?.instantiateViewController(identifier: "FollowTabViewController") as! FollowTabViewController
         
         self.navigationController?.pushViewController(followingViewController, animated: true)
-
+        
     }
-    
     @IBAction func editProfileButtonTouchUpInside(_ sender: UIButton) {
         let readProfileEditViewController = self.storyboard?.instantiateViewController(identifier: "ReadProfileEditViewController") as! ReadProfileEditViewController
         self.navigationController?.pushViewController(readProfileEditViewController, animated: true)
     }
-    
 }
 
 extension TopProfileViewController {
     func didSetProfile(result: ProfileResult) {
         //self.presentAlert(title: "프로필 로딩에 성공하였습니다", message: result.userId)
         // 프로필 이미지
+        print(result.profileImg)
         if let profileImageUrl = result.profileImg {
             let url = URL(string: profileImageUrl)
             self.profileImageView.kf.setImage(with: url)
         } else {
-            self.profileImageView.image = UIImage(named: "고양이1")
+            self.profileImageView.image = UIImage(named: "default_profile")
         }
         // 이름
         self.userNameLabel.text = result.name
@@ -95,50 +94,93 @@ extension TopProfileViewController {
         self.followerCountLabel.text = String(result.followingCount)
         // 팔로잉 수
         self.followingCountLabel.text = String(result.followerCount)
-        if let introduction = result.introduction, let website = result.website {
-            print("둘 다 존재")
-            //self.introductionLabel.font = .NotoSans(.regular, size: 13)
+        
+        if let name = result.name , let introduction = result.introduction, let website = result.website {
+            print("셋다 있음")
+            self.userNameLabel.text = name
             self.introductionLabel.text = introduction
-            //self.websiteLabel.font = .NotoSans(.regular, size: 11)
             self.websiteLabel.text = website
-        } else if (result.introduction == nil && result.website != nil) {
-            print("소개글 없음")
-            // 소개글이 없는 경우
+        } else if (result.name != nil &&  result.introduction == nil && result.website == nil) {
+            print("이름만 존재")
+            self.userNameLabel.text = result.name
             self.introductionLabel.isHidden = true
+            self.websiteLabel.isHidden = true
             
-            // 프로필 편집 버튼 topAnchor 변경
-            self.websiteLabelTopConstraint.isActive = false
-            self.websiteLabelTopConstraint = websiteLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 10)
+            self.editProfileTopConstraint.isActive = false
+            self.editProfileTopConstraint = editProfileButton.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 10)
             self.editProfileTopConstraint.isActive = true
+        } else if (result.name == nil && result.introduction != nil && result.website == nil) {
+            print("소개글만 존재")
+            self.introductionLabel.text = result.introduction
+            self.userNameLabel.isHidden = true
+            self.websiteLabel.isHidden = true
+            // 소개글 topAnchor 변경
+            self.introductionTopConstraint.isActive = false
+            self.introductionTopConstraint = introductionLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 10)
             
-            //self.websiteLabel.font = .NotoSans(.regular, size: 11)
+            self.introductionTopConstraint.isActive = true
+            self.editProfileTopConstraint.isActive = false
+            self.editProfileTopConstraint = editProfileButton.topAnchor.constraint(equalTo: introductionLabel.bottomAnchor, constant: 10)
+            self.editProfileTopConstraint.isActive = true
+        } else if (result.name == nil && result.introduction == nil && result.website != nil) {
+            print("웹사이트만 존재")
             self.websiteLabel.text = result.website
-            
-        } else if (result.website == nil && result.introduction != nil) {
+            self.userNameLabel.isHidden = true
+            self.introductionLabel.isHidden = true
+            // 소개글 topAnchor 변경
+            self.websiteLabelTopConstraint.isActive = false
+            self.websiteLabelTopConstraint = websiteLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 10)
+            self.websiteLabelTopConstraint.isActive = true
+            // 프로필 topAnchor 변경
+            self.editProfileTopConstraint.isActive = false
+            self.editProfileTopConstraint = editProfileButton.topAnchor.constraint(equalTo: websiteLabel.bottomAnchor, constant: 10)
+            self.editProfileTopConstraint.isActive = true
+        } else if (result.name != nil && result.introduction != nil && result.website == nil) {
             print("웹 사이트 없음")
-            // 웹사이트가 없는 경우
             websiteLabel.isHidden = true
-            
             self.editProfileTopConstraint.isActive = false
             self.editProfileTopConstraint = editProfileButton.topAnchor.constraint(equalTo: introductionLabel.bottomAnchor, constant: 10)
             self.editProfileTopConstraint.isActive = true
             
-            //self.introductionLabel.font = .NotoSans(.regular, size: 13)
+            self.userNameLabel.text = result.name
             self.introductionLabel.text = result.introduction
-        } else if(result.introduction == nil && result.website == nil) {
-            print("둘 다 없음")
-            // 둘 다 없는 경우
+            
+        } else if (result.name != nil && result.introduction == nil && result.website != nil) {
+            print("소개글 없음")
+            // 소개글이 없는 경우
             self.introductionLabel.isHidden = true
-            self.websiteLabel.isHidden = true
-            self.editProfileTopConstraint.isActive = false
-            self.editProfileTopConstraint = editProfileButton.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 5)
+            
+            self.websiteLabelTopConstraint.isActive = false
+            self.websiteLabelTopConstraint = websiteLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 5)
             self.editProfileTopConstraint.isActive = true
             
-           
+            self.userNameLabel.text = result.name
+            self.websiteLabel.text = result.website
+        } else if (result.name == nil && result.introduction != nil && result.website != nil) {
+            print("이름만 없음")
+            self.introductionLabel.text = result.introduction
+            self.websiteLabel.text = result.website
+            self.userNameLabel.isHidden = true
+            
+            // 소개글 topAnchor 변경
+            self.introductionTopConstraint.isActive = false
+            self.introductionTopConstraint = introductionLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 10)
+            self.introductionTopConstraint.isActive = true
+        } else if(result.name == nil && result.introduction == nil && result.website == nil) {
+            print("셋 다 없음")
+            // 셋 다 없는 경우
+            self.userNameLabel.isHidden = true
+            self.introductionLabel.isHidden = true
+            self.websiteLabel.isHidden = true
+            
+            self.editProfileTopConstraint.isActive = false
+            self.editProfileTopConstraint = editProfileButton.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 10)
+            self.editProfileTopConstraint.isActive = true
+        }
             profile.AfterUserIdx = result.userIdx
             profile.AfterUserId = result.userId
-        }
     }
+    
     
     func failedToRequest(message: String) {
         self.presentAlert(title: message)

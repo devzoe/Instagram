@@ -14,6 +14,7 @@ class DeletePostViewController: BaseViewController {
     @IBOutlet weak var deleteView: UIView!
     @IBOutlet weak var updateView: UIView!
     
+    @IBOutlet weak var stackView: UIStackView!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("delete post view will appear")
@@ -29,6 +30,7 @@ class DeletePostViewController: BaseViewController {
         deleteView.addGestureRecognizer(tapGestureRecognizer)
         let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(didTapUpdateView(_:)))
         updateView.addGestureRecognizer(tapGestureRecognizer2)
+        self.stackView.layer.cornerRadius = 20
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

@@ -17,6 +17,7 @@ class ReadProfileEditDataManager {
         let token = UserDefaults.standard.string(forKey: "LoginUserIdentifier") ?? "none"
         print("My Token : ", token)
         
+        
         AF.request(url, method: .get, parameters: nil, encoding:JSONEncoding.default, headers: ["X-ACCESS-TOKEN":token])
             .validate()
             .responseDecodable(of: ReadProfileEditResponse.self) { response in

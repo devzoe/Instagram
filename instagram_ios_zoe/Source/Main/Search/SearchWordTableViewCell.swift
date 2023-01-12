@@ -7,9 +7,13 @@
 
 import UIKit
 
+protocol SearchWordDelegate {
+    func deleteTapped(word : String)
+}
 class SearchWordTableViewCell: UITableViewCell {
+    var delegate: SearchWordDelegate?
     @IBOutlet weak var searchWordLabel: UILabel!
-    
+    var searchWord = ""
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,4 +27,10 @@ class SearchWordTableViewCell: UITableViewCell {
         searchWordLabel.text = data.searchWord
         print(searchWordLabel.text )
     }
+    
+    @IBAction func deleteWordButtonTouchUpInside(_ sender: UIButton) {
+        print("delete button tapped", sender)
+        self.delegate?.deleteTapped(word: searchWord)
+    }
+    
 }

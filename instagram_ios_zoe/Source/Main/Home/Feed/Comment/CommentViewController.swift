@@ -24,16 +24,14 @@ class CommentViewController: BaseViewController {
     var commentList : [MyPostContents] = []
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         DispatchQueue.main.async {
             self.profileImage.layer.cornerRadius = self.profileImage.frame.width / 2
             self.profileImage.clipsToBounds = true
-            //self.commentTextField.layer.cornerRadius = self.commentTextField.bounds.size.height * 0.5
-
         }
         
         self.setUpCommentTableView()
         self.postDataManager.getPost(postIdx, delegate: self)
+        
         // 키보드 감지
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardUp), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDown), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -57,42 +55,51 @@ class CommentViewController: BaseViewController {
     }
     
     @objc func keyboardUp(notification:NSNotification) {
-        if let keyboardFrame:NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            
-            UIView.animate(
-                withDuration: 0.3
-                , animations: {
-                    self.footerView.transform = CGAffineTransform(translationX: 0, y: -keyboardRectangle.height)
-                }
-            )
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            // if keyboard size is not available for some reason, dont do anything
+            return
         }
+        let keyboardHeight = keyboardSize.height
+        self.view.frame.origin.y -= (keyboardHeight-(self.tabBarController?.tabBar.frame.size.height)!)
     }
-    @objc func keyboardDown() {
-        self.footerView.transform = .identity
+    @objc func keyboardDown(_ notification: Notification) {
+        self.view.frame.origin.y = 0
     }
     
     @IBAction func commentButtonTouchUpInside(_ sender: UIButton) {
         let reply = commentTextField.text
         let commentRequest = CommentRequest(reply: reply!, depth: 0, commentAIdx: 0)
+        commentTextField.text = ""
         commentDataManager.postComment(postIdx, commentRequest, delegate: self)
+    }
+}
+extension CommentViewController : UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.dismiss(animated: true, completion: nil)
+        return true
     }
 }
 extension CommentViewController {
     func didSuccessPostData(result: MyPostResponse) {
         postResponse = result
-        profileImage.image = UIImage(named: "고양이1")
+        profileImage.image = UIImage(named: "default_profile")
         commentTextField.placeholder = "댓글 달기..."
         commentList = result.result?.postContentRes as! [MyPostContents]
         self.commentTableView.reloadData()
     }
     func didSuccessComment() {
         // 댓글 생성 성공.
-        self.commentTableView.reloadData()
+        self.postDataManager.getPost(postIdx, delegate: self)
+
     }
     func didDeleteComment() {
-        // 댓글 생성 성공.
-        self.commentTableView.reloadData()
+        // 댓글 삭제 성공.
+        self.postDataManager.getPost(postIdx, delegate: self)
+
     }
     
     func failedToRequest(message: String) {
@@ -140,7 +147,7 @@ extension CommentViewController : UITableViewDelegate, UITableViewDataSource {
         if let url = postResponse.result?.profileImgUrl {
             commentHeaderView.postProfileImageView.kf.setImage(with: URL(string: url))
         } else {
-            commentHeaderView.postProfileImageView.image = UIImage(named: "고양이1")
+            commentHeaderView.postProfileImageView.image = UIImage(named: "default_profile")
         }
         
         commentHeaderView.userIdLabel.text = postResponse.result?.userId
@@ -150,7 +157,7 @@ extension CommentViewController : UITableViewDelegate, UITableViewDataSource {
         return commentHeaderView
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 120
+        return 100
     }
     
 }

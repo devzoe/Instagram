@@ -99,6 +99,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bum-a3-qaY">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="dnA-Ip-SRZ"/>
@@ -116,21 +124,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="125.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A8S-Tm-Ofi">
+                            <collectionView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A8S-Tm-Ofi">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="125.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vvm-k9-gRF">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zep-PB-5Tg"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="6o0-oL-gud"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="Vvm-k9-gRF">
+                                    <size key="itemSize" width="90" height="90"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reuse" id="Eh7-lj-PzQ">
-                                        <rect key="frame" x="0.0" y="-1.5" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="18" width="90" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vEX-ej-qIj">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
@@ -183,6 +193,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW3-6a-g7W">
                                         <rect key="frame" x="364" y="20.5" width="30" height="30"/>
+                                        <color key="tintColor" red="0.25882352939999997" green="0.58431372550000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="게시"/>
                                         <connections>
@@ -212,7 +223,6 @@
                             <constraint firstItem="0by-1y-G0M" firstAttribute="leading" secondItem="Og3-vp-Va9" secondAttribute="leading" id="HsR-vV-8E3"/>
                             <constraint firstItem="Og3-vp-Va9" firstAttribute="trailing" secondItem="gAE-uP-gDH" secondAttribute="trailing" id="KdT-49-Uzm"/>
                             <constraint firstItem="Og3-vp-Va9" firstAttribute="trailing" secondItem="0by-1y-G0M" secondAttribute="trailing" id="LLq-1z-Cub"/>
-                            <constraint firstItem="Og3-vp-Va9" firstAttribute="bottom" secondItem="gAE-uP-gDH" secondAttribute="bottom" id="g41-3c-cgE"/>
                             <constraint firstItem="gAE-uP-gDH" firstAttribute="top" secondItem="Og3-vp-Va9" secondAttribute="top" id="oLa-gT-Swd"/>
                             <constraint firstItem="gAE-uP-gDH" firstAttribute="leading" secondItem="Og3-vp-Va9" secondAttribute="leading" id="sC0-Fj-vYg"/>
                         </constraints>

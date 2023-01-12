@@ -31,9 +31,9 @@ class PhoneViewController: BaseViewController {
         
         userInfo.phone = phoneTextField.text!
         print(userInfo)
-        let codeViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "PhoneAuthCodeViewController") as! PhoneAuthCodeViewController
-        codeViewController.userInfo = userInfo
-        self.navigationController?.pushViewController(codeViewController, animated: true)
+        let nameViewController = UIStoryboard(name: "SignUpStoryboard", bundle: nil).instantiateViewController(identifier: "NameViewController") as! NameViewController
+        nameViewController.userInfo = userInfo
+        self.navigationController?.pushViewController(nameViewController, animated: true)
     }    
 }
 

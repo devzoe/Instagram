@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,21 +18,37 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kd0-mc-roG">
-                        <rect key="frame" x="20" y="46" width="21" height="22"/>
-                        <color key="tintColor" systemColor="systemGray2Color"/>
+                        <rect key="frame" x="20" y="45.666666666666664" width="24" height="22.999999999999993"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="tintColor" red="0.4352940917" green="0.43529412150000002" blue="0.43529412150000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" image="magnifyingglass" catalog="system"/>
+                        <state key="normal" image="magnifyingglass" catalog="system">
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                        </state>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhl-Tg-QbQ">
-                        <rect key="frame" x="61" y="46.666666666666664" width="42" height="20.999999999999993"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="59" y="48.666666666666664" width="35.333333333333343" height="16.999999999999993"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGG-CU-R6a">
+                        <rect key="frame" x="287.66666666666669" y="46" width="15.333333333333314" height="22"/>
+                        <color key="tintColor" red="0.4352940917" green="0.43529412150000002" blue="0.43529412150000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="xmark" catalog="system">
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="15"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteWordButtonTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="X3m-Qx-j99"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="hGG-CU-R6a" firstAttribute="centerY" secondItem="Yhl-Tg-QbQ" secondAttribute="centerY" id="InK-fd-dJO"/>
                     <constraint firstItem="Kd0-mc-roG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="POg-dN-cU7"/>
-                    <constraint firstItem="Yhl-Tg-QbQ" firstAttribute="leading" secondItem="Kd0-mc-roG" secondAttribute="trailing" constant="20" id="hU1-b8-wGE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hGG-CU-R6a" secondAttribute="trailing" constant="1" id="feS-g6-eMh"/>
+                    <constraint firstItem="Yhl-Tg-QbQ" firstAttribute="leading" secondItem="Kd0-mc-roG" secondAttribute="trailing" constant="15" id="hU1-b8-wGE"/>
                     <constraint firstItem="Kd0-mc-roG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lVQ-Um-LZv"/>
                     <constraint firstItem="Yhl-Tg-QbQ" firstAttribute="centerY" secondItem="Kd0-mc-roG" secondAttribute="centerY" id="mhE-he-CkI"/>
                 </constraints>
@@ -47,8 +62,6 @@
     </objects>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>

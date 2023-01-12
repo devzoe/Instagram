@@ -18,6 +18,7 @@ struct ReadProfileEditResponse: Decodable {
 // MARK: - ReadProfileEditresult
 struct ReadProfileEditResult: Decodable {
     var userIdx: Int
-    var userId, name: String
+    var userId : String
+    var name: String?
     var introduction, profileImg, website: String?
 }

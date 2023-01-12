@@ -34,7 +34,7 @@ class CommentTableViewCell: UITableViewCell {
         if let url = data.profileImg {
             profileImageView.kf.setImage(with: URL(string: url))
         } else {
-            profileImageView.image = UIImage(named: "고양이1")
+            profileImageView.image = UIImage(named: "default_profile")
         }
         userIdLabel.text = data.userId
         replyLabel.text = data.reply

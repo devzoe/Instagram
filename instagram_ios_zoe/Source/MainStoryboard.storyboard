@@ -12,7 +12,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="MainTabBarController" id="i9s-q3-kub" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eaa-CT-ja2"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xob-lu-C38">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Xob-lu-C38">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

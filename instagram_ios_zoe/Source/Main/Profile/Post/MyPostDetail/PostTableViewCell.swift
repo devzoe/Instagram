@@ -10,11 +10,10 @@ import Kingfisher
 
 // 델리게이트
 protocol PostCellDelegate {
-    func imagePageChanged(pageControl : UIPageControl, postImgRes: [MyPostImages], imageView: UIImageView)
     func commentLabelTapped(postIdx : Int)
     func menuButtonTapped()
 }
-class PostTableViewCell: UITableViewCell {
+class PostTableViewCell: UITableViewCell, UIScrollViewDelegate {
     var delegate: PostCellDelegate?
     var postImgRes: [MyPostImages] = []
     var cellHeight: CGFloat = 0
@@ -26,16 +25,18 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var userIdLabel2: UILabel!
     @IBOutlet weak var postPageControl: UIPageControl!
-    @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var commentCountLabel: UILabel!
     @IBOutlet weak var updateAtLabel: UILabel!
-    
+    @IBOutlet weak var imageScrollView: UIScrollView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        //tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didCommentTapped(_:)))
-       // self.commentCountLabel.addGestureRecognizer(tapGestureRecognizer)
+        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didCommentTapped(_:)))
+        self.commentCountLabel.addGestureRecognizer(tapGestureRecognizer)
+        
+        self.imageScrollView.delegate = self
+        
     }
     
     @objc func didCommentTapped(_ sender: UITapGestureRecognizer) {
@@ -46,53 +47,67 @@ class PostTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
+       
     public func get(data: MyPostResult) {
         DispatchQueue.main.async {
             self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
             self.profileImageView.clipsToBounds = true
+            self.postPageControl.pageIndicatorTintColor = .buttonGray
+            self.postPageControl.currentPageIndicatorTintColor = .buttonIsEnableTrue
+            self.addContentScrollView(data.postImgRes)
+            self.setPageControl(data.postImgRes)
         }
-        postPageControl.numberOfPages = data.postImgRes.count
-        postPageControl.currentPage = 0
-        postPageControl.pageIndicatorTintColor = .lightGray
-        postPageControl.currentPageIndicatorTintColor = .buttonIsEnableTrue
         
         // 프로필 이미지
         if let url = data.profileImgUrl {
             let profileImgUrl = URL(string: url)
             profileImageView.kf.setImage(with: profileImgUrl)
         } else {
-            profileImageView.image = UIImage(named: "고양이1")
+            profileImageView.image = UIImage(named: "default_profile")
         }
-
         // user id
         userIdLabel.text = data.userId
-        
-        //피드 이미지
-        let feedImgUrl = URL(string: data.postImgRes[0].postImgUrl)
-        postImageView.kf.setImage(with: feedImgUrl)
-        
-        
         userIdLabel2.text = data.userId
         contentLabel.text = data.content
         // 좋아요
-        
         let likeCount = "좋아요 \(data.postLikeCount)개"
         likeCountLabel.text = likeCount
-        //let commentCount = "댓글 \(data.commentCount)개 모두 보기"
-       // commentCountLabel.text = commentCount
-        commentCountLabel.isHidden = true
+        
+        let commentCount = "댓글 \(data.postContentRes.count)개 모두 보기"
+        commentCountLabel.text = commentCount
+        
         updateAtLabel.text = data.updateAt
     }
-    
-    @IBAction func imagePageChanged(_ sender: UIPageControl) {
-        print("pageChanged")
-        self.delegate?.imagePageChanged(pageControl: sender, postImgRes: postImgRes, imageView: postImageView)
+    private func addContentScrollView(_ imageResult : [MyPostImages]) {
+
+        for i in 0..<imageResult.count {
+            let imageView = UIImageView()
+            let xPos = imageScrollView.frame.width * CGFloat(i)
+            imageView.frame = CGRect(x: xPos, y: 0, width: imageScrollView.bounds.width, height: imageScrollView.bounds.height)
+            imageView.kf.setImage(with: URL(string: imageResult[i].postImgUrl))
+            imageScrollView.addSubview(imageView)
+            imageScrollView.contentSize.width = imageView.frame.width * CGFloat(i + 1)
+        }
+        
     }
     
+    private func setPageControl(_ imageResult : [MyPostImages]) {
+        postPageControl.numberOfPages = imageResult.count
+    }
+    private func setPageControlSelectedPage(currentPage:Int) {
+        postPageControl.currentPage = currentPage
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let value = scrollView.contentOffset.x/scrollView.frame.size.width
+        setPageControlSelectedPage(currentPage: Int(round(value)))
+    }
+
+        
     @IBAction func menuButtonTouchUpInside(_ sender: UIButton) {
         self.delegate?.menuButtonTapped()
     }
+    
     
 }
 

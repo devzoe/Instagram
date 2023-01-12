@@ -10,8 +10,8 @@ import Foundation
 struct EditProfileRequest : Encodable {
     var userIdx : Int
     var userId : String
-    var name : String
-    var profileImage : String?
+    var name : String?
+    var profileImage : String
     var website : String?
     var introduction : String?
 }

@@ -40,6 +40,7 @@ extension PostDetailViewController: UITableViewDelegate, UITableViewDataSource {
         let cellData = postResponse.result!
         cell.get(data: cellData)
         cell.postImgRes = cellData.postImgRes
+        cell.postIdx = cellData.postIdx
         cell.selectionStyle = .none
         cell.delegate = self
         
@@ -50,19 +51,16 @@ extension PostDetailViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 extension PostDetailViewController: PostCellDelegate {
-    func imagePageChanged(pageControl: UIPageControl, postImgRes: [MyPostImages], imageView: UIImageView) {
-        let postImgUrl = URL(string: postImgRes[pageControl.currentPage].postImgUrl)
-        imageView.kf.setImage(with: postImgUrl)
-    }
-    
     func commentLabelTapped(postIdx: Int) {
-        print("")
+        let comment = UIStoryboard.init(name: "HomeStoryboard", bundle: nil)
+        let commentViewController = comment.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
+        commentViewController.postIdx = postIdx
+        UserDefaults.standard.set(postIdx, forKey: "postIdx")
+        self.navigationController?.pushViewController(commentViewController, animated: true)
     }
     func menuButtonTapped() {
         let deletePostViewController = self.storyboard?.instantiateViewController(identifier: "DeletePostViewController") as! DeletePostViewController
         deletePostViewController.postIdx = postResponse.result!.postIdx
         self.present(deletePostViewController, animated: true, completion: nil)
     }
-    
-  
 }

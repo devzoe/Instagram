@@ -18,6 +18,7 @@ class EditProfileDataManager {
         let token = UserDefaults.standard.string(forKey: "LoginUserIdentifier") ?? "none"
         print("My Token : ", token)
         
+        print("final profile : ", parameters.profileImage)
         AF.request(url, method: .patch, parameters: parameters, encoder: JSONParameterEncoder(), headers: ["X-ACCESS-TOKEN":token])
             .validate()
             .responseDecodable(of: EditProfileResponse.self) { response in

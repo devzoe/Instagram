@@ -8,6 +8,8 @@
 import UIKit
 
 class SearchViewController: BaseViewController {
+
+    
     let searchController = UISearchController(searchResultsController: nil)
     lazy var datamanager : RecentSearchesDataManager = RecentSearchesDataManager()
     lazy var randomPostDataManager = RecommendPostDataManager()
@@ -78,8 +80,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             print("tableview cell 등록 실패")
             return UITableViewCell() }
         let cellData = recentSearchesResult[indexPath.row]
+        cell.searchWord = recentSearchesResult[indexPath.row].searchWord
         cell.get(data : cellData)
+        cell.delegate = self
         print("cell : ", cellData)
+        cell.selectionStyle = .none
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -88,6 +93,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         searchView.searchRequest = searchRequest
         self.navigationController?.pushViewController(searchView, animated: true)
     }
+}
+extension SearchViewController : SearchWordDelegate {
+    func deleteTapped(word: String) {
+        self.datamanager.deleteWord(word, delegate: self)
+    }
+    
+    
 }
 
 extension SearchViewController: UISearchResultsUpdating {
@@ -150,10 +162,21 @@ extension SearchViewController {
         print(recentSearchesResult)
         self.searchTableView.reloadData()
     }
+    func didDeleteWord() {
+        recommendPostCollectionView.isHidden = true
+        searchTableView.isHidden = false
+        datamanager.getRecentSearchesData(delegate: self)
+    }
     func didGetRandomPost(result: [RecommendPostResult]) {
         self.randomPosts = result
         self.recommendPostCollectionView.reloadData()
     }
+    func didGetRandomFeed(result: [RecommendFeedResult]) {
+        let recommendFeedViewController = self.storyboard?.instantiateViewController(withIdentifier: "RecommendFeedViewController") as! RecommendFeedViewController
+        recommendFeedViewController.feedResult = result
+        self.navigationController?.pushViewController(recommendFeedViewController, animated: true)
+    }
+
     func failedToRequest(message: String) {
         self.presentAlert(title: message)
     }
@@ -171,6 +194,10 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell.get(data: cellData)
         return cell
     }
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         let postIdx = randomPosts[indexPath.row].postIdx
+         randomPostDataManager.getRandomFeed(postIdx: postIdx, delegate: self)
+    }
 }
 
 extension SearchViewController: UICollectionViewDelegateFlowLayout {
@@ -181,13 +208,13 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
         let numberOfItemsPerRow: CGFloat = 3
         let spacing: CGFloat = self.cellMarginSize
         let availableWidth = width - spacing * (numberOfItemsPerRow + 1)
-        let itemDimension = floor(availableWidth / numberOfItemsPerRow)
+        let itemDimension = availableWidth / numberOfItemsPerRow
 
         return CGSize(width: itemDimension, height: itemDimension)
     }
     // 섹션에서 콘텐츠를 배치하는 데 사용되는 여백
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     // 그리드의 항목 줄 사이에 사용할 최소 간격
@@ -197,7 +224,7 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
 
     // 같은 행에 있는 항목 사이에 사용할 최소 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return self.cellMarginSize
+        return 0
     }
     
 }

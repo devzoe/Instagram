@@ -97,7 +97,7 @@ extension UserTopProfileViewController {
             let url = URL(string: profileImageUrl)
             self.profileImageView.kf.setImage(with: url)
         } else {
-            self.profileImageView.image = UIImage(named: "고양이1")
+            self.profileImageView.image = UIImage(named: "default_profile")
         }
         // 이름
         self.userNameLabel.text = result.name
@@ -150,12 +150,12 @@ extension UserTopProfileViewController {
         if (result.followStatus == "ACTIVE") {
             self.followYn = "ACTIVE"
             self.followYnButton.setTitle("팔로잉", for: .normal)
-            self.followYnButton.backgroundColor = .lightGray
+            self.followYnButton.backgroundColor = .buttonGray
             self.followYnButton.titleLabel?.tintColor = .black
         } else {
             self.followYn = "INACTIVE"
             self.followYnButton.setTitle("팔로우", for: .normal)
-            self.followYnButton.backgroundColor = .blue
+            self.followYnButton.backgroundColor = .buttonIsEnableTrue
             self.followYnButton.titleLabel?.tintColor = .white
         }
         
@@ -165,13 +165,13 @@ extension UserTopProfileViewController {
         if (followYn == "ACTIVE") { // 이미 팔로우 함
             self.followYn = "INACTIVE"
             self.followYnButton.setTitle("팔로우", for: .normal)
-            self.followYnButton.backgroundColor = .blue
+            self.followYnButton.backgroundColor = .buttonIsEnableTrue
             self.followYnButton.titleLabel?.tintColor = .white
             
         } else { // 팔로우 해야 함.
             self.followYn = "ACTIVE"
             self.followYnButton.setTitle("팔로잉", for: .normal)
-            self.followYnButton.backgroundColor = .lightGray
+            self.followYnButton.backgroundColor = .buttonGray
             self.followYnButton.titleLabel?.tintColor = .black
         }
         

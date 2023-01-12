@@ -9,7 +9,7 @@ import UIKit
 
 class StoryViewController: BaseViewController {
     
-    let sectionInsets = UIEdgeInsets(top: 0, left: 1, bottom: 0, right: 1)
+    let sectionInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
     
     lazy var dataManager: StoryDataManager = StoryDataManager()
     
@@ -64,15 +64,10 @@ extension StoryViewController: UICollectionViewDelegate, UICollectionViewDataSou
     //cell 크기
     private func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewFlowLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = collectionView.frame.width
-        let height = collectionView.frame.height
-        
-        let itemsPerRow: CGFloat = 5
-        let widthPadding = sectionInsets.left * (itemsPerRow + 1)
-        let cellWidth = (width - widthPadding) / itemsPerRow
-      
-        
-        return CGSize(width: cellWidth, height: height)
+        let width = Device.width / 4
+        let height = collectionView.frame.height - 10
+              
+        return CGSize(width: width, height: height)
         
     }
     
@@ -80,9 +75,9 @@ extension StoryViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return sectionInsets
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
+    // 같은 행에 있는 항목 사이에 사용할 최소 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
     }
-    
     
 }

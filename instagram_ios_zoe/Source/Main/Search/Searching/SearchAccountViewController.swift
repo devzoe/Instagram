@@ -37,6 +37,7 @@ extension SearchAccountViewController: UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SearchingTableViewCell
         let cellData = accounts[indexPath.row]
         cell.get(data: cellData)
+        cell.selectionStyle = .none
         return cell
     }
     

@@ -10,12 +10,9 @@ import Kingfisher
 
 // 페이지 컨트롤 델리게이트
 protocol FeedCellDelegate {
-    func imagePageChanged(pageControl : UIPageControl, postImgRes: [FeedPostImages], imageView: UIImageView)
     func commentLabelTapped(postIdx : Int)
 }
-
-
-class FeedTableViewCell: UITableViewCell {
+class FeedTableViewCell: UITableViewCell, UIScrollViewDelegate {
     var delegate: FeedCellDelegate?
     var postImgRes: [FeedPostImages] = []
     var cellHeight: CGFloat = 0
@@ -24,8 +21,6 @@ class FeedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var idLabel: UILabel!
-    @IBOutlet weak var feedImageView: UIImageView!
-    
     @IBOutlet weak var idLabel2: UILabel!
     @IBOutlet weak var feedTextLabel: UILabel!
     
@@ -34,11 +29,13 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var commentCountLabel: UILabel!
     @IBOutlet weak var updateAtLabel: UILabel!
     
+    @IBOutlet weak var imageScrollView: UIScrollView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didCommentTapped(_:)))
         self.commentCountLabel.addGestureRecognizer(tapGestureRecognizer)
+        imageScrollView.delegate = self
     }
     
     @objc func didCommentTapped(_ sender: UITapGestureRecognizer) {
@@ -54,28 +51,22 @@ class FeedTableViewCell: UITableViewCell {
         DispatchQueue.main.async {
             self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
             self.profileImageView.clipsToBounds = true
+            self.feedImagePageControl.pageIndicatorTintColor = .buttonGray
+            self.feedImagePageControl.currentPageIndicatorTintColor = .buttonIsEnableTrue
+            self.addContentScrollView(data.postImgRes)
+            self.setPageControl(data.postImgRes)
         }
-        feedImagePageControl.numberOfPages = data.postImgRes.count
-        feedImagePageControl.currentPage = 0
-        feedImagePageControl.pageIndicatorTintColor = .lightGray
-        feedImagePageControl.currentPageIndicatorTintColor = .buttonIsEnableTrue
         
         // 프로필 이미지
         if let url = data.profileImgUrl {
             let profileImgUrl = URL(string: url)
             profileImageView.kf.setImage(with: profileImgUrl)
         } else {
-            profileImageView.image = UIImage(named: "고양이1")
+            profileImageView.image = UIImage(named: "default_profile")
         }
 
         // user id
         idLabel.text = data.userId
-        
-        //피드 이미지
-        let feedImgUrl = URL(string: data.postImgRes[0].postImgUrl)
-        feedImageView.kf.setImage(with: feedImgUrl)
-        
-        
         idLabel2.text = data.userId
         feedTextLabel.text = data.content
         // 좋아요
@@ -86,49 +77,36 @@ class FeedTableViewCell: UITableViewCell {
         commentCountLabel.text = commentCount
         updateAtLabel.text = data.updateAt
     }
-    
-    @IBAction func imagePageChanged(_ sender: UIPageControl) {
-        print("pageChanged")
-        self.delegate?.imagePageChanged(pageControl: sender, postImgRes: postImgRes, imageView: feedImageView)
+    private func addContentScrollView(_ imageResult : [FeedPostImages]) {
+        for i in 0..<imageResult.count {
+            let imageView = UIImageView()
+            let xPos = imageScrollView.frame.width * CGFloat(i)
+            imageView.frame = CGRect(x: xPos, y: 0, width: imageScrollView.bounds.width, height: imageScrollView.bounds.height)
+            imageView.kf.setImage(with: URL(string: imageResult[i].postImgUrl))
+            imageScrollView.addSubview(imageView)
+            imageScrollView.contentSize.width = imageView.frame.width * CGFloat(i + 1)
+        }
+        
+    }
+    private func setPageControl(_ imageResult : [FeedPostImages]) {
+        feedImagePageControl.numberOfPages = imageResult.count
+        
     }
     
-    func getPost(data: MyPostResult) {
-        DispatchQueue.main.async {
-            self.profileImageView.layer.cornerRadius = self.profileImageView.frame.width / 2
-            self.profileImageView.clipsToBounds = true
+    private func setPageControlSelectedPage(currentPage:Int) {
+        feedImagePageControl.currentPage = currentPage
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let value = (scrollView.contentOffset.x)/(scrollView.frame.size.width)
+        setPageControlSelectedPage(currentPage: Int(round(value)))
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.imageScrollView.subviews.forEach{
+            $0.removeFromSuperview()
         }
-        feedImagePageControl.numberOfPages = data.postImgRes.count
-        feedImagePageControl.currentPage = 0
-        feedImagePageControl.pageIndicatorTintColor = .lightGray
-        feedImagePageControl.currentPageIndicatorTintColor = .buttonIsEnableTrue
-        
-        // 프로필 이미지
-        if let url = data.profileImgUrl {
-            let profileImgUrl = URL(string: url)
-            profileImageView.kf.setImage(with: profileImgUrl)
-        } else {
-            profileImageView.image = UIImage(named: "고양이1")
-        }
-
-        // user id
-        idLabel.text = data.userId
-        
-        //피드 이미지
-        let postImgUrl = URL(string: (data.postImgRes[0].postImgUrl))
-        feedImageView.kf.setImage(with: postImgUrl)
-        
-        
-        idLabel2.text = data.userId
-        feedTextLabel.text = data.content
-        
-        // 좋아요
-        let likeCount = "좋아요 \(data.postLikeCount)개"
-        likeCountLabel.text = likeCount
-        //let commentCount = "댓글 \(data.commentCount)개 모두 보기"
-        //commentCountLabel.text = commentCount
-        commentCountLabel.isHidden = true
-        updateAtLabel.text = data.updateAt
-        
     }
 }
 

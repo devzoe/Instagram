@@ -111,6 +111,11 @@
 		2FC4F21A296F55DB00E010EE /* FollowRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F219296F55DB00E010EE /* FollowRequest.swift */; };
 		2FC4F21C296F55E600E010EE /* FollowResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F21B296F55E600E010EE /* FollowResponse.swift */; };
 		2FC4F21E296F68F800E010EE /* CloseAccountDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F21D296F68F800E010EE /* CloseAccountDataManager.swift */; };
+		2FC4F221296F704700E010EE /* RecommendPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F21F296F704700E010EE /* RecommendPostTableViewCell.swift */; };
+		2FC4F222296F704700E010EE /* RecommendPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC4F220296F704700E010EE /* RecommendPostTableViewCell.xib */; };
+		2FC4F224296F962500E010EE /* RecommendFeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F223296F962500E010EE /* RecommendFeedResponse.swift */; };
+		2FC4F226296F990B00E010EE /* RecommendFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F225296F990B00E010EE /* RecommendFeedViewController.swift */; };
+		2FC4F22B296FAEFB00E010EE /* DeleteWordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4F22A296FAEFB00E010EE /* DeleteWordResponse.swift */; };
 		2FDCF2B62968050200FD1DBA /* DeletePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */; };
 		2FDCF2B8296806B300FD1DBA /* DeletePostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */; };
 		2FDCF2BB2968086100FD1DBA /* DeleteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */; };
@@ -293,6 +298,11 @@
 		2FC4F219296F55DB00E010EE /* FollowRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowRequest.swift; sourceTree = "<group>"; };
 		2FC4F21B296F55E600E010EE /* FollowResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowResponse.swift; sourceTree = "<group>"; };
 		2FC4F21D296F68F800E010EE /* CloseAccountDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseAccountDataManager.swift; sourceTree = "<group>"; };
+		2FC4F21F296F704700E010EE /* RecommendPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPostTableViewCell.swift; sourceTree = "<group>"; };
+		2FC4F220296F704700E010EE /* RecommendPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendPostTableViewCell.xib; sourceTree = "<group>"; };
+		2FC4F223296F962500E010EE /* RecommendFeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendFeedResponse.swift; sourceTree = "<group>"; };
+		2FC4F225296F990B00E010EE /* RecommendFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendFeedViewController.swift; sourceTree = "<group>"; };
+		2FC4F22A296FAEFB00E010EE /* DeleteWordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteWordResponse.swift; sourceTree = "<group>"; };
 		2FDCF2B52968050200FD1DBA /* DeletePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostViewController.swift; sourceTree = "<group>"; };
 		2FDCF2B7296806B300FD1DBA /* DeletePostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostDataManager.swift; sourceTree = "<group>"; };
 		2FDCF2BA2968086100FD1DBA /* DeleteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteResponse.swift; sourceTree = "<group>"; };
@@ -656,9 +666,11 @@
 			children = (
 				2FBE45C52960C9E600051BB5 /* SearchStoryboard.storyboard */,
 				2FE3F60D29694E6500F38963 /* SearchViewController.swift */,
+				2FC4F225296F990B00E010EE /* RecommendFeedViewController.swift */,
 				2FE3F61329695C1500F38963 /* RecentSearchesDataManager.swift */,
 				2FE3F60F29695A0E00F38963 /* SearchWordTableViewCell.swift */,
 				2FE3F61029695A0E00F38963 /* SearchWordTableViewCell.xib */,
+				2FC4F227296FAEDB00E010EE /* Delete */,
 				2FC4F1F8296ECFF500E010EE /* RecommendPost */,
 				2FE3F61A296976AE00F38963 /* Searching */,
 				2FE3F61529695CCB00F38963 /* Entity */,
@@ -893,6 +905,8 @@
 			children = (
 				2FC4F1F6296ECF7A00E010EE /* RecommendPostCollectionViewCell.swift */,
 				2FC4F1FC296ED4A500E010EE /* RecommendPostDataManager.swift */,
+				2FC4F21F296F704700E010EE /* RecommendPostTableViewCell.swift */,
+				2FC4F220296F704700E010EE /* RecommendPostTableViewCell.xib */,
 				2FC4F1F9296ED3CD00E010EE /* Entity */,
 			);
 			path = RecommendPost;
@@ -902,6 +916,7 @@
 			isa = PBXGroup;
 			children = (
 				2FC4F1FA296ED3EF00E010EE /* RecommendPostResponse.swift */,
+				2FC4F223296F962500E010EE /* RecommendFeedResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -952,6 +967,22 @@
 				2FC4F20F296F05F900E010EE /* ProfilesUserInfoResponse.swift */,
 				2FC4F217296F280D00E010EE /* UserInfoRequest.swift */,
 				2FC4F215296F27FF00E010EE /* UserInfoResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2FC4F227296FAEDB00E010EE /* Delete */ = {
+			isa = PBXGroup;
+			children = (
+				2FC4F228296FAEE500E010EE /* Entity */,
+			);
+			path = Delete;
+			sourceTree = "<group>";
+		};
+		2FC4F228296FAEE500E010EE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2FC4F22A296FAEFB00E010EE /* DeleteWordResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1204,6 +1235,7 @@
 				2FBE45C62960C9E600051BB5 /* SearchStoryboard.storyboard in Resources */,
 				2FBE45CD2960CA1400051BB5 /* ProfileStoryboard.storyboard in Resources */,
 				2FE3852A296B296C00C2FBBE /* Roboto-Bold.ttf in Resources */,
+				2FC4F222296F704700E010EE /* RecommendPostTableViewCell.xib in Resources */,
 				2FBE46302962473E00051BB5 /* billabong.otf in Resources */,
 				2FBE46062962032300051BB5 /* StoryCollectionViewCell.xib in Resources */,
 				2FE3852D296B296C00C2FBBE /* NotoSansKR-Medium.otf in Resources */,
@@ -1410,6 +1442,7 @@
 				2FDCF2B62968050200FD1DBA /* DeletePostViewController.swift in Sources */,
 				2FE38530296BCDCB00C2FBBE /* PostUrl.swift in Sources */,
 				2FBE46002961F95100051BB5 /* HomeViewController.swift in Sources */,
+				2FC4F221296F704700E010EE /* RecommendPostTableViewCell.swift in Sources */,
 				2FDCF2C62968362100FD1DBA /* UpdatePostDataManager.swift in Sources */,
 				2FBE45AD29600E4900051BB5 /* Constant.swift in Sources */,
 				2FC4F1E6296DC01F00E010EE /* FollowerTableViewCell.swift in Sources */,
@@ -1434,6 +1467,7 @@
 				2FBE463C2964382700051BB5 /* SignUpDataManager.swift in Sources */,
 				2FBE46382964375100051BB5 /* SignUpRequest.swift in Sources */,
 				2FE3F61D2969785500F38963 /* SearchingTabViewViewController.swift in Sources */,
+				2FC4F22B296FAEFB00E010EE /* DeleteWordResponse.swift in Sources */,
 				2FC4F208296F036100E010EE /* LogOutResponse.swift in Sources */,
 				2FBE457B295FE69500051BB5 /* instagram_ios_zoe.xcdatamodeld in Sources */,
 				2FE3F619296972BA00F38963 /* SearchDataManager.swift in Sources */,
@@ -1442,6 +1476,7 @@
 				2FBE46142962299600051BB5 /* FeedViewController.swift in Sources */,
 				2FC4F1E8296DC02C00E010EE /* FollowingTableViewCell.swift in Sources */,
 				2FBE45F52961E2CC00051BB5 /* IdViewController.swift in Sources */,
+				2FC4F226296F990B00E010EE /* RecommendFeedViewController.swift in Sources */,
 				2FC4F1EB296DDB3500E010EE /* UserProfileTableViewController.swift in Sources */,
 				2FE3F61F29697A7E00F38963 /* SearchAccountViewController.swift in Sources */,
 				2F8CC7AC29693B1E0011C143 /* ReadProfileEditResponse.swift in Sources */,
@@ -1468,6 +1503,7 @@
 				2FDCF2C4296835C900FD1DBA /* UpdatePostResponse.swift in Sources */,
 				2FDCF2C82969286C00FD1DBA /* PostData.swift in Sources */,
 				2FC4F216296F27FF00E010EE /* UserInfoResponse.swift in Sources */,
+				2FC4F224296F962500E010EE /* RecommendFeedResponse.swift in Sources */,
 				2FBE45B52960B3AF00051BB5 /* UIButton.swift in Sources */,
 				2FBE45F12961E2AD00051BB5 /* PasswordViewController.swift in Sources */,
 				2FBE45F82961E48300051BB5 /* BirthdayViewController.swift in Sources */,

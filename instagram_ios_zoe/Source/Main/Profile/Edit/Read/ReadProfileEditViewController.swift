@@ -7,11 +7,15 @@
 
 import UIKit
 import Kingfisher
+import FirebaseStorage
+import Firebase
 
 class ReadProfileEditViewController: BaseViewController {
     lazy var dataManager : ReadProfileEditDataManager = ReadProfileEditDataManager()
     lazy var editDataManager : EditProfileDataManager = EditProfileDataManager()
-    var editProfileRequest : EditProfileRequest = EditProfileRequest(userIdx: 0, userId: "", name: "", profileImage: nil, website: nil, introduction: nil)
+    var editProfileRequest : EditProfileRequest = EditProfileRequest(userIdx: 0, userId: "", name: "", profileImage: "", website: nil, introduction: nil)
+    let imagePicker = UIImagePickerController()
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userIdTextField: UITextField!
@@ -38,14 +42,17 @@ class ReadProfileEditViewController: BaseViewController {
         self.dataManager.getProfileData(delegate: self)
         // Set it to the right of the navigation bar.
         self.navigationItem.rightBarButtonItem = self.rightButton
+        self.imagePicker.sourceType = .photoLibrary // 앨범에서 가져옴
+        self.imagePicker.allowsEditing = true // 수정 가능 여부
+        self.imagePicker.delegate = self // picker delegate
     }
     
     @objc func buttonPressed(_ sender: Any) {
-        setData()
-        editDataManager.editProfileData(editProfileRequest, delegate: self)
+        self.setData()
+        print("url : ", self.editProfileRequest.profileImage)
+        self.editDataManager.editProfileData(editProfileRequest, delegate: self)
     }
     func setData() {
-        editProfileRequest.profileImage = "https://firebasestorage.googleapis.com/v0/b/imagetest-e4d50.appspot.com/o/6E952A1A-B1C9-4F23-A588-94C48A788B561672994546.275323?alt=media&token=1e8ebd92-e1f0-4c1a-9c8b-5bc383b762f1"
         editProfileRequest.name = userNameTextField.text!
         editProfileRequest.userId = userIdTextField.text!
         editProfileRequest.introduction = introductionTextField.text!
@@ -64,33 +71,44 @@ class ReadProfileEditViewController: BaseViewController {
         textfield.textAlignment = .left
         textfield.textColor = UIColor.white
     }
+    @IBAction func profileImageButtonTouchUpInside(_ sender: UIButton) {
+        self.present(self.imagePicker, animated: true)
+    }
 }
 
 extension ReadProfileEditViewController {
     func didSetProfile(result: ReadProfileEditResult) {
         //self.presentAlert(title: "프로필 로딩에 성공하였습니다", message: result.userId)
         DispatchQueue.main.async {
+            // 이미지
             if let url = result.profileImg {
                 self.profileImageView.kf.setImage(with: URL(string: url))
             } else {
-                self.profileImageView.image = UIImage(named: "고양이1")
+                self.profileImageView.image = UIImage(named: "default_profile")
             }
             self.userNameTextField.textColor = .black
             self.userIdTextField.textColor = .black
-            self.userNameTextField.text = result.name
+            self.introductionTextField.textColor = .black
+            self.websiteTextField.textColor = .black
+            self.userNameTextField.attributedPlaceholder = NSAttributedString(string: "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.labelGray])
+            self.userIdTextField.attributedPlaceholder = NSAttributedString(string: "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.labelGray])
+            self.introductionTextField.attributedPlaceholder = NSAttributedString(string: "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.labelGray])
+            self.websiteTextField.attributedPlaceholder = NSAttributedString(string: "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.labelGray])
+            
+            if let name = result.name {
+                self.userNameTextField.text = name
+            } else {
+                self.userNameTextField.placeholder = "이름"
+            }
             self.userIdTextField.text = result.userId
             if let introduction = result.introduction {
-                self.introductionTextField.textColor = .black
                 self.introductionTextField.text = introduction
             } else {
-                self.introductionTextField.textColor = .lightGray
                 self.introductionTextField.placeholder = "소개"
             }
             if let website = result.website {
-                self.websiteTextField.textColor = .black
                 self.websiteTextField.text = website
             } else {
-                self.websiteTextField.textColor = .lightGray
                 self.websiteTextField.placeholder = "링크 추가"
             }
         }
@@ -104,3 +122,26 @@ extension ReadProfileEditViewController {
     }
 }
 
+extension ReadProfileEditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        var newImage: UIImage? = nil // update 할 이미지
+        
+        if let possibleImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            newImage = possibleImage // 수정된 이미지가 있을 경우
+        } else if let possibleImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            newImage = possibleImage // 원본 이미지가 있을 경우
+        }
+        self.profileImageView.image = newImage // 받아온 이미지를 update
+        let data = newImage?.jpegData(compressionQuality: 1)
+        FirebaseStorageManager.uploadImage(imageData: data!, pathRoot: "image") { url in
+            if let url = url {
+                let urlString = url.absoluteString
+                self.editProfileRequest.profileImage = urlString
+                print("url add", urlString)
+                print("url add", self.editProfileRequest.profileImage)
+            }
+        }
+        picker.dismiss(animated: true, completion: nil) // picker를 닫아줌
+    }
+}

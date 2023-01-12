@@ -19,6 +19,7 @@ class FinalViewController: BaseViewController {
         super.viewDidLoad()
         self.signUpButton.setCornerRadius(10)
         print(userInfo)
+        self.idLabel.text = userInfo.userId
     }
     
     @IBAction func signUpButtonTouchUpInside(_ sender: UIButton) {
