@@ -29,6 +29,7 @@ class UserProfileTableViewController: UITableViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("profile tableview will disappear")
+        self.navigationItem.title = ""
         //profile.AfterUserIdx = profile.BeforeUserIdx
         //profile.AfterUserId = profile.BeforeUserId
         

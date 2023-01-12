@@ -19,6 +19,7 @@ class FollowTabViewController: TabmanViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("tab viewwillappear")
+        self.navigationItem.title = profile.AfterUserId
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -27,6 +28,7 @@ class FollowTabViewController: TabmanViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("tab view will disappear")
+        self.navigationItem.title = ""
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -35,7 +37,6 @@ class FollowTabViewController: TabmanViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = profile.AfterUserId
         if let firstVC = storyboard?.instantiateViewController(withIdentifier: "FollowerViewController") {
             viewControllers.append(firstVC)
             
@@ -49,7 +50,7 @@ class FollowTabViewController: TabmanViewController {
         self.dataManager.gotFollower(userIdx : userIdx, delegate: self)
         
     }
-        
+         
 }
 extension FollowTabViewController {
     func didGetFollower(result: [FollowerResult]) {

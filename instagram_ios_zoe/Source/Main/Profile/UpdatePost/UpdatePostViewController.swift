@@ -28,7 +28,7 @@ class UpdatePostViewController: BaseViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.topItem?.title = "정보 수정"
+        //self.navigationController?.navigationBar.topItem?.title = "정보 수정"
         self.setUI()
         // 키보드 감지
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardUp), name: UIResponder.keyboardWillShowNotification, object: nil)

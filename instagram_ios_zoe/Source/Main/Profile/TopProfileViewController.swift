@@ -152,7 +152,7 @@ extension TopProfileViewController {
             
             self.websiteLabelTopConstraint.isActive = false
             self.websiteLabelTopConstraint = websiteLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 5)
-            self.editProfileTopConstraint.isActive = true
+            self.websiteLabelTopConstraint.isActive = true
             
             self.userNameLabel.text = result.name
             self.websiteLabel.text = result.website

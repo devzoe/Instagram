@@ -38,7 +38,7 @@ class CreatePostViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.topItem?.title = "새 게시물"
+        //self.navigationController?.navigationBar.topItem?.title = "새 게시물"
         print("create post view did load")
         self.postThumbnailImageView.image = postUrl.thumnail
         

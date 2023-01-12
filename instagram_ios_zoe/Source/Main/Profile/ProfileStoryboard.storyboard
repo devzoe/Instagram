@@ -1575,6 +1575,7 @@
                         <outlet property="followingCountLabel" destination="i7u-tS-Mla" id="7jU-eQ-fqq"/>
                         <outlet property="followingView" destination="VAL-RL-vaj" id="kdR-yp-HEl"/>
                         <outlet property="introductionLabel" destination="d0E-se-mib" id="Npy-Vi-bwV"/>
+                        <outlet property="introductionTopConstraint" destination="eSa-6q-Eo1" id="kbD-HL-XCO"/>
                         <outlet property="messageButton" destination="W0s-Lq-sec" id="60m-sP-Sjg"/>
                         <outlet property="postCountLabel" destination="510-5u-9eL" id="jcn-l9-wUk"/>
                         <outlet property="profileImageView" destination="N4B-hP-Bd5" id="jKH-bz-uuJ"/>
@@ -1585,7 +1586,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90l-VS-33g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4565" y="-1167"/>
+            <point key="canvasLocation" x="4563.768115942029" y="-1167.1875"/>
         </scene>
         <!--User Tab View Controller-->
         <scene sceneID="Kif-8o-9f7">

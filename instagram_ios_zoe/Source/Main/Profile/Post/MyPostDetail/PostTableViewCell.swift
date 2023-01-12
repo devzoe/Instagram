@@ -80,14 +80,20 @@ class PostTableViewCell: UITableViewCell, UIScrollViewDelegate {
     }
     private func addContentScrollView(_ imageResult : [MyPostImages]) {
 
-        for i in 0..<imageResult.count {
+        
+        var index = imageResult.count - 1
+        print("index : ", index)
+        for i in (0..<imageResult.count) {
             let imageView = UIImageView()
             let xPos = imageScrollView.frame.width * CGFloat(i)
             imageView.frame = CGRect(x: xPos, y: 0, width: imageScrollView.bounds.width, height: imageScrollView.bounds.height)
-            imageView.kf.setImage(with: URL(string: imageResult[i].postImgUrl))
+            imageView.kf.setImage(with: URL(string: imageResult[index].postImgUrl))
             imageScrollView.addSubview(imageView)
             imageScrollView.contentSize.width = imageView.frame.width * CGFloat(i + 1)
+            index -= 1
+            print("index : ", index)
         }
+        
         
     }
     
